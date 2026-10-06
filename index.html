@@ -189,6 +189,12 @@ html{scrollbar-color:var(--line-strong) transparent;scrollbar-width:thin;}
 .lact a{color:var(--accent);font-weight:600;font-size:14.5px;}
 
 
+
+/* ---------- Bibliografía por ficha ---------- */
+.refs{margin:14px 18px 0;border-top:1px solid var(--line);padding-top:10px;}
+.refs summary{cursor:pointer;font-weight:650;font-size:15px;color:var(--muted);}
+.refs ol{margin:8px 0 0;padding-left:22px;font-size:14px;line-height:1.5;color:var(--muted);}
+.refs li{margin-bottom:4px;}
 /* ---------- Bandera + Malvinas (igual que alcoholito) ---------- */
 .ar-mark{display:flex;align-items:center;justify-content:center;gap:9px;margin-top:16px;}
 .ar-mark .flag{width:30px;height:20px;border-radius:3px;display:block;box-shadow:0 1px 3px rgba(0,0,0,.18);border:1px solid var(--line-strong);}
@@ -3022,7 +3028,10 @@ const REF_RULES = [
 function refsFor(d){
   const text = JSON.stringify(d) + " " + (PREG[d.id] || "") + " " + (LACT_NOTE[d.id] || "");
   const out = [...BASE_REFS];
+  if(["hip","opi","bnm","al","vaso"].includes(d.cat) || ["esmolol","labetalol","ondansetron","dexametasona","metoclopramida","magnesio","dantroleno","sugammadex","neostigmina"].includes(d.id))
+    out.unshift("Gropper MA, Miller RD, et al. (eds.). Miller. Anestesia. 9.ª ed. Barcelona: Elsevier; 2021.");
   REF_RULES.forEach(([re, f]) => { if(re.test(text)){ const r = f(d); if(!out.includes(r)) out.push(r); } });
+  if(d.cat === "al"){ const r = "Neal JM, et al. ASRA Practice Advisory on Local Anesthetic Systemic Toxicity: 2020 version. Reg Anesth Pain Med. 2021;46:81-82."; if(!out.includes(r)) out.push(r); }
   out.push("APILAM. e-lactancia.org. Compatibilidad de medicamentos con la lactancia materna. Consulta: octubre de 2026.");
   out.push("Prospecto aprobado por la Administración Nacional de Medicamentos, Alimentos y Tecnología Médica (ANMAT).");
   return out;
@@ -3059,6 +3068,7 @@ function renderDrug(d){
     </div>
     <div class="panel" id="panel" role="tabpanel" aria-labelledby="tab-${currentTab}">${panelHTML(d,currentTab)}</div>
     ${d.perla ? `<div class="perla"><b>Perla clínica</b>${md(d.perla)}</div>` : ""}
+    <details class="refs"><summary>Bibliografía</summary><ol>${refsFor(d).map(r => `<li>${esc(r)}</li>`).join("")}</ol></details>
     <p class="note" style="margin-top:16px">Dosis orientativas para adultos salvo aclaración. Verificar con el prospecto aprobado por ANMAT y el protocolo institucional.</p>
   </article>`;
 
