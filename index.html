@@ -195,6 +195,21 @@ html{scrollbar-color:var(--line-strong) transparent;scrollbar-width:thin;}
 .refs summary{cursor:pointer;font-weight:650;font-size:15px;color:var(--muted);}
 .refs ol{margin:8px 0 0;padding-left:22px;font-size:14px;line-height:1.5;color:var(--muted);}
 .refs li{margin-bottom:4px;}
+
+/* ---------- Calculadora ---------- */
+.calc{margin-top:20px;border:1.5px solid var(--accent);border-radius:var(--r-md);padding:14px 14px 10px;background:var(--accent-soft);}
+.calc-head{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:6px;}
+.calc-head h3{margin:0 !important;}
+.peso{display:inline-flex;align-items:center;gap:6px;background:var(--surface);border:1.5px solid var(--line-strong);border-radius:var(--r-sm);padding:4px 10px;}
+.peso:focus-within{border-color:var(--accent);}
+.peso input{width:64px;border:0;outline:0;background:transparent;font-size:18px;font-weight:700;text-align:right;font-variant-numeric:tabular-nums;}
+.peso span{font-weight:600;color:var(--muted);}
+.calc .kv{background:transparent;}
+.calc .kv td{font-weight:700;font-size:16px;}
+.calc .ref{display:block;font-weight:500;font-size:13px;color:var(--muted);margin-top:2px;}
+.calc .sub{font-weight:500;font-size:13.5px;color:var(--muted);}
+.calc .empty{color:var(--muted);font-family:var(--sans);font-weight:500;}
+.calc-note{margin:8px 0 0;font-size:13px;color:var(--muted);}
 /* ---------- Bandera + Malvinas (igual que alcoholito) ---------- */
 .ar-mark{display:flex;align-items:center;justify-content:center;gap:9px;margin-top:16px;}
 .ar-mark .flag{width:30px;height:20px;border-radius:3px;display:block;box-shadow:0 1px 3px rgba(0,0,0,.18);border:1px solid var(--line-strong);}
@@ -1356,7 +1371,7 @@ perla:"Ante sospecha de crisis suprarrenal, el tratamiento precede al estudio: s
 
 /* =============== DIGESTIVO =============== */
 {id:"omeprazol",n:"Omeprazol",g:"Inhibidor de la bomba de protones (IBP)",l:"otro",cat:"gastro",
-a:["omeprazol","ibp","inhibidor bomba de protones","esomeprazol","pantoprazol","lansoprazol"],
+a:["omeprazol","ibp","inhibidor bomba de protones","lansoprazol"],
 res:"El antiácido más potente y uno de los fármacos más usados (y sobreindicados) del mundo. Funciona mejor tomado 30 min antes del desayuno.",
 mec:["**Sitio:** bloquea de forma **irreversible** la H⁺/K⁺-ATPasa (bomba de protones) de la célula parietal, paso final de la secreción ácida.","**Prodroga ácido-activada:** se concentra en el canalículo ácido de la célula parietal y allí se convierte en la forma activa que se une a la bomba. Sólo bloquea bombas **activas**, por lo que se administra antes de las comidas, que activan las bombas.","**Duración superior a su vida media:** la bomba permanece inactivada hasta la síntesis de una nueva (≈ 24–48 h)."],
 pk:[["t½ plasmática","≈ 1 h; efecto ≈ 24 h"],["Efecto máximo","3–5 días de tratamiento"],["Metabolismo","CYP2C19 (polimorfismos) y CYP3A4"]],
@@ -2574,6 +2589,319 @@ dosis:[["IV clásico (21 h)","150 mg/kg en 1 h → 50 mg/kg en 4 h → 100 mg/kg
 tox:["Sobredosis IV: reacción anafilactoide grave, hiponatremia por sobrecarga de agua (niños). Soporte."],
 perla:"Ante la duda sobre la indicación de N-acetilcisteína en una intoxicación por paracetamol debe iniciarse: el riesgo del tratamiento es muy inferior al de la omisión."},
 
+/* =============== TANDA 4: PSICOFÁRMACOS =============== */
+{id:"paroxetina",n:"Paroxetina",g:"Antidepresivo, inhibidor selectivo de la recaptación de serotonina (ISRS)",l:"otro",cat:"psi",
+a:["paroxetina","isrs","antidepresivo","aropax","paxil"],
+res:"ISRS potente con el perfil anticolinérgico más marcado del grupo. Su síndrome de discontinuación es el más intenso entre los ISRS y debe evitarse en el embarazo.",
+mec:["**Sitio:** inhibidor potente del transportador de serotonina (SERT); a dosis altas inhibe también el de noradrenalina.","**Efecto anticolinérgico:** afinidad por receptores muscarínicos, mayor que la del resto de los ISRS (sequedad bucal, constipación, sedación).","**Inhibición enzimática:** inhibidor potente del CYP2D6 (incluso de su propio metabolismo, con cinética no lineal); reduce la activación del tamoxifeno y de la codeína y aumenta los niveles de β-bloqueantes, antipsicóticos y tricíclicos.","**Discontinuación:** su vida media relativamente corta, sin metabolitos activos, explica la intensidad del síndrome de discontinuación."],
+pk:[["t½","≈ 21 h"],["Metabolismo","CYP2D6 (autoinhibición, cinética no lineal)"],["Metabolitos activos","No"]],
+ea:["Disfunción sexual, aumento de peso, sedación.","Efectos anticolinérgicos.","**Síndrome de discontinuación** intenso (mareos, parestesias, irritabilidad).","Hiponatremia, sangrado, ideación suicida en menores de 25 años."],
+ci:["IMAO (esperar 14 días), linezolid, azul de metileno.","Tamoxifeno (reduce su eficacia).","Pimozida, tioridazina.","Embarazo (preferir otros ISRS)."],
+usos:["Depresión mayor.","Trastorno de pánico, ansiedad social y generalizada.","Trastorno obsesivo-compulsivo y estrés postraumático."],
+dosis:[["Depresión","20 mg/día VO (hasta 50 mg/día)"],["Pánico","10 mg/día, titular hasta 40 mg/día"],["Ancianos o hepatopatía","Máx 40 mg/día"],["Suspensión","Descenso muy gradual"]],
+tox:["Sobredosis aislada de baja letalidad (somnolencia, taquicardia, vómitos). En combinación: síndrome serotoninérgico (ver sertralina)."],
+perla:"Entre los ISRS, la paroxetina tiene el síndrome de discontinuación más intenso y la mayor asociación con malformaciones cardíacas en el primer trimestre."},
+
+{id:"citalopram",n:"Citalopram",g:"Antidepresivo ISRS",l:"otro",cat:"psi",
+a:["citalopram","isrs","antidepresivo"],
+res:"ISRS bien tolerado y con pocas interacciones, limitado por la prolongación dosis-dependiente del QT.",
+mec:["**Sitio:** inhibidor selectivo del transportador de serotonina; mezcla racémica cuyo enantiómero activo es el escitalopram.","**QT:** prolonga la repolarización de forma dosis-dependiente (bloqueo de canales hERG), por lo que la FDA limitó la dosis máxima a 40 mg/día (20 mg/día en mayores de 60 años)."],
+pk:[["t½","≈ 35 h"],["Metabolismo","CYP2C19, 3A4 y 2D6; metabolizadores lentos de CYP2C19: mayor exposición"]],
+ea:["Náuseas, disfunción sexual, somnolencia o insomnio.","**Prolongación del QT.**","Hiponatremia, sangrado, ideación suicida en jóvenes."],
+ci:["IMAO, linezolid.","QT largo congénito, bradicardia, hipopotasemia o hipomagnesemia no corregidas, otros fármacos que prolongan el QT."],
+usos:["Depresión mayor.","Trastornos de ansiedad (fuera de prospecto en algunos países)."],
+dosis:[["Adultos","20 mg/día VO, máx 40 mg/día"],["Mayores de 60 años, hepatopatía o metabolizadores lentos de CYP2C19","Máx 20 mg/día"]],
+tox:["Sobredosis: QT largo, torsade de pointes, convulsiones, síndrome serotoninérgico. Monitoreo ECG, corrección de K⁺ y Mg²⁺."],
+perla:"Citalopram y escitalopram son los ISRS que más prolongan el QT: dosis máxima reducida en ancianos."},
+
+{id:"duloxetina",n:"Duloxetina",g:"Antidepresivo, inhibidor de la recaptación de serotonina y noradrenalina (IRSN)",l:"otro",cat:"psi",
+a:["duloxetina","cymbalta","irsn","antidepresivo"],
+res:"IRSN con efecto noradrenérgico desde dosis bajas: además de depresión y ansiedad, está indicada en el dolor neuropático diabético, la fibromialgia y el dolor musculoesquelético crónico.",
+mec:["**Sitio:** inhibición equilibrada de los transportadores de serotonina y noradrenalina desde las dosis habituales.","**Analgesia:** refuerza las vías descendentes inhibitorias serotoninérgicas y noradrenérgicas del asta dorsal, con efecto independiente del antidepresivo.","**Inhibición enzimática:** inhibidor moderado del CYP2D6."],
+pk:[["t½","≈ 12 h"],["Metabolismo","CYP1A2 y CYP2D6 (la fluvoxamina y la ciprofloxacina aumentan sus niveles)"],["Absorción","Cápsulas con cubierta entérica: no abrir ni masticar"]],
+ea:["Náuseas (frecuentes al inicio), boca seca, constipación, sudoración.","Aumento de la presión arterial.","**Hepatotoxicidad** (mayor con consumo de alcohol).","Síndrome de discontinuación.","Hiponatremia, sangrado, ideación suicida en jóvenes."],
+ci:["IMAO, linezolid.","Insuficiencia hepática o consumo importante de alcohol.","ClCr < 30 mL/min.","Glaucoma de ángulo cerrado no controlado.","Inhibidores potentes de CYP1A2 (fluvoxamina, ciprofloxacina)."],
+usos:["Depresión mayor y trastorno de ansiedad generalizada.","**Dolor neuropático diabético.**","Fibromialgia.","Dolor musculoesquelético crónico (lumbalgia, artrosis)."],
+dosis:[["Depresión o ansiedad","30 mg/día por 1–2 semanas, luego 60 mg/día (máx 120 mg/día)"],["Dolor neuropático o fibromialgia","60 mg/día"]],
+tox:["Sobredosis: síndrome serotoninérgico, convulsiones, taquicardia, somnolencia. Soporte."],
+perla:"En el paciente con depresión y dolor crónico, la duloxetina trata ambos componentes con un mismo fármaco."},
+
+{id:"vortioxetina",n:"Vortioxetina",g:"Antidepresivo multimodal",l:"otro",cat:"psi",
+a:["vortioxetina","brintellix","antidepresivo multimodal"],
+res:"Antidepresivo que combina la inhibición del transportador de serotonina con acciones sobre varios receptores serotoninérgicos. Menor disfunción sexual y posible beneficio sobre los síntomas cognitivos de la depresión.",
+mec:["**Inhibición del SERT** asociada a **agonismo 5-HT1A**, agonismo parcial 5-HT1B y antagonismo 5-HT3, 5-HT7 y 5-HT1D.","**Modulación de otros sistemas:** el antagonismo 5-HT3 y 5-HT7 aumenta indirectamente la liberación de noradrenalina, dopamina, acetilcolina e histamina en la corteza prefrontal, lo que se relaciona con su efecto sobre la función cognitiva.","El antagonismo 5-HT3 no evita las náuseas, que son su efecto adverso más frecuente."],
+pk:[["t½","≈ 66 h"],["Metabolismo","CYP2D6 (reducir la dosis con bupropión, fluoxetina o paroxetina)"]],
+ea:["**Náuseas** (las más frecuentes, dosis-dependientes).","Prurito, constipación.","Menor disfunción sexual que los ISRS a dosis bajas.","Hiponatremia, sangrado."],
+ci:["IMAO, linezolid.","Precaución con inhibidores potentes de CYP2D6."],
+usos:["Depresión mayor, incluida la depresión con síntomas cognitivos o en ancianos."],
+dosis:[["Adultos","10 mg/día VO (5–20 mg/día)"],["Mayores de 65 años","Iniciar con 5 mg/día"]],
+tox:["Sobredosis: náuseas, mareos, prurito; síndrome serotoninérgico en combinaciones."],
+perla:"La vida media de 66 h permite la suspensión sin síndrome de discontinuación relevante."},
+
+{id:"clomipramina",n:"Clomipramina",g:"Antidepresivo tricíclico serotoninérgico",l:"otro",cat:"psi",
+a:["clomipramina","anafranil","triciclico","atc"],
+res:"El tricíclico con mayor potencia serotoninérgica: tratamiento eficaz del trastorno obsesivo-compulsivo. Comparte la toxicidad cardíaca y la letalidad en sobredosis de los tricíclicos.",
+mec:["**Sitio:** inhibición potente del transportador de serotonina; su metabolito desmetilclomipramina inhibe el de noradrenalina.","**Bloqueo de receptores** muscarínicos, H1 y α1 (efectos anticolinérgicos, sedación, hipotensión ortostática).","**Bloqueo de canales de Na⁺ cardíacos:** ensanchamiento del QRS y arritmias en sobredosis.","Es el tricíclico que más reduce el umbral convulsivo."],
+pk:[["t½","≈ 32 h (metabolito ≈ 70 h)"],["Metabolismo","CYP2D6, 1A2, 3A4"]],
+ea:["Anticolinérgicos, sedación, aumento de peso.","Hipotensión ortostática.","**Convulsiones** (dosis-dependientes, máx 250 mg/día).","Disfunción sexual (anorgasmia).","QT y QRS prolongados."],
+ci:["Infarto reciente, bloqueos de conducción.","IMAO.","Glaucoma de ángulo cerrado, retención urinaria.","Epilepsia no controlada."],
+usos:["**Trastorno obsesivo-compulsivo.**","Depresión.","Cataplejía (narcolepsia).","Eyaculación precoz (fuera de prospecto)."],
+dosis:[["TOC o depresión","25 mg/día, titular hasta 100–250 mg/día (máx 250 mg/día)"]],
+tox:["Igual que el resto de los tricíclicos: anticolinérgico, convulsiones, hipotensión y **QRS ancho** → bicarbonato de sodio 1–2 mEq/kg IV si QRS > 100 ms."],
+perla:"El TOC responde a fármacos con potente acción serotoninérgica (clomipramina e ISRS a dosis altas), no a los noradrenérgicos."},
+
+{id:"aripiprazol",n:"Aripiprazol",g:"Antipsicótico atípico, agonista parcial dopaminérgico",l:"otro",cat:"psi",
+a:["aripiprazol","abilify","antipsicotico atipico","agonista parcial"],
+res:"Antipsicótico de tercera generación por su agonismo parcial D2: bajo riesgo metabólico y sin hiperprolactinemia. Su efecto adverso característico es la acatisia.",
+mec:["**Agonista parcial D2:** en la vía mesolímbica hiperactiva actúa como antagonista funcional; en vías con baja dopamina (mesocortical, tuberoinfundibular) actúa como agonista. Por ello no eleva la prolactina e incluso puede reducirla.","**Agonista parcial 5-HT1A y antagonista 5-HT2A.**","Escasa afinidad por receptores H1, muscarínicos y α1: poca sedación, poco aumento de peso y escasa hipotensión."],
+pk:[["t½","≈ 75 h (metabolito activo ≈ 94 h)"],["Metabolismo","CYP2D6 y CYP3A4 (reducir la dosis con inhibidores potentes)"],["Formulaciones","Oral e inyectable de depósito mensual"]],
+ea:["**Acatisia** e inquietud.","Insomnio, náuseas, cefalea.","**Trastornos del control de impulsos** (juego patológico, compras, hiperfagia).","Menor riesgo metabólico que otros atípicos.","Mortalidad en ancianos con demencia."],
+ci:["Hipersensibilidad.","Precaución en ancianos con demencia y en antecedentes de juego patológico."],
+usos:["Esquizofrenia.","Trastorno bipolar (manía y mantenimiento).","Coadyuvante en la depresión mayor resistente.","Irritabilidad en el trastorno del espectro autista; síndrome de Tourette."],
+dosis:[["Esquizofrenia","10–15 mg/día VO (máx 30 mg/día)"],["Manía","15–30 mg/día"],["Coadyuvante en depresión","2–5 mg/día, hasta 15 mg/día"]],
+tox:["Sobredosis: somnolencia, taquicardia, vómitos, extrapiramidalismo; baja letalidad. Soporte."],
+perla:"Como agonista parcial, el aripiprazol puede reducir la hiperprolactinemia inducida por otros antipsicóticos."},
+
+{id:"clozapina",n:"Clozapina",g:"Antipsicótico atípico",l:"otro",cat:"psi",
+a:["clozapina","leponex","antipsicotico atipico","esquizofrenia resistente"],
+res:"El único antipsicótico eficaz en la esquizofrenia resistente y con efecto antisuicida demostrado. Su uso exige monitoreo hematológico por el riesgo de agranulocitosis.",
+mec:["**Perfil receptorial:** baja afinidad y disociación rápida del receptor D2, alta afinidad por D4, antagonismo 5-HT2A potente y bloqueo muscarínico, H1 y α1.","**Ausencia de extrapiramidalismo:** el bajo bloqueo D2 estriatal explica la escasa incidencia de efectos extrapiramidales y de discinesia tardía; es de elección en la psicosis de la enfermedad de Parkinson.","**Sialorrea paradójica:** pese a su efecto anticolinérgico, produce hipersalivación (agonismo M4 y alteración de la deglución)."],
+pk:[["t½","≈ 12 h"],["Metabolismo","CYP1A2 (el tabaco reduce sus niveles; al dejar de fumar pueden aumentar 50%)"],["Monitoreo","Concentración plasmática terapéutica ≈ 350–600 ng/mL"]],
+ea:["**Agranulocitosis** (≈ 1%, mayor riesgo en las primeras 18 semanas): recuento de neutrófilos semanal y luego periódico.","**Miocarditis** y miocardiopatía (primeras 4–8 semanas).","**Convulsiones** (dosis-dependientes).","**Hipomotilidad intestinal** grave (íleo potencialmente mortal).","Sialorrea, sedación, hipotensión ortostática, taquicardia.","Síndrome metabólico, aumento de peso marcado."],
+ci:["Antecedente de agranulocitosis o mielosupresión.","Epilepsia no controlada.","Íleo paralítico.","Miocarditis o cardiopatía grave.","Fármacos mielosupresores (carbamazepina)."],
+usos:["**Esquizofrenia resistente** (falla de al menos dos antipsicóticos a dosis adecuadas).","Reducción del riesgo suicida en esquizofrenia.","Psicosis en la enfermedad de Parkinson."],
+dosis:[["Inicio","12,5 mg 1–2 veces el primer día; aumentar 25–50 mg/día"],["Objetivo","300–450 mg/día en tomas divididas (máx 900 mg/día)"],["Interrupción > 48 h","Reiniciar la titulación desde 12,5 mg"]],
+tox:["Sobredosis: sedación, coma, convulsiones, taquicardia, hipotensión, depresión respiratoria, sialorrea. Soporte; carbón activado temprano."],
+perla:"Fiebre y odinofagia en un paciente con clozapina obligan a un hemograma urgente; dolor torácico y taquicardia en el primer mes, a descartar miocarditis."},
+
+{id:"levomepromazina",n:"Levomepromazina",g:"Antipsicótico típico de baja potencia (fenotiazina)",l:"otro",cat:"psi",
+a:["levomepromazina","metotrimeprazina","nozinan","fenotiazina"],
+res:"Fenotiazina de baja potencia, muy sedante y con efecto analgésico. De uso frecuente en Argentina en el insomnio de pacientes psiquiátricos, la agitación y los cuidados paliativos.",
+mec:["**Perfil receptorial amplio:** antagonista D2 (antipsicótico y antiemético), 5-HT2, **H1** (sedación marcada), **α1** (hipotensión ortostática) y muscarínico (efectos anticolinérgicos).","**Analgesia:** mecanismo no completamente aclarado (bloqueo α1 y 5-HT2 en vías nociceptivas); se emplea como coadyuvante en el dolor oncológico.","Como fenotiazina de baja potencia, produce menos extrapiramidalismo y más sedación e hipotensión que el haloperidol."],
+pk:[["t½","15–30 h"],["Metabolismo","Hepático; inhibe el CYP2D6"]],
+ea:["**Sedación** intensa.","**Hipotensión ortostática** marcada (caídas en ancianos).","Anticolinérgicos.","Prolongación del QT.","Síndrome neuroléptico maligno (raro), discinesia tardía."],
+ci:["Hipotensión, shock.","Parkinson, demencia con cuerpos de Lewy.","Glaucoma de ángulo cerrado, retención urinaria.","Ancianos frágiles (riesgo de caídas)."],
+usos:["Agitación psicótica.","Insomnio en pacientes psiquiátricos (fuera de prospecto en muchos países).","Cuidados paliativos: náuseas refractarias, agitación terminal, sedación paliativa.","Esquizofrenia (en desuso como monoterapia)."],
+dosis:[["Insomnio o ansiedad (VO)","6,25–25 mg a la noche"],["Psicosis","25–50 mg/día, hasta 150–250 mg/día"],["Paliativos (SC)","6,25–25 mg/24 h para náuseas; dosis mayores en sedación paliativa"]],
+tox:["Sobredosis: sedación profunda, hipotensión, QT largo, convulsiones. Soporte; vasopresores α para la hipotensión."],
+perla:"En el anciano, la hipotensión ortostática de la levomepromazina es causa frecuente de caídas nocturnas."},
+
+{id:"metilfenidato",n:"Metilfenidato",g:"Psicoestimulante, inhibidor de la recaptación de dopamina y noradrenalina",l:"otro",cat:"psi",
+a:["metilfenidato","ritalina","concerta","estimulante","tdah"],
+res:"Tratamiento farmacológico de primera línea del trastorno por déficit de atención con hiperactividad (TDAH) en niños y adultos. Psicoestimulante con potencial de abuso.",
+mec:["**Sitio:** bloquea los transportadores de **dopamina (DAT)** y **noradrenalina (NET)** → ↑ dopamina y noradrenalina en la corteza prefrontal y el estriado.","**Efecto en el TDAH:** mejora la regulación de la atención y el control inhibitorio a través de la señalización catecolaminérgica prefrontal.","A diferencia de las anfetaminas, no promueve la liberación de catecolaminas de forma directa."],
+pk:[["Inicio","30–60 min"],["Duración","Liberación inmediata 3–4 h; prolongada 8–12 h"],["Metabolismo","Esterasas (ácido ritalínico), sin intervención relevante del CYP"]],
+ea:["Insomnio, anorexia, pérdida de peso.","Taquicardia, aumento de la presión arterial.","Cefalea, ansiedad, irritabilidad.","Retraso leve del crecimiento en niños.","Potencial de abuso y dependencia."],
+ci:["IMAO.","Glaucoma, hipertiroidismo, feocromocitoma.","Cardiopatía estructural, arritmias, HTA no controlada.","Psicosis, trastorno bipolar no controlado, anorexia nerviosa."],
+usos:["**TDAH** en niños, adolescentes y adultos.","Narcolepsia."],
+dosis:[["Niños (liberación inmediata)","0,3 mg/kg/dosis (5–10 mg) 2–3 veces/día; máx 60 mg/día"],["Adultos","10–20 mg 2–3 veces/día o liberación prolongada 18–72 mg/día"]],
+tox:["Sobredosis: síndrome simpaticomimético (agitación, taquicardia, hipertensión, hipertermia, convulsiones). Benzodiacepinas, enfriamiento, soporte."],
+perla:"En el perioperatorio, los psicoestimulantes suelen omitirse el día de la cirugía para reducir la inestabilidad hemodinámica."},
+
+{id:"atomoxetina",n:"Atomoxetina",g:"Inhibidor selectivo de la recaptación de noradrenalina (no estimulante)",l:"otro",cat:"psi",
+a:["atomoxetina","strattera","tdah","no estimulante"],
+res:"Alternativa no estimulante para el TDAH, sin potencial de abuso. Su efecto completo tarda semanas.",
+mec:["**Sitio:** inhibe selectivamente el transportador de noradrenalina (NET).","**Corteza prefrontal:** el NET también recapta dopamina en esa región, por lo que aumenta ambas catecolaminas en la corteza prefrontal sin aumentar la dopamina en el núcleo accumbens (ausencia de potencial de abuso)."],
+pk:[["t½","≈ 5 h (≈ 20 h en metabolizadores lentos de CYP2D6)"],["Metabolismo","CYP2D6"],["Efecto completo","4–6 semanas"]],
+ea:["Náuseas, anorexia, somnolencia.","Aumento de la presión arterial y la frecuencia cardíaca.","Ideación suicida en niños y adolescentes (advertencia).","Hepatotoxicidad (rara).","Retención urinaria, disfunción sexual."],
+ci:["IMAO.","Glaucoma de ángulo cerrado.","Feocromocitoma.","Enfermedad cardiovascular grave."],
+usos:["TDAH (cuando hay riesgo de abuso, tics, ansiedad comórbida o intolerancia a los estimulantes)."],
+dosis:[["Niños < 70 kg","0,5 mg/kg/día, aumentar a 1,2 mg/kg/día tras ≥ 3 días (máx 1,4 mg/kg/día o 100 mg)"],["Adultos y niños > 70 kg","40 mg/día, aumentar a 80 mg/día (máx 100 mg/día)"]],
+tox:["Sobredosis: somnolencia, agitación, taquicardia, convulsiones (raras). Soporte."],
+perla:"La atomoxetina es de elección en el TDAH con riesgo de abuso de sustancias."},
+
+{id:"buspirona",n:"Buspirona",g:"Ansiolítico no benzodiacepínico, agonista parcial 5-HT1A",l:"otro",cat:"psi",
+a:["buspirona","ansiolitico"],
+res:"Ansiolítico sin sedación, dependencia ni interacción con el alcohol. Eficaz en la ansiedad generalizada, con una latencia de semanas.",
+mec:["**Sitio:** agonista parcial del receptor **5-HT1A** (pleno en autorreceptores presinápticos, parcial en postsinápticos); antagonista D2 débil.","**Latencia:** al inicio reduce el disparo serotoninérgico; la desensibilización de los autorreceptores somatodendríticos permite el aumento progresivo de la neurotransmisión serotoninérgica (2–4 semanas).","No actúa sobre el receptor GABA-A: no es anticonvulsivante ni miorrelajante, no produce tolerancia cruzada con benzodiacepinas ni previene su abstinencia."],
+pk:[["t½","2–3 h"],["Metabolismo","CYP3A4 (pomelo, ketoconazol y ritonavir aumentan sus niveles)"],["Efecto completo","2–4 semanas"]],
+ea:["Mareos, cefalea, náuseas.","Nerviosismo inicial.","Sin sedación, dependencia ni deterioro psicomotor relevantes."],
+ci:["IMAO.","Inhibidores potentes de CYP3A4 (ajustar dosis)."],
+usos:["Trastorno de ansiedad generalizada.","Potenciación de ISRS en la depresión.","Disfunción sexual por ISRS (coadyuvante)."],
+dosis:[["Adultos","7,5 mg c/12 h, titular hasta 15–30 mg c/12 h (máx 60 mg/día)"]],
+tox:["Sobredosis: náuseas, vómitos, mareos, miosis; baja toxicidad."],
+perla:"La buspirona no es útil en las crisis de pánico ni para sustituir una benzodiacepina: no comparte su mecanismo."},
+
+{id:"bromazepam",n:"Bromazepam",g:"Benzodiacepina de acción intermedia",l:"bzd",cat:"psi",
+a:["bromazepam","lexotanil","benzodiacepina"],
+res:"Benzodiacepina ansiolítica de vida media intermedia, de prescripción muy frecuente en Argentina. Comparte el riesgo de dependencia y de sedación del grupo.",
+mec:["**Sitio:** modulador alostérico positivo del receptor GABA-A (sitio benzodiacepínico) → ↑ frecuencia de apertura del canal de Cl⁻.","Predomina el efecto ansiolítico a dosis bajas, con sedación y miorrelajación a dosis mayores.","Tolerancia y dependencia con el uso prolongado (adaptación del receptor GABA-A)."],
+pk:[["Inicio","VO 30–60 min"],["t½","10–20 h (mayor en ancianos)"],["Metabolismo","Oxidación hepática (CYP3A4): se acumula en ancianos y hepatópatas"]],
+ea:["Somnolencia, deterioro psicomotor y de la memoria.","Caídas y fracturas en ancianos.","Depresión respiratoria combinada con opioides o alcohol.","Tolerancia, dependencia, abstinencia."],
+ci:["Insuficiencia respiratoria grave, apnea del sueño.","Miastenia gravis.","Insuficiencia hepática grave.","Ancianos (criterios de Beers)."],
+usos:["Ansiedad (uso a corto plazo).","Coadyuvante en trastornos de ansiedad mientras actúa el tratamiento de base."],
+dosis:[["Adultos","1,5–3 mg c/8–12 h VO (máx habitual 18 mg/día)"],["Ancianos","Iniciar con 0,75–1,5 mg/día"],["Suspensión","Descenso gradual"]],
+tox:["Sobredosis: sedación, ataxia; grave en combinación con alcohol u opioides. Soporte; flumazenil con precaución en usuarios crónicos."],
+perla:"El uso de benzodiacepinas en el adulto mayor se asocia a caídas, fracturas de cadera y deterioro cognitivo."},
+
+{id:"naltrexona",n:"Naltrexona",g:"Antagonista opioide oral",l:"opi-x",cat:"psi",
+a:["naltrexona","revia","antagonista opioide","alcoholismo"],
+res:"Antagonista opioide de acción prolongada por vía oral: reduce el consumo de alcohol y previene la recaída en la dependencia de opioides. Bloquea la analgesia opioide.",
+mec:["**Sitio:** antagonista competitivo de receptores µ (y κ, δ) de acción prolongada.","**Alcohol:** el etanol libera endorfinas que activan el sistema dopaminérgico mesolímbico (refuerzo); el bloqueo µ reduce el efecto placentero y el craving.","**Opioides:** bloquea los efectos euforizantes y analgésicos de los opioides, lo que previene la recaída tras la desintoxicación."],
+pk:[["Biodisponibilidad","5–40% (primer paso)"],["t½","≈ 4 h (6-β-naltrexol, activo, ≈ 13 h)"],["Duración del bloqueo","24–72 h según la dosis"]],
+ea:["Náuseas, cefalea, mareos, fatiga.","Hepatotoxicidad a dosis altas (controlar hepatograma).","Abstinencia aguda si hay opioides presentes."],
+ci:["**Uso actual de opioides** o dependencia sin desintoxicación (7–10 días libres).","Hepatitis aguda o insuficiencia hepática.","**Dolor que requiere opioides:** suspender ≥ 72 h antes de una cirugía programada."],
+usos:["Trastorno por consumo de alcohol.","Prevención de recaídas en la dependencia de opioides tras la desintoxicación.","Obesidad (combinada con bupropión)."],
+dosis:[["Alcohol u opioides","50 mg/día VO (iniciar con 25 mg)"]],
+tox:["Sobredosis: escasa toxicidad. El riesgo principal es la sobredosis de opioides al intentar superar el bloqueo o tras suspenderla (pérdida de tolerancia)."],
+perla:"En el paciente con naltrexona, la analgesia opioide es ineficaz: suspenderla al menos 72 h antes de una cirugía programada y planificar analgesia multimodal y regional."},
+
+{id:"disulfiram",n:"Disulfiram",g:"Inhibidor de la aldehído deshidrogenasa (aversivo del alcohol)",l:"otro",cat:"psi",
+a:["disulfiram","antabus","aversivo","alcoholismo"],
+res:"Fármaco aversivo para el trastorno por consumo de alcohol: produce una reacción desagradable si se bebe. Su eficacia depende de la adherencia supervisada.",
+mec:["**Sitio:** inhibe de forma irreversible la **aldehído deshidrogenasa (ALDH)**.","**Reacción disulfiram-alcohol:** el etanol se oxida a acetaldehído, que no puede degradarse a acetato y se acumula → rubor, cefalea pulsátil, náuseas, vómitos, taquicardia, hipotensión y, en casos graves, arritmias y shock.","**Duración:** por la inhibición irreversible, la reacción puede aparecer hasta 1–2 semanas después de la última dosis.","Inhibe también la dopamina-β-hidroxilasa (↓ síntesis de noradrenalina), lo que contribuye a la hipotensión y a los efectos psiquiátricos."],
+pk:[["Absorción","70–90%"],["Efecto","Hasta 1–2 semanas tras suspenderlo"]],
+ea:["Somnolencia, sabor metálico, cefalea.","**Hepatotoxicidad.**","Neuropatía periférica y óptica.","Psicosis, depresión."],
+ci:["Consumo de alcohol en las 12 h previas.","Cardiopatía isquémica, arritmias.","Psicosis.","**Metronidazol** (psicosis aguda) y preparados con alcohol (jarabes, enjuagues, perfumes)."],
+usos:["Trastorno por consumo de alcohol en pacientes motivados con toma supervisada."],
+dosis:[["Adultos","250 mg/día VO (125–500 mg/día), con al menos 12 h de abstinencia"]],
+tox:["Reacción disulfiram-alcohol grave: soporte, expansión con volumen, vasopresores; antihistamínicos.","Sobredosis aislada: neurotoxicidad, letargia. Soporte."],
+perla:"Otros fármacos producen un efecto disulfiram con el alcohol: metronidazol, cefalosporinas con cadena metiltiotetrazol, sulfonilureas de primera generación y algunos antifúngicos."},
+
+/* =============== TANDA 4: DIGESTIVO =============== */
+{id:"pantoprazol",n:"Pantoprazol",g:"Inhibidor de la bomba de protones (IBP)",l:"otro",cat:"gastro",
+a:["pantoprazol","pantus","ibp","inhibidor bomba de protones"],
+res:"IBP con menor interacción por CYP2C19 que el omeprazol: de elección con clopidogrel. Disponible por vía IV para la hemorragia digestiva alta.",
+mec:["**Sitio:** prodroga que se activa en el canalículo ácido de la célula parietal y se une de forma covalente e **irreversible** a la H⁺/K⁺-ATPasa.","**Interacciones:** menor afinidad por el CYP2C19 que omeprazol y esomeprazol, por lo que interfiere menos con la activación del clopidogrel.","Sólo inhibe bombas activas: máxima eficacia administrado 30–60 min antes del desayuno."],
+pk:[["t½ plasmática","≈ 1 h; efecto ≈ 24 h"],["Metabolismo","CYP2C19 y sulfotransferasa"],["Vías","VO e IV"]],
+ea:["Cefalea, diarrea.","Uso prolongado: hipomagnesemia, déficit de B12, fracturas, infección por C. difficile, nefritis intersticial."],
+ci:["Hipersensibilidad.","Reduce la absorción de fármacos dependientes del pH ácido (ketoconazol, atazanavir)."],
+usos:["ERGE, úlcera péptica, erradicación de H. pylori.","Prevención de úlcera por AINE en pacientes de riesgo y con doble antiagregación.","Hemorragia digestiva alta (IV).","Profilaxis de úlcera de estrés en pacientes críticos con factores de riesgo."],
+dosis:[["ERGE o úlcera","40 mg/día VO antes del desayuno"],["Hemorragia digestiva alta","80 mg IV en bolo + 8 mg/h por 72 h (o 40 mg IV c/12 h)"],["Profilaxis","20–40 mg/día"]],
+tox:["Sobredosis: bien tolerada. Soporte."],
+perla:"Paciente con clopidogrel que requiere IBP: pantoprazol."},
+
+{id:"esomeprazol",n:"Esomeprazol",g:"Inhibidor de la bomba de protones (S-enantiómero del omeprazol)",l:"otro",cat:"gastro",
+a:["esomeprazol","nexium","ibp"],
+res:"S-enantiómero del omeprazol con menor metabolismo de primer paso y mayor exposición sistémica. Eficacia clínica similar a la de los demás IBP a dosis equivalentes.",
+mec:["**Sitio:** inhibición irreversible de la H⁺/K⁺-ATPasa tras activación ácida.","**Enantiómero S:** menor aclaramiento por CYP2C19 que el racemato → concentraciones más altas y menor variabilidad interindividual.","Inhibe el CYP2C19 (interacción con clopidogrel, citalopram, diazepam)."],
+pk:[["t½","1–1,5 h; efecto ≈ 24 h"],["Metabolismo","CYP2C19 y 3A4"]],
+ea:["Igual que el resto de los IBP: cefalea, diarrea; con uso prolongado, hipomagnesemia, déficit de B12, fracturas y C. difficile."],
+ci:["Hipersensibilidad.","Clopidogrel (preferir pantoprazol)."],
+usos:["ERGE, esofagitis erosiva.","Úlcera péptica y erradicación de H. pylori.","Hemorragia digestiva alta (IV)."],
+dosis:[["ERGE","20–40 mg/día VO"],["Hemorragia digestiva alta","80 mg IV + 8 mg/h por 72 h"]],
+tox:["Sobredosis: escasa toxicidad. Soporte."],
+perla:"Los IBP no se diferencian de forma clínicamente relevante en eficacia: la elección depende de interacciones, vía y costo."},
+
+{id:"sucralfato",n:"Sucralfato",g:"Protector de la mucosa gástrica",l:"otro",cat:"gastro",
+a:["sucralfato","antepsin","citoprotector"],
+res:"Citoprotector local que forma una barrera sobre la úlcera sin modificar la secreción ácida. Casi no se absorbe, pero interfiere con la absorción de otros fármacos.",
+mec:["**Sitio:** complejo de sacarosa sulfatada e hidróxido de aluminio que, en medio ácido, se polimeriza en un gel viscoso.","**Barrera:** se une a las proteínas expuestas en el lecho de la úlcera y protege del ácido, la pepsina y las sales biliares.","**Citoprotección:** estimula la síntesis local de prostaglandinas y de factores de crecimiento epidérmico.","No neutraliza ácido ni inhibe su secreción."],
+pk:[["Absorción","< 5% (aluminio absorbido en mínima cantidad)"],["Inicio","Efecto local en minutos"]],
+ea:["**Constipación** (aluminio).","Acumulación de aluminio en la insuficiencia renal.","Bezoares (pacientes con gastroparesia o alimentación enteral)."],
+ci:["Insuficiencia renal grave (acumulación de aluminio).","Separar 2 h de fluoroquinolonas, levotiroxina, digoxina, warfarina, fenitoína (reduce su absorción)."],
+usos:["Úlcera duodenal (alternativa).","Profilaxis de úlcera de estrés (alternativa, menor riesgo de neumonía en ventilados).","Mucositis y proctitis por radiación (uso local)."],
+dosis:[["Úlcera duodenal","1 g c/6 h o 2 g c/12 h VO, 1 h antes de las comidas"],["Profilaxis de estrés","1 g c/6 h"]],
+tox:["Sobredosis: escasa toxicidad; riesgo de bezoar."],
+perla:"Al requerir pH ácido para activarse, no conviene administrarlo junto con antiácidos o IBP."},
+
+{id:"trimebutina",n:"Trimebutina",g:"Regulador de la motilidad intestinal (agonista opioide periférico)",l:"otro",cat:"gastro",
+a:["trimebutina","miopropan","debridat","antiespasmodico"],
+res:"Modulador de la motilidad digestiva de uso frecuente en Argentina para el síndrome de intestino irritable y los trastornos funcionales.",
+mec:["**Sitio:** agonista débil de receptores opioides periféricos µ, κ y δ del plexo entérico y bloqueante de canales iónicos del músculo liso.","**Efecto regulador:** estimula la motilidad cuando está disminuida e inhibe la hiperactividad, según el estado previo del intestino.","Reduce la hipersensibilidad visceral a la distensión."],
+pk:[["Inicio","≈ 1 h"],["Metabolismo","Hepático (N-desmetilación, metabolito activo)"],["Eliminación","Renal"]],
+ea:["Bien tolerada.","Sequedad bucal, somnolencia, exantema (infrecuentes)."],
+ci:["Hipersensibilidad.","Embarazo (primer trimestre, por falta de datos)."],
+usos:["Síndrome de intestino irritable.","Dolor abdominal funcional, dispepsia funcional.","Íleo posoperatorio (aceleración de la recuperación, evidencia limitada)."],
+dosis:[["Adultos","100–200 mg c/8 h VO antes de las comidas"]],
+tox:["Sobredosis: escasa experiencia; soporte."],
+perla:"A diferencia de la loperamida, la trimebutina no constipa de forma marcada: regula la motilidad en ambos sentidos."},
+
+{id:"mebeverina",n:"Mebeverina",g:"Antiespasmódico musculotrópico",l:"otro",cat:"gastro",
+a:["mebeverina","duspatalin","antiespasmodico"],
+res:"Antiespasmódico de acción directa sobre el músculo liso intestinal, sin efectos anticolinérgicos. Indicado en el síndrome de intestino irritable.",
+mec:["**Sitio:** acción directa sobre el músculo liso del colon: bloqueo de canales de Na⁺ y reducción de la entrada de Ca²⁺, con efecto anestésico local sobre la mucosa.","No bloquea receptores muscarínicos: no produce sequedad bucal, retención urinaria ni taquicardia.","Reduce el espasmo sin abolir la motilidad normal."],
+pk:[["Metabolismo","Hidrólisis completa por esterasas (primer paso)"],["Eliminación","Renal (metabolitos)"]],
+ea:["Muy bien tolerada.","Reacciones de hipersensibilidad (raras)."],
+ci:["Íleo paralítico.","Hipersensibilidad."],
+usos:["Síndrome de intestino irritable.","Espasmo intestinal secundario a enfermedad orgánica."],
+dosis:[["Adultos","135 mg c/8 h VO (20 min antes de las comidas) o 200 mg c/12 h (liberación prolongada)"]],
+tox:["Sobredosis: excitabilidad del SNC; soporte."],
+perla:"Es una opción en pacientes en los que los antimuscarínicos están contraindicados (glaucoma, hiperplasia prostática)."},
+
+{id:"bisacodilo",n:"Bisacodilo",g:"Laxante estimulante",l:"otro",cat:"gastro",
+a:["bisacodilo","dulcolax","laxante estimulante"],
+res:"Laxante estimulante de acción colónica previsible (6–12 h por vía oral). Útil en la constipación aguda, la inducida por opioides y la preparación intestinal.",
+mec:["**Prodroga:** las esterasas intestinales y bacterianas la convierten en el metabolito activo BHPM.","**Colon:** estimula los plexos entéricos → ↑ peristaltismo propulsivo; inhibe la reabsorción de agua y electrolitos y favorece su secreción luminal.","**Comprimidos con cubierta entérica:** evita la irritación gástrica; no deben masticarse ni tomarse con antiácidos o leche."],
+pk:[["Inicio","VO 6–12 h; rectal 15–60 min"],["Absorción","< 5%; circulación enterohepática del metabolito"]],
+ea:["Cólicos abdominales, diarrea.","Hipopotasemia y deshidratación con uso excesivo.","Irritación rectal (supositorios)."],
+ci:["Obstrucción intestinal, abdomen agudo.","Deshidratación grave.","Enfermedad inflamatoria intestinal activa."],
+usos:["Constipación aguda.","**Constipación inducida por opioides** (asociado a un ablandador osmótico).","Preparación intestinal para procedimientos."],
+dosis:[["Adultos VO","5–10 mg a la noche"],["Rectal","10 mg (supositorio)"]],
+tox:["Sobredosis: diarrea, deshidratación, hipopotasemia. Reposición."],
+perla:"Los opioides no generan tolerancia a la constipación: el laxante debe indicarse desde el inicio del tratamiento."},
+
+{id:"polietilenglicol",n:"Polietilenglicol",g:"Laxante osmótico (macrogol)",l:"otro",cat:"gastro",
+a:["polietilenglicol","peg","macrogol","barex","laxante osmotico"],
+res:"Laxante osmótico de primera línea en la constipación crónica de adultos y niños, y base de la preparación colonoscópica en dosis altas.",
+mec:["**Sitio:** polímero no absorbible ni metabolizado por bacterias que retiene agua en la luz intestinal por efecto osmótico.","Al no fermentarse, produce menos meteorismo que la lactulosa.","Las soluciones de preparación colónica contienen electrolitos para evitar el intercambio neto de agua y sodio."],
+pk:[["Absorción","Mínima"],["Inicio","24–72 h (constipación); 1–2 h (preparación colónica)"]],
+ea:["Distensión, náuseas, diarrea.","Alteraciones electrolíticas con soluciones de preparación (ancianos, insuficiencia renal o cardíaca)."],
+ci:["Obstrucción o perforación intestinal.","Íleo, megacolon tóxico.","Enfermedad inflamatoria intestinal grave."],
+usos:["Constipación crónica (adultos y niños).","Impactación fecal.","Preparación para colonoscopía."],
+dosis:[["Constipación (adultos)","17 g/día en 240 mL de agua"],["Pediatría","0,4–0,8 g/kg/día"],["Preparación colónica","4 L en dosis fraccionadas según protocolo"]],
+tox:["Sobredosis: diarrea, deshidratación. Reposición."],
+perla:"En pediatría, el polietilenglicol es el laxante de primera elección en la constipación funcional."},
+
+{id:"mesalazina",n:"Mesalazina",g:"Aminosalicilato (5-ASA)",l:"otro",cat:"gastro",
+a:["mesalazina","5-asa","pentasa","asacol","aminosalicilato","colitis ulcerosa"],
+res:"Tratamiento de primera línea de la inducción y el mantenimiento de la colitis ulcerosa leve a moderada. Su eficacia en la enfermedad de Crohn es escasa.",
+mec:["**Acción tópica** sobre la mucosa colónica: inhibe la producción de prostaglandinas y leucotrienos (COX y lipooxigenasa), elimina radicales libres y activa el receptor **PPAR-γ** (antiinflamatorio).","**Formulaciones de liberación dependiente del pH o del tiempo:** permiten que llegue al íleon distal y al colon sin absorberse antes.","Vías tópicas (supositorios, enemas) para la proctitis y la colitis distal."],
+pk:[["Absorción","20–30% (acetilada en la mucosa y el hígado)"],["Eliminación","Renal (metabolito) y fecal"]],
+ea:["Cefalea, náuseas, diarrea.","**Nefritis intersticial** (controlar creatinina periódicamente).","Pancreatitis, pericarditis o miocarditis (raras).","Paradójicamente, empeoramiento de la colitis (raro)."],
+ci:["Alergia a salicilatos.","Insuficiencia renal o hepática grave."],
+usos:["Colitis ulcerosa leve a moderada (inducción y mantenimiento).","Proctitis ulcerosa (supositorios)."],
+dosis:[["Inducción","2,4–4,8 g/día VO"],["Mantenimiento","1,5–2,4 g/día"],["Proctitis","1 g/día rectal"]],
+tox:["Sobredosis: toxicidad salicílica (rara). Soporte."],
+perla:"En la colitis ulcerosa distal, la vía rectal es más eficaz que la oral; la combinación de ambas es superior a cada una."},
+
+{id:"ursodiol",n:"Ácido ursodesoxicólico",g:"Ácido biliar hidrofílico",l:"otro",cat:"gastro",
+a:["acido ursodesoxicolico","ursodiol","udca","ursobilane","ursacol"],
+res:"Ácido biliar hidrofílico de primera línea en la colangitis biliar primaria. También disuelve cálculos de colesterol pequeños.",
+mec:["**Desplazamiento de ácidos biliares tóxicos:** reemplaza a los ácidos biliares hidrofóbicos, más citotóxicos, en el pool biliar.","**Colerético:** estimula la secreción biliar y de bicarbonato (\"paraguas de bicarbonato\") que protege a los colangiocitos.","**Citoprotección:** efectos antiapoptóticos e inmunomoduladores en el hepatocito.","**Litiasis:** reduce la saturación de colesterol de la bilis al disminuir su absorción intestinal y su secreción biliar."],
+pk:[["Absorción","Yeyuno e íleon; circulación enterohepática"],["Metabolismo","Conjugación hepática"]],
+ea:["Diarrea.","Aumento de peso leve, prurito transitorio."],
+ci:["Colecistitis aguda, obstrucción biliar completa.","Cálculos calcificados o pigmentarios (no los disuelve).","Vesícula excluida."],
+usos:["**Colangitis biliar primaria.**","Colestasis intrahepática del embarazo.","Disolución de cálculos de colesterol radiolúcidos < 15 mm con vesícula funcionante.","Prevención de litiasis tras cirugía bariátrica."],
+dosis:[["Colangitis biliar primaria","13–15 mg/kg/día VO en 1–2 tomas"],["Colestasis del embarazo","10–15 mg/kg/día"],["Disolución de cálculos","8–10 mg/kg/día por 6–24 meses"],["Prevención posbariátrica","300 mg c/12 h por 6 meses"]],
+tox:["Sobredosis: diarrea. Soporte."],
+perla:"La respuesta bioquímica al año de tratamiento en la colangitis biliar primaria tiene valor pronóstico."},
+
+{id:"octreotida",n:"Octreotida",g:"Análogo sintético de la somatostatina",l:"otro",cat:"gastro",
+a:["octreotida","sandostatin","somatostatina","analogo somatostatina","varices"],
+res:"Análogo de somatostatina usado en la hemorragia por várices esofágicas, los tumores neuroendocrinos, la acromegalia y la hipoglucemia por sulfonilureas.",
+mec:["**Sitio:** agonista de receptores de somatostatina (SSTR2 y SSTR5).","**Hemorragia variceal:** inhibe la liberación de glucagón y otros péptidos vasodilatadores esplácnicos → vasoconstricción esplácnica → ↓ flujo y presión portal.","**Endocrino:** inhibe la secreción de GH, insulina, glucagón, gastrina, VIP y serotonina.","**Hipoglucemia por sulfonilureas:** inhibe la secreción de insulina desde la célula β, lo que evita la hipoglucemia de rebote tras la glucosa."],
+pk:[["Vida media","≈ 1,5 h (SC); formulación de depósito mensual IM"],["Vías","SC, IV, IM (depósito)"]],
+ea:["Náuseas, cólicos, diarrea, esteatorrea.","**Colelitiasis** (uso prolongado).","Hipo o hiperglucemia.","Bradicardia, trastornos de conducción."],
+ci:["Hipersensibilidad.","Precaución en diabéticos (alteraciones glucémicas)."],
+usos:["**Hemorragia por várices esofágicas** (con ligadura endoscópica y antibiótico).","Tumores neuroendocrinos (síndrome carcinoide, VIPoma).","Acromegalia.","**Hipoglucemia por sulfonilureas.**","Fístulas pancreáticas y enterocutáneas de alto débito."],
+dosis:[["Hemorragia variceal","Bolo 50 µg IV + infusión 25–50 µg/h por 2–5 días"],["Hipoglucemia por sulfonilureas","50–100 µg SC c/6–12 h"],["Síndrome carcinoide","100–500 µg SC c/8 h"]],
+tox:["Sobredosis: bradicardia, rubor, diarrea, hipoglucemia. Soporte."],
+perla:"En la hemorragia variceal, el vasoactivo se inicia ante la sospecha, antes de la endoscopia."},
+
+{id:"rifaximina",n:"Rifaximina",g:"Antibiótico no absorbible (rifamicina)",l:"otro",cat:"gastro",
+a:["rifaximina","normix","xifaxan","encefalopatia hepatica"],
+res:"Rifamicina prácticamente no absorbible que actúa sólo en la luz intestinal. Junto con la lactulosa, previene la recurrencia de la encefalopatía hepática.",
+mec:["**Sitio:** inhibe la ARN polimerasa bacteriana dependiente de ADN (subunidad β).","**Acción local:** su absorción < 0,4% concentra el efecto en el intestino, sin toxicidad sistémica ni inducción enzimática relevante.","**Encefalopatía hepática:** reduce las bacterias productoras de amoníaco y otras toxinas intestinales."],
+pk:[["Absorción","< 0,4%"],["Eliminación","Fecal sin cambios"]],
+ea:["Náuseas, distensión, flatulencia.","Infección por C. difficile (infrecuente)."],
+ci:["Hipersensibilidad a rifamicinas.","Obstrucción intestinal."],
+usos:["**Prevención secundaria de la encefalopatía hepática** (asociada a lactulosa).","Diarrea del viajero no invasiva.","Síndrome de intestino irritable con predominio de diarrea.","Sobrecrecimiento bacteriano del intestino delgado."],
+dosis:[["Encefalopatía hepática","550 mg c/12 h VO"],["Diarrea del viajero","200 mg c/8 h × 3 días"],["SII con diarrea","550 mg c/8 h × 14 días"]],
+tox:["Sin toxicidad sistémica relevante."],
+perla:"No sirve en la diarrea con fiebre o sangre: al no absorberse, no actúa sobre patógenos invasivos."},
+
+{id:"simeticona",n:"Simeticona",g:"Antiflatulento (agente tensioactivo)",l:"otro",cat:"gastro",
+a:["simeticona","dimeticona","antiflatulento","flatulencia"],
+res:"Antiflatulento inerte que favorece la coalescencia de las burbujas de gas. Además se utiliza para mejorar la visualización en endoscopía.",
+mec:["**Mecanismo físico:** reduce la tensión superficial de las burbujas de gas del tubo digestivo → se fusionan en burbujas mayores que se eliminan con facilidad por eructos o flatos.","No reduce la producción de gas."],
+pk:[["Absorción","Nula"],["Eliminación","Fecal sin cambios"]],
+ea:["Prácticamente nulos."],
+ci:["Hipersensibilidad."],
+usos:["Meteorismo y flatulencia.","Preparación para endoscopía y ecografía abdominal.","Cólico del lactante (eficacia no demostrada)."],
+dosis:[["Adultos","40–125 mg después de las comidas y antes de acostarse (máx 500 mg/día)"]],
+tox:["Sin toxicidad."],
+perla:"Es un fármaco inerte: su seguridad permite usarlo en embarazo y lactancia."}
 ];
 
 /* =============== EMBARAZO (texto propio, basado en la bibliografía citada) =============== */
@@ -2581,6 +2909,32 @@ const ANEST_FDA = " La FDA (2016–2017) advirtió que la exposición prolongada
 const AINE_EMB = "Evitar desde las 20 semanas (oligohidramnios por disfunción renal fetal; FDA 2020) y contraindicado desde las 30 semanas (cierre prematuro del ductus arterioso). En el primer trimestre, uso puntual sólo si es imprescindible.";
 const BB_EMB = "Los β-bloqueantes se asocian a restricción del crecimiento intrauterino con uso prolongado y a bradicardia e hipoglucemia neonatales. En la hipertensión del embarazo se prefiere labetalol.";
 const PREG = {
+paroxetina:"Evitar: se asoció a malformaciones cardíacas (defectos septales) con la exposición en el primer trimestre. Si ya se usa y es eficaz, la decisión de cambiar debe individualizarse. Riesgo de síndrome de adaptación neonatal e hipertensión pulmonar persistente del recién nacido.",
+citalopram:"Sin aumento claro de malformaciones mayores. Síndrome de adaptación neonatal posible con uso en el tercer trimestre.",
+duloxetina:"Datos limitados, sin señal teratogénica clara. Posible síndrome de adaptación neonatal y mayor riesgo de hemorragia posparto con uso cercano al parto.",
+vortioxetina:"Datos insuficientes en humanos. Preferir antidepresivos con más experiencia (sertralina).",
+clomipramina:"Sin teratogenicidad mayor demostrada. El uso al final del embarazo puede producir síndrome de abstinencia neonatal, convulsiones y efectos anticolinérgicos.",
+aripiprazol:"Datos limitados sin aumento claro de malformaciones. Como con todos los antipsicóticos, síntomas extrapiramidales y de abstinencia neonatales con uso en el tercer trimestre (FDA 2011).",
+clozapina:"Datos limitados, sin señal teratogénica clara. Riesgo de diabetes gestacional; en el neonato, hipotonía y posible agranulocitosis. Monitoreo estrecho si se mantiene.",
+levomepromazina:"Datos escasos. Uso en el tercer trimestre: riesgo de síntomas extrapiramidales y sedación neonatal. Evitar si existen alternativas.",
+metilfenidato:"Datos sin aumento importante de malformaciones (posible pequeño aumento de defectos cardíacos). Evaluar la suspensión durante el embarazo según la gravedad del TDAH.",
+atomoxetina:"Datos insuficientes en humanos. Evitar si existen alternativas.",
+buspirona:"Datos limitados, sin señal teratogénica en animales. Preferir alternativas con más experiencia.",
+bromazepam:"Sin teratogenicidad mayor demostrada. Cerca del parto: hipotonía, depresión respiratoria y abstinencia neonatal.",
+naltrexona:"Datos limitados. En la dependencia de opioides durante el embarazo, el estándar es el tratamiento con agonistas (metadona, buprenorfina).",
+disulfiram:"Evitar: datos escasos con informes de malformaciones de miembros; la abstinencia de alcohol debe sostenerse con otras estrategias.",
+pantoprazol:"Datos tranquilizadores con los IBP; puede utilizarse.",
+esomeprazol:"Datos tranquilizadores (como el omeprazol); puede utilizarse.",
+sucralfato:"Seguro: absorción mínima. Opción de primera línea en la pirosis del embarazo tras medidas higiénico-dietéticas.",
+trimebutina:"Datos insuficientes. Evitar en el primer trimestre.",
+mebeverina:"Datos limitados, sin señal teratogénica. Uso sólo si es necesario.",
+bisacodilo:"Uso puntual aceptado (absorción mínima). Preferir laxantes formadores de masa u osmóticos para el uso regular.",
+polietilenglicol:"Seguro: absorción mínima. Laxante osmótico de elección en el embarazo.",
+mesalazina:"Segura: se mantiene durante el embarazo en la enfermedad inflamatoria intestinal (la actividad de la enfermedad implica más riesgo que el fármaco). Evitar formulaciones con ftalato de dibutilo.",
+ursodiol:"Indicada en la colestasis intrahepática del embarazo; mejora el prurito y los parámetros bioquímicos. Datos de seguridad tranquilizadores.",
+octreotida:"Datos limitados, sin teratogenicidad descripta. Se mantiene cuando la indicación lo requiere (acromegalia, tumores neuroendocrinos).",
+rifaximina:"Datos insuficientes en humanos; teratogénica en animales a dosis altas. Evitar si existen alternativas.",
+simeticona:"Segura: no se absorbe.",
 propofol:"Atraviesa la placenta; de uso habitual en cesárea con anestesia general y en cirugía no obstétrica. Dosis altas pueden producir depresión neonatal transitoria."+ANEST_FDA,
 ketamina:"Atraviesa la placenta. Dosis superiores a 1,5–2 mg/kg pueden aumentar el tono uterino y producir depresión neonatal. Útil en la cesárea de urgencia con inestabilidad hemodinámica o broncoespasmo."+ANEST_FDA,
 etomidato:"Atraviesa la placenta. Alternativa en la cesárea con inestabilidad hemodinámica; puede producir supresión suprarrenal neonatal transitoria sin repercusión clínica demostrada.",
@@ -2756,6 +3110,11 @@ nac:"Atraviesa la placenta y protege también el hígado fetal en la intoxicaci�
 
 /* Notas propias sobre lactancia, sumadas al nivel de riesgo de e-lactancia */
 const LACT_NOTE = {
+bromazepam:"Benzodiacepina de vida media intermedia con riesgo de sedación del lactante: preferir benzodiacepinas de vida media corta (lorazepam) y vigilar somnolencia y succión.",
+levomepromazina:"Sedante con riesgo de somnolencia y apneas en el lactante: preferir otros antipsicóticos con más datos.",
+disulfiram:"Sin datos suficientes y con riesgo de toxicidad en el lactante: usar alternativas.",
+clozapina:"Se concentra en la leche; riesgo de sedación y agranulocitosis en el lactante: si se mantiene, controlar hemograma del lactante.",
+metilfenidato:"Paso a la leche bajo; vigilar irritabilidad, insomnio y escasa ganancia de peso del lactante.",
 amiodarona:"Contiene ≈ 35–37% de yodo y tiene una vida media de semanas: riesgo de hipotiroidismo en el lactante. Las dosis aisladas son aceptables; el uso crónico obliga a buscar alternativas o a controlar la función tiroidea del lactante.",
 dipirona:"Las dosis aisladas no requieren interrumpir la lactancia; el uso repetido no se recomienda (riesgo de agranulocitosis). Preferir paracetamol o ibuprofeno.",
 atenolol:"Se excreta en leche en concentraciones altas; se describieron bradicardia y cianosis en lactantes. Preferir propranolol, metoprolol o labetalol.",
@@ -2789,11 +3148,38 @@ donepecilo:"No figura en e-lactancia. Sin datos publicados sobre su excreción e
 };
 
 /* Niveles de e-lactancia.org (APILAM), consultados en octubre de 2026 */
-const ELAC = {"propofol": [0, "https://e-lactancia.org/breastfeeding/propofol/product/"], "ketamina": [1, "https://e-lactancia.org/breastfeeding/ketamine-hydrochloride/product/"], "etomidato": [0, "https://e-lactancia.org/breastfeeding/etomidate/product/"], "midazolam": [0, "https://e-lactancia.org/breastfeeding/midazolam/product/"], "dexmedetomidina": [0, "https://e-lactancia.org/breastfeeding/dexmedetomidine-hydrochloride/product/"], "sevoflurano": [0, "https://e-lactancia.org/breastfeeding/sevoflurane/product/"], "dantroleno": [1, "https://e-lactancia.org/breastfeeding/dantrolene-sodium/product/"], "fentanilo": [0, "https://e-lactancia.org/breastfeeding/fentanyl/product/"], "remifentanilo": [1, "https://e-lactancia.org/breastfeeding/remifentanil-hydrochloride/product/"], "morfina": [1, "https://e-lactancia.org/breastfeeding/morphine/product/"], "tramadol": [0, "https://e-lactancia.org/breastfeeding/tramadol/product/"], "naloxona": [1, "https://e-lactancia.org/breastfeeding/naloxone-hydrochloride/product/"], "succinilcolina": [0, "https://e-lactancia.org/breastfeeding/succinylcholine-chloride/product/"], "rocuronio": [0, "https://e-lactancia.org/breastfeeding/rocuronium/product/"], "cisatracurio": [0, "https://e-lactancia.org/breastfeeding/cisatracurium-besilate/product/"], "sugammadex": [0, "https://e-lactancia.org/breastfeeding/sugammadex-sodium/product/"], "neostigmina": [0, "https://e-lactancia.org/breastfeeding/neostigmine-bromide/product/"], "lidocaina": [0, "https://e-lactancia.org/breastfeeding/lidocaine/product/"], "bupivacaina": [0, "https://e-lactancia.org/breastfeeding/bupivacaine/product/"], "ropivacaina": [0, "https://e-lactancia.org/breastfeeding/ropivacaine-hydrochloride/product/"], "efedrina": [1, "https://e-lactancia.org/breastfeeding/ephedrine/product/"], "fenilefrina": [1, "https://e-lactancia.org/breastfeeding/phenylephrine/product/"], "noradrenalina": [0, "https://e-lactancia.org/breastfeeding/noradrenaline/synonym/"], "adrenalina": [0, "https://e-lactancia.org/breastfeeding/adrenaline/product/"], "atropina": [0, "https://e-lactancia.org/breastfeeding/atropine/product/"], "esmolol": [1, "https://e-lactancia.org/breastfeeding/esmolol-hydrochloride/product/"], "labetalol": [0, "https://e-lactancia.org/breastfeeding/labetalol-hydrochloride/product/"], "amiodarona": [2, "https://e-lactancia.org/breastfeeding/amiodarone/product/"], "furosemida": [1, "https://e-lactancia.org/breastfeeding/furosemide/product/"], "enalapril": [0, "https://e-lactancia.org/breastfeeding/enalapril/product/"], "digoxina": [0, "https://e-lactancia.org/breastfeeding/digoxin/product/"], "ondansetron": [0, "https://e-lactancia.org/breastfeeding/ondansetron/product/"], "dexametasona": [1, "https://e-lactancia.org/breastfeeding/dexamethasone/product/"], "metoclopramida": [0, "https://e-lactancia.org/breastfeeding/metoclopramide/product/"], "paracetamol": [0, "https://e-lactancia.org/breastfeeding/paracetamol/product/"], "dipirona": [2, "https://e-lactancia.org/breastfeeding/metamizole/product/"], "ketorolac": [0, "https://e-lactancia.org/breastfeeding/ketorolac-trometamol/product/"], "ibuprofeno": [0, "https://e-lactancia.org/breastfeeding/ibuprofen/product/"], "heparina": [0, "https://e-lactancia.org/breastfeeding/heparin-sodium/synonym/"], "enoxaparina": [0, "https://e-lactancia.org/breastfeeding/enoxaparin-sodium/product/"], "tranexamico": [0, "https://e-lactancia.org/breastfeeding/tranexamic-acid/product/"], "insulina": [0, "https://e-lactancia.org/breastfeeding/insulin/product/"], "metformina": [0, "https://e-lactancia.org/breastfeeding/metformin-hydrochloride/product/"], "cefazolina": [0, "https://e-lactancia.org/breastfeeding/cefazolin/product/"], "magnesio": [0, "https://e-lactancia.org/breastfeeding/magnesium-sulfate/product/"], "clonazepam": [0, "https://e-lactancia.org/breastfeeding/clonazepam/product/"], "atorvastatina": [0, "https://e-lactancia.org/breastfeeding/atorvastatin-calcium/product/"], "rosuvastatina": [0, "https://e-lactancia.org/breastfeeding/rosuvastatin-calcium/product/"], "amlodipina": [0, "https://e-lactancia.org/breastfeeding/amlodipine/product/"], "losartan": [1, "https://e-lactancia.org/breastfeeding/losartan-potassium/product/"], "hidroclorotiazida": [0, "https://e-lactancia.org/breastfeeding/hydrochlorothiazide/product/"], "espironolactona": [0, "https://e-lactancia.org/breastfeeding/spironolactone/product/"], "bisoprolol": [1, "https://e-lactancia.org/breastfeeding/bisoprolol-fumarate/product/"], "carvedilol": [1, "https://e-lactancia.org/breastfeeding/carvedilol/product/"], "atenolol": [2, "https://e-lactancia.org/breastfeeding/atenolol/product/"], "nitroglicerina": [1, "https://e-lactancia.org/breastfeeding/nitroglycerin/synonym/"], "aspirina": [1, "https://e-lactancia.org/breastfeeding/acetylsalicylic-acid/synonym/"], "clopidogrel": [0, "https://e-lactancia.org/breastfeeding/clopidogrel/product/"], "acenocumarol": [0, "https://e-lactancia.org/breastfeeding/acenocoumarol/product/"], "warfarina": [0, "https://e-lactancia.org/breastfeeding/warfarin/product/"], "apixaban": [1, "https://e-lactancia.org/breastfeeding/apixaban/product/"], "rivaroxaban": [0, "https://e-lactancia.org/breastfeeding/rivaroxaban/product/"], "levotiroxina": [0, "https://e-lactancia.org/breastfeeding/levothyroxine/product/"], "metimazol": [0, "https://e-lactancia.org/breastfeeding/methimazole/product/"], "glibenclamida": [0, "https://e-lactancia.org/breastfeeding/glibenclamide/product/"], "sitagliptina": [1, "https://e-lactancia.org/breastfeeding/sitagliptin-phosphate/product/"], "dapagliflozina": [1, "https://e-lactancia.org/breastfeeding/dapagliflozin/product/"], "semaglutida": [0, "https://e-lactancia.org/breastfeeding/semaglutide/product/"], "glargina": [0, "https://e-lactancia.org/breastfeeding/insulin/product/"], "prednisona": [0, "https://e-lactancia.org/breastfeeding/prednisone/product/"], "hidrocortisona": [0, "https://e-lactancia.org/breastfeeding/hydrocortisone-systemic-use/product/"], "omeprazol": [0, "https://e-lactancia.org/breastfeeding/omeprazole/product/"], "famotidina": [0, "https://e-lactancia.org/breastfeeding/famotidine/product/"], "domperidona": [0, "https://e-lactancia.org/breastfeeding/domperidone/product/"], "loperamida": [0, "https://e-lactancia.org/breastfeeding/loperamide-hydrochloride/product/"], "lactulosa": [0, "https://e-lactancia.org/breastfeeding/lactulose/product/"], "salbutamol": [0, "https://e-lactancia.org/breastfeeding/albuterol/product/"], "budesonida": [0, "https://e-lactancia.org/breastfeeding/budesonide/product/"], "ipratropio": [0, "https://e-lactancia.org/breastfeeding/ipratropium-bromide/product/"], "montelukast": [0, "https://e-lactancia.org/breastfeeding/montelukast-sodium/product/"], "amoxicilina": [0, "https://e-lactancia.org/breastfeeding/amoxicillin/product/"], "amoxiclav": [0, "https://e-lactancia.org/breastfeeding/amoxicillin-clavulanate/product/"], "penicilinabenzatinica": [0, "https://e-lactancia.org/breastfeeding/penicillin-g-benzathine/product/"], "cefalexina": [0, "https://e-lactancia.org/breastfeeding/cephalexin/product/"], "ceftriaxona": [0, "https://e-lactancia.org/breastfeeding/ceftriaxone-sodium/product/"], "piptazo": [0, "https://e-lactancia.org/breastfeeding/piperacillin-sodium/product/"], "meropenem": [0, "https://e-lactancia.org/breastfeeding/meropenem/product/"], "azitromicina": [0, "https://e-lactancia.org/breastfeeding/azithromycin/product/"], "claritromicina": [0, "https://e-lactancia.org/breastfeeding/clarithromycin/product/"], "doxiciclina": [1, "https://e-lactancia.org/breastfeeding/doxycycline/product/"], "ciprofloxacina": [0, "https://e-lactancia.org/breastfeeding/ciprofloxacina/tradename/"], "tmpsmx": [0, "https://e-lactancia.org/breastfeeding/co-trimoxazole/synonym/"], "nitrofurantoina": [0, "https://e-lactancia.org/breastfeeding/nitrofurantoin/product/"], "metronidazol": [0, "https://e-lactancia.org/breastfeeding/metronidazole/product/"], "clindamicina": [0, "https://e-lactancia.org/breastfeeding/clindamycin/product/"], "vancomicina": [0, "https://e-lactancia.org/breastfeeding/vancomycin/product/"], "gentamicina": [0, "https://e-lactancia.org/breastfeeding/gentamicin-sulfate/product/"], "aciclovir": [0, "https://e-lactancia.org/breastfeeding/acyclovir-aciclovir/product/"], "oseltamivir": [0, "https://e-lactancia.org/breastfeeding/oseltamivir-phosphate/product/"], "fluconazol": [0, "https://e-lactancia.org/breastfeeding/fluconazole/product/"], "albendazol": [0, "https://e-lactancia.org/breastfeeding/albendazole/product/"], "sertralina": [0, "https://e-lactancia.org/breastfeeding/sertraline-hydrochloride/product/"], "fluoxetina": [1, "https://e-lactancia.org/breastfeeding/fluoxetine-hydrochloride/product/"], "escitalopram": [0, "https://e-lactancia.org/breastfeeding/escitalopram-oxalate/product/"], "amitriptilina": [0, "https://e-lactancia.org/breastfeeding/amitriptyline/product/"], "quetiapina": [0, "https://e-lactancia.org/breastfeeding/quetiapine-fumarate/product/"], "risperidona": [0, "https://e-lactancia.org/breastfeeding/risperidone/product/"], "haloperidol": [1, "https://e-lactancia.org/breastfeeding/haloperidol/product/"], "litio": [1, "https://e-lactancia.org/breastfeeding/lithium-carbonate/product/"], "diazepam": [1, "https://e-lactancia.org/breastfeeding/diazepam/product/"], "alprazolam": [1, "https://e-lactancia.org/breastfeeding/alprazolam/product/"], "levetiracetam": [1, "https://e-lactancia.org/breastfeeding/levetiracetam/product/"], "fenitoina": [0, "https://e-lactancia.org/breastfeeding/phenytoin/product/"], "valproato": [0, "https://e-lactancia.org/breastfeeding/valproate-valproic-acid/product/"], "carbamazepina": [0, "https://e-lactancia.org/breastfeeding/carbamazepine/product/"], "pregabalina": [1, "https://e-lactancia.org/breastfeeding/pregabalin/product/"], "diclofenac": [0, "https://e-lactancia.org/breastfeeding/diclofenac/product/"], "celecoxib": [0, "https://e-lactancia.org/breastfeeding/celecoxib/product/"], "colchicina": [0, "https://e-lactancia.org/breastfeeding/colchicine/product/"], "alopurinol": [0, "https://e-lactancia.org/breastfeeding/allopurinol/product/"], "loratadina": [0, "https://e-lactancia.org/breastfeeding/loratadine/product/"], "difenhidramina": [0, "https://e-lactancia.org/breastfeeding/diphenhydramine/product/"], "tamsulosina": [1, "https://e-lactancia.org/breastfeeding/tamsulosin-hydrochloride/product/"], "sildenafil": [0, "https://e-lactancia.org/breastfeeding/sildenafil/product/"], "sulfatoferroso": [0, "https://e-lactancia.org/breastfeeding/ferrous-sulfate/synonym/"], "oxitocina": [1, "https://e-lactancia.org/breastfeeding/oxytocin/product/"], "ramipril": [1, "https://e-lactancia.org/breastfeeding/ramipril/product/"], "valsartan": [0, "https://e-lactancia.org/breastfeeding/valsartan/product/"], "sacubitrilovalsartan": [0, "https://e-lactancia.org/breastfeeding/sacubitril/product/"], "hidralazina": [0, "https://e-lactancia.org/breastfeeding/hydralazine-hydrochloride/product/"], "verapamilo": [0, "https://e-lactancia.org/breastfeeding/verapamil-hydrochloride/product/"], "diltiazem": [0, "https://e-lactancia.org/breastfeeding/diltiazem-hydrochloride/product/"], "nifedipina": [0, "https://e-lactancia.org/breastfeeding/nifedipine/product/"], "ivabradina": [1, "https://e-lactancia.org/breastfeeding/ivabradine/product/"], "dobutamina": [0, "https://e-lactancia.org/breastfeeding/dobutamine-hydrochloride/product/"], "vasopresina": [1, "https://e-lactancia.org/breastfeeding/vasopressin/product/"], "hioscina": [1, "https://e-lactancia.org/breastfeeding/hyoscin-hyoscine-butylbromide/synonym/"], "isoniazida": [0, "https://e-lactancia.org/breastfeeding/isoniazid-isonicotinohydrazide-inh/product/"], "rifampicina": [0, "https://e-lactancia.org/breastfeeding/rifampicine/product/"], "pirazinamida": [0, "https://e-lactancia.org/breastfeeding/pyrazinamide-pza/product/"], "etambutol": [0, "https://e-lactancia.org/breastfeeding/ethambutol-hydrochloride/product/"], "tenofovir": [0, "https://e-lactancia.org/breastfeeding/tenofovir-taf-tdf/product/"], "dolutegravir": [0, "https://e-lactancia.org/breastfeeding/dolutegravir-dtg-dolutegravir-sodium/product/"], "ivermectina": [0, "https://e-lactancia.org/breastfeeding/ivermectin/product/"], "linezolid": [1, "https://e-lactancia.org/breastfeeding/linezolid/product/"], "aztreonam": [0, "https://e-lactancia.org/breastfeeding/aztreonam/product/"], "nistatina": [0, "https://e-lactancia.org/breastfeeding/nystatin/product/"], "venlafaxina": [0, "https://e-lactancia.org/breastfeeding/venlafaxine-hydrochloride/product/"], "mirtazapina": [0, "https://e-lactancia.org/breastfeeding/mirtazapine/product/"], "trazodona": [0, "https://e-lactancia.org/breastfeeding/trazodone-hydrochloride/product/"], "bupropion": [1, "https://e-lactancia.org/breastfeeding/bupropion-hcl/product/"], "olanzapina": [0, "https://e-lactancia.org/breastfeeding/olanzapine/product/"], "lorazepam": [0, "https://e-lactancia.org/breastfeeding/lorazepam/product/"], "zolpidem": [0, "https://e-lactancia.org/breastfeeding/zolpidem-tartrate/product/"], "levodopa": [1, "https://e-lactancia.org/breastfeeding/levodopa/product/"], "lamotrigina": [1, "https://e-lactancia.org/breastfeeding/lamotrigine/product/"], "sumatriptan": [0, "https://e-lactancia.org/breastfeeding/sumatriptan/product/"], "aco": [1, "https://e-lactancia.org/breastfeeding/ethinylestradiol/product/"], "levonorgestrelemergencia": [0, "https://e-lactancia.org/breastfeeding/levonorgestrel-oral-implant-iud/product/"], "misoprostol": [0, "https://e-lactancia.org/breastfeeding/misoprostol/product/"], "progesterona": [0, "https://e-lactancia.org/breastfeeding/progesterone/product/"], "isotretinoina": [2, "https://e-lactancia.org/breastfeeding/isotretinoin/product/"], "permetrina": [0, "https://e-lactancia.org/breastfeeding/permethrin/product/"], "timolol": [0, "https://e-lactancia.org/breastfeeding/timolol-maleate/product/"], "latanoprost": [0, "https://e-lactancia.org/breastfeeding/latanoprost/product/"], "acidofolico": [0, "https://e-lactancia.org/breastfeeding/folic-acid/product/"], "cianocobalamina": [0, "https://e-lactancia.org/breastfeeding/cyanocobalamin/synonym/"], "flumazenil": [1, "https://e-lactancia.org/breastfeeding/flumazenil-flumazepil/product/"], "carbonactivado": [0, "https://e-lactancia.org/breastfeeding/activated-charcoal/product/"], "nac": [0, "https://e-lactancia.org/breastfeeding/acetylcysteine/product/"]};
+const ELAC = {
+paroxetina:[0, "https://e-lactancia.org/breastfeeding/paroxetine/product/"],
+citalopram:[0, "https://e-lactancia.org/breastfeeding/citalopram/product/"],
+duloxetina:[0, "https://e-lactancia.org/breastfeeding/duloxetine/product/"],
+vortioxetina:[0, "https://e-lactancia.org/breastfeeding/vortioxetine-hydrobromide/product/"],
+clomipramina:[0, "https://e-lactancia.org/breastfeeding/chlorimipramine-hydrochloride/product/"],
+aripiprazol:[1, "https://e-lactancia.org/breastfeeding/aripiprazole/product/"],
+clozapina:[1, "https://e-lactancia.org/breastfeeding/clozapine/product/"],
+levomepromazina:[2, "https://e-lactancia.org/breastfeeding/levomepromazine/product/"],
+metilfenidato:[0, "https://e-lactancia.org/breastfeeding/methylphenidate/product/"],
+atomoxetina:[0, "https://e-lactancia.org/breastfeeding/atomoxetine-hydrochloride/product/"],
+buspirona:[1, "https://e-lactancia.org/breastfeeding/buspirone-hydrochloride/product/"],
+bromazepam:[2, "https://e-lactancia.org/breastfeeding/bromazepam/product/"],
+naltrexona:[0, "https://e-lactancia.org/breastfeeding/naltrexone-hydrochloride/product/"],
+disulfiram:[2, "https://e-lactancia.org/breastfeeding/disulfiram/product/"],
+pantoprazol:[0, "https://e-lactancia.org/breastfeeding/pantoprazole/product/"],
+esomeprazol:[0, "https://e-lactancia.org/breastfeeding/esomeprazole/product/"],
+sucralfato:[0, "https://e-lactancia.org/breastfeeding/sucralfate/product/"],
+trimebutina:[1, "https://e-lactancia.org/breastfeeding/trimebutine-maleate/product/"],
+mebeverina:[1, "https://e-lactancia.org/breastfeeding/mebeverine-hydrochloride/product/"],
+bisacodilo:[0, "https://e-lactancia.org/breastfeeding/bisacodyl/product/"],
+polietilenglicol:[0, "https://e-lactancia.org/breastfeeding/polyethylene-glycol-peg/product/"],
+mesalazina:[0, "https://e-lactancia.org/breastfeeding/mesalazine-5-asa/product/"],
+ursodiol:[0, "https://e-lactancia.org/breastfeeding/ursodeoxycholic-acid-udca/product/"],
+octreotida:[0, "https://e-lactancia.org/breastfeeding/octreotide-acetate/product/"],
+rifaximina:[0, "https://e-lactancia.org/breastfeeding/rifaximin/product/"],
+simeticona:[0, "https://e-lactancia.org/breastfeeding/simeticone-simethicone/product/"],"propofol": [0, "https://e-lactancia.org/breastfeeding/propofol/product/"], "ketamina": [1, "https://e-lactancia.org/breastfeeding/ketamine-hydrochloride/product/"], "etomidato": [0, "https://e-lactancia.org/breastfeeding/etomidate/product/"], "midazolam": [0, "https://e-lactancia.org/breastfeeding/midazolam/product/"], "dexmedetomidina": [0, "https://e-lactancia.org/breastfeeding/dexmedetomidine-hydrochloride/product/"], "sevoflurano": [0, "https://e-lactancia.org/breastfeeding/sevoflurane/product/"], "dantroleno": [1, "https://e-lactancia.org/breastfeeding/dantrolene-sodium/product/"], "fentanilo": [0, "https://e-lactancia.org/breastfeeding/fentanyl/product/"], "remifentanilo": [1, "https://e-lactancia.org/breastfeeding/remifentanil-hydrochloride/product/"], "morfina": [1, "https://e-lactancia.org/breastfeeding/morphine/product/"], "tramadol": [0, "https://e-lactancia.org/breastfeeding/tramadol/product/"], "naloxona": [1, "https://e-lactancia.org/breastfeeding/naloxone-hydrochloride/product/"], "succinilcolina": [0, "https://e-lactancia.org/breastfeeding/succinylcholine-chloride/product/"], "rocuronio": [0, "https://e-lactancia.org/breastfeeding/rocuronium/product/"], "cisatracurio": [0, "https://e-lactancia.org/breastfeeding/cisatracurium-besilate/product/"], "sugammadex": [0, "https://e-lactancia.org/breastfeeding/sugammadex-sodium/product/"], "neostigmina": [0, "https://e-lactancia.org/breastfeeding/neostigmine-bromide/product/"], "lidocaina": [0, "https://e-lactancia.org/breastfeeding/lidocaine/product/"], "bupivacaina": [0, "https://e-lactancia.org/breastfeeding/bupivacaine/product/"], "ropivacaina": [0, "https://e-lactancia.org/breastfeeding/ropivacaine-hydrochloride/product/"], "efedrina": [1, "https://e-lactancia.org/breastfeeding/ephedrine/product/"], "fenilefrina": [1, "https://e-lactancia.org/breastfeeding/phenylephrine/product/"], "noradrenalina": [0, "https://e-lactancia.org/breastfeeding/noradrenaline/synonym/"], "adrenalina": [0, "https://e-lactancia.org/breastfeeding/adrenaline/product/"], "atropina": [0, "https://e-lactancia.org/breastfeeding/atropine/product/"], "esmolol": [1, "https://e-lactancia.org/breastfeeding/esmolol-hydrochloride/product/"], "labetalol": [0, "https://e-lactancia.org/breastfeeding/labetalol-hydrochloride/product/"], "amiodarona": [2, "https://e-lactancia.org/breastfeeding/amiodarone/product/"], "furosemida": [1, "https://e-lactancia.org/breastfeeding/furosemide/product/"], "enalapril": [0, "https://e-lactancia.org/breastfeeding/enalapril/product/"], "digoxina": [0, "https://e-lactancia.org/breastfeeding/digoxin/product/"], "ondansetron": [0, "https://e-lactancia.org/breastfeeding/ondansetron/product/"], "dexametasona": [1, "https://e-lactancia.org/breastfeeding/dexamethasone/product/"], "metoclopramida": [0, "https://e-lactancia.org/breastfeeding/metoclopramide/product/"], "paracetamol": [0, "https://e-lactancia.org/breastfeeding/paracetamol/product/"], "dipirona": [2, "https://e-lactancia.org/breastfeeding/metamizole/product/"], "ketorolac": [0, "https://e-lactancia.org/breastfeeding/ketorolac-trometamol/product/"], "ibuprofeno": [0, "https://e-lactancia.org/breastfeeding/ibuprofen/product/"], "heparina": [0, "https://e-lactancia.org/breastfeeding/heparin-sodium/synonym/"], "enoxaparina": [0, "https://e-lactancia.org/breastfeeding/enoxaparin-sodium/product/"], "tranexamico": [0, "https://e-lactancia.org/breastfeeding/tranexamic-acid/product/"], "insulina": [0, "https://e-lactancia.org/breastfeeding/insulin/product/"], "metformina": [0, "https://e-lactancia.org/breastfeeding/metformin-hydrochloride/product/"], "cefazolina": [0, "https://e-lactancia.org/breastfeeding/cefazolin/product/"], "magnesio": [0, "https://e-lactancia.org/breastfeeding/magnesium-sulfate/product/"], "clonazepam": [0, "https://e-lactancia.org/breastfeeding/clonazepam/product/"], "atorvastatina": [0, "https://e-lactancia.org/breastfeeding/atorvastatin-calcium/product/"], "rosuvastatina": [0, "https://e-lactancia.org/breastfeeding/rosuvastatin-calcium/product/"], "amlodipina": [0, "https://e-lactancia.org/breastfeeding/amlodipine/product/"], "losartan": [1, "https://e-lactancia.org/breastfeeding/losartan-potassium/product/"], "hidroclorotiazida": [0, "https://e-lactancia.org/breastfeeding/hydrochlorothiazide/product/"], "espironolactona": [0, "https://e-lactancia.org/breastfeeding/spironolactone/product/"], "bisoprolol": [1, "https://e-lactancia.org/breastfeeding/bisoprolol-fumarate/product/"], "carvedilol": [1, "https://e-lactancia.org/breastfeeding/carvedilol/product/"], "atenolol": [2, "https://e-lactancia.org/breastfeeding/atenolol/product/"], "nitroglicerina": [1, "https://e-lactancia.org/breastfeeding/nitroglycerin/synonym/"], "aspirina": [1, "https://e-lactancia.org/breastfeeding/acetylsalicylic-acid/synonym/"], "clopidogrel": [0, "https://e-lactancia.org/breastfeeding/clopidogrel/product/"], "acenocumarol": [0, "https://e-lactancia.org/breastfeeding/acenocoumarol/product/"], "warfarina": [0, "https://e-lactancia.org/breastfeeding/warfarin/product/"], "apixaban": [1, "https://e-lactancia.org/breastfeeding/apixaban/product/"], "rivaroxaban": [0, "https://e-lactancia.org/breastfeeding/rivaroxaban/product/"], "levotiroxina": [0, "https://e-lactancia.org/breastfeeding/levothyroxine/product/"], "metimazol": [0, "https://e-lactancia.org/breastfeeding/methimazole/product/"], "glibenclamida": [0, "https://e-lactancia.org/breastfeeding/glibenclamide/product/"], "sitagliptina": [1, "https://e-lactancia.org/breastfeeding/sitagliptin-phosphate/product/"], "dapagliflozina": [1, "https://e-lactancia.org/breastfeeding/dapagliflozin/product/"], "semaglutida": [0, "https://e-lactancia.org/breastfeeding/semaglutide/product/"], "glargina": [0, "https://e-lactancia.org/breastfeeding/insulin/product/"], "prednisona": [0, "https://e-lactancia.org/breastfeeding/prednisone/product/"], "hidrocortisona": [0, "https://e-lactancia.org/breastfeeding/hydrocortisone-systemic-use/product/"], "omeprazol": [0, "https://e-lactancia.org/breastfeeding/omeprazole/product/"], "famotidina": [0, "https://e-lactancia.org/breastfeeding/famotidine/product/"], "domperidona": [0, "https://e-lactancia.org/breastfeeding/domperidone/product/"], "loperamida": [0, "https://e-lactancia.org/breastfeeding/loperamide-hydrochloride/product/"], "lactulosa": [0, "https://e-lactancia.org/breastfeeding/lactulose/product/"], "salbutamol": [0, "https://e-lactancia.org/breastfeeding/albuterol/product/"], "budesonida": [0, "https://e-lactancia.org/breastfeeding/budesonide/product/"], "ipratropio": [0, "https://e-lactancia.org/breastfeeding/ipratropium-bromide/product/"], "montelukast": [0, "https://e-lactancia.org/breastfeeding/montelukast-sodium/product/"], "amoxicilina": [0, "https://e-lactancia.org/breastfeeding/amoxicillin/product/"], "amoxiclav": [0, "https://e-lactancia.org/breastfeeding/amoxicillin-clavulanate/product/"], "penicilinabenzatinica": [0, "https://e-lactancia.org/breastfeeding/penicillin-g-benzathine/product/"], "cefalexina": [0, "https://e-lactancia.org/breastfeeding/cephalexin/product/"], "ceftriaxona": [0, "https://e-lactancia.org/breastfeeding/ceftriaxone-sodium/product/"], "piptazo": [0, "https://e-lactancia.org/breastfeeding/piperacillin-sodium/product/"], "meropenem": [0, "https://e-lactancia.org/breastfeeding/meropenem/product/"], "azitromicina": [0, "https://e-lactancia.org/breastfeeding/azithromycin/product/"], "claritromicina": [0, "https://e-lactancia.org/breastfeeding/clarithromycin/product/"], "doxiciclina": [1, "https://e-lactancia.org/breastfeeding/doxycycline/product/"], "ciprofloxacina": [0, "https://e-lactancia.org/breastfeeding/ciprofloxacina/tradename/"], "tmpsmx": [0, "https://e-lactancia.org/breastfeeding/co-trimoxazole/synonym/"], "nitrofurantoina": [0, "https://e-lactancia.org/breastfeeding/nitrofurantoin/product/"], "metronidazol": [0, "https://e-lactancia.org/breastfeeding/metronidazole/product/"], "clindamicina": [0, "https://e-lactancia.org/breastfeeding/clindamycin/product/"], "vancomicina": [0, "https://e-lactancia.org/breastfeeding/vancomycin/product/"], "gentamicina": [0, "https://e-lactancia.org/breastfeeding/gentamicin-sulfate/product/"], "aciclovir": [0, "https://e-lactancia.org/breastfeeding/acyclovir-aciclovir/product/"], "oseltamivir": [0, "https://e-lactancia.org/breastfeeding/oseltamivir-phosphate/product/"], "fluconazol": [0, "https://e-lactancia.org/breastfeeding/fluconazole/product/"], "albendazol": [0, "https://e-lactancia.org/breastfeeding/albendazole/product/"], "sertralina": [0, "https://e-lactancia.org/breastfeeding/sertraline-hydrochloride/product/"], "fluoxetina": [1, "https://e-lactancia.org/breastfeeding/fluoxetine-hydrochloride/product/"], "escitalopram": [0, "https://e-lactancia.org/breastfeeding/escitalopram-oxalate/product/"], "amitriptilina": [0, "https://e-lactancia.org/breastfeeding/amitriptyline/product/"], "quetiapina": [0, "https://e-lactancia.org/breastfeeding/quetiapine-fumarate/product/"], "risperidona": [0, "https://e-lactancia.org/breastfeeding/risperidone/product/"], "haloperidol": [1, "https://e-lactancia.org/breastfeeding/haloperidol/product/"], "litio": [1, "https://e-lactancia.org/breastfeeding/lithium-carbonate/product/"], "diazepam": [1, "https://e-lactancia.org/breastfeeding/diazepam/product/"], "alprazolam": [1, "https://e-lactancia.org/breastfeeding/alprazolam/product/"], "levetiracetam": [1, "https://e-lactancia.org/breastfeeding/levetiracetam/product/"], "fenitoina": [0, "https://e-lactancia.org/breastfeeding/phenytoin/product/"], "valproato": [0, "https://e-lactancia.org/breastfeeding/valproate-valproic-acid/product/"], "carbamazepina": [0, "https://e-lactancia.org/breastfeeding/carbamazepine/product/"], "pregabalina": [1, "https://e-lactancia.org/breastfeeding/pregabalin/product/"], "diclofenac": [0, "https://e-lactancia.org/breastfeeding/diclofenac/product/"], "celecoxib": [0, "https://e-lactancia.org/breastfeeding/celecoxib/product/"], "colchicina": [0, "https://e-lactancia.org/breastfeeding/colchicine/product/"], "alopurinol": [0, "https://e-lactancia.org/breastfeeding/allopurinol/product/"], "loratadina": [0, "https://e-lactancia.org/breastfeeding/loratadine/product/"], "difenhidramina": [0, "https://e-lactancia.org/breastfeeding/diphenhydramine/product/"], "tamsulosina": [1, "https://e-lactancia.org/breastfeeding/tamsulosin-hydrochloride/product/"], "sildenafil": [0, "https://e-lactancia.org/breastfeeding/sildenafil/product/"], "sulfatoferroso": [0, "https://e-lactancia.org/breastfeeding/ferrous-sulfate/synonym/"], "oxitocina": [1, "https://e-lactancia.org/breastfeeding/oxytocin/product/"], "ramipril": [1, "https://e-lactancia.org/breastfeeding/ramipril/product/"], "valsartan": [0, "https://e-lactancia.org/breastfeeding/valsartan/product/"], "sacubitrilovalsartan": [0, "https://e-lactancia.org/breastfeeding/sacubitril/product/"], "hidralazina": [0, "https://e-lactancia.org/breastfeeding/hydralazine-hydrochloride/product/"], "verapamilo": [0, "https://e-lactancia.org/breastfeeding/verapamil-hydrochloride/product/"], "diltiazem": [0, "https://e-lactancia.org/breastfeeding/diltiazem-hydrochloride/product/"], "nifedipina": [0, "https://e-lactancia.org/breastfeeding/nifedipine/product/"], "ivabradina": [1, "https://e-lactancia.org/breastfeeding/ivabradine/product/"], "dobutamina": [0, "https://e-lactancia.org/breastfeeding/dobutamine-hydrochloride/product/"], "vasopresina": [1, "https://e-lactancia.org/breastfeeding/vasopressin/product/"], "hioscina": [1, "https://e-lactancia.org/breastfeeding/hyoscin-hyoscine-butylbromide/synonym/"], "isoniazida": [0, "https://e-lactancia.org/breastfeeding/isoniazid-isonicotinohydrazide-inh/product/"], "rifampicina": [0, "https://e-lactancia.org/breastfeeding/rifampicine/product/"], "pirazinamida": [0, "https://e-lactancia.org/breastfeeding/pyrazinamide-pza/product/"], "etambutol": [0, "https://e-lactancia.org/breastfeeding/ethambutol-hydrochloride/product/"], "tenofovir": [0, "https://e-lactancia.org/breastfeeding/tenofovir-taf-tdf/product/"], "dolutegravir": [0, "https://e-lactancia.org/breastfeeding/dolutegravir-dtg-dolutegravir-sodium/product/"], "ivermectina": [0, "https://e-lactancia.org/breastfeeding/ivermectin/product/"], "linezolid": [1, "https://e-lactancia.org/breastfeeding/linezolid/product/"], "aztreonam": [0, "https://e-lactancia.org/breastfeeding/aztreonam/product/"], "nistatina": [0, "https://e-lactancia.org/breastfeeding/nystatin/product/"], "venlafaxina": [0, "https://e-lactancia.org/breastfeeding/venlafaxine-hydrochloride/product/"], "mirtazapina": [0, "https://e-lactancia.org/breastfeeding/mirtazapine/product/"], "trazodona": [0, "https://e-lactancia.org/breastfeeding/trazodone-hydrochloride/product/"], "bupropion": [1, "https://e-lactancia.org/breastfeeding/bupropion-hcl/product/"], "olanzapina": [0, "https://e-lactancia.org/breastfeeding/olanzapine/product/"], "lorazepam": [0, "https://e-lactancia.org/breastfeeding/lorazepam/product/"], "zolpidem": [0, "https://e-lactancia.org/breastfeeding/zolpidem-tartrate/product/"], "levodopa": [1, "https://e-lactancia.org/breastfeeding/levodopa/product/"], "lamotrigina": [1, "https://e-lactancia.org/breastfeeding/lamotrigine/product/"], "sumatriptan": [0, "https://e-lactancia.org/breastfeeding/sumatriptan/product/"], "aco": [1, "https://e-lactancia.org/breastfeeding/ethinylestradiol/product/"], "levonorgestrelemergencia": [0, "https://e-lactancia.org/breastfeeding/levonorgestrel-oral-implant-iud/product/"], "misoprostol": [0, "https://e-lactancia.org/breastfeeding/misoprostol/product/"], "progesterona": [0, "https://e-lactancia.org/breastfeeding/progesterone/product/"], "isotretinoina": [2, "https://e-lactancia.org/breastfeeding/isotretinoin/product/"], "permetrina": [0, "https://e-lactancia.org/breastfeeding/permethrin/product/"], "timolol": [0, "https://e-lactancia.org/breastfeeding/timolol-maleate/product/"], "latanoprost": [0, "https://e-lactancia.org/breastfeeding/latanoprost/product/"], "acidofolico": [0, "https://e-lactancia.org/breastfeeding/folic-acid/product/"], "cianocobalamina": [0, "https://e-lactancia.org/breastfeeding/cyanocobalamin/synonym/"], "flumazenil": [1, "https://e-lactancia.org/breastfeeding/flumazenil-flumazepil/product/"], "carbonactivado": [0, "https://e-lactancia.org/breastfeeding/activated-charcoal/product/"], "nac": [0, "https://e-lactancia.org/breastfeeding/acetylcysteine/product/"]};
 
 
 /* Marcas verificadas para Argentina (sólo se muestran estas) */
 const MARCAS = {
+  paroxetina:["Aropax"], duloxetina:["Cymbalta"], vortioxetina:["Brintellix"], clomipramina:["Anafranil"], aripiprazol:["Abilify"], clozapina:["Leponex"], levomepromazina:["Nozinan"], metilfenidato:["Ritalina","Concerta"], atomoxetina:["Strattera"], bromazepam:["Lexotanil"], disulfiram:["Antabus"], pantoprazol:["Pantus"], esomeprazol:["Nexium"], sucralfato:["Antepsin"], trimebutina:["Miopropan"], mebeverina:["Duspatalin"], bisacodilo:["Dulcolax"], mesalazina:["Pentasa","Asacol"], ursodiol:["Ursobilane"], octreotida:["Sandostatin"], rifaximina:["Normix"],
   paracetamol:["Tafirol"], dipirona:["Novemina"], ibuprofeno:["Ibupirac","Actron"],
   clonazepam:["Rivotril"], diazepam:["Valium"], alprazolam:["Alplax"],
   furosemida:["Lasix"], dexametasona:["Decadron"], amiodarona:["Atlansil"],
@@ -3037,13 +3423,115 @@ function refsFor(d){
   return out;
 }
 
+
+const CALC = {
+propofol:[["Inducción",1,2.5,"mg/kg",{conc:[10,"1%"]}],["Mantenimiento (TIVA)",50,150,"µg/kg/min"],["Sedación",25,75,"µg/kg/min"]],
+ketamina:[["Inducción IV",0.5,2,"mg/kg"],["Inducción IM",4,6,"mg/kg"],["Sedación y analgesia IV",0.2,0.8,"mg/kg"],["Analgesia preventiva",0.15,0.25,"mg/kg"],["Infusión analgésica",0.1,0.2,"mg/kg/h"]],
+etomidato:[["Inducción",0.2,0.3,"mg/kg",{conc:[2,"2 mg/mL"]}]],
+midazolam:[["Premedicación IV",0.02,0.05,"mg/kg"],["Inducción",0.1,0.2,"mg/kg"],["Infusión (UTI)",0.02,0.1,"mg/kg/h"]],
+dexmedetomidina:[["Carga (en 10–20 min)",0.5,1,"µg/kg"],["Mantenimiento",0.2,0.7,"µg/kg/h"]],
+dantroleno:[["Hipertermia maligna (bolo)",2.5,2.5,"mg/kg",{note:"Repetir hasta revertir los signos"}],["Mantenimiento posterior",1,1,"mg/kg",{note:"c/4–6 h por 24 h"}]],
+fentanilo:[["Analgesia intraoperatoria",1,2,"µg/kg",{conc:[50,"50 µg/mL"]}],["Inducción",1,3,"µg/kg",{conc:[50,"50 µg/mL"]}],["Infusión",0.5,2,"µg/kg/h"]],
+remifentanilo:[["Bolo (lento)",0.5,1,"µg/kg"],["Mantenimiento",0.05,0.25,"µg/kg/min"]],
+morfina:[["Dosis IV",0.05,0.1,"mg/kg",{max:10}]],
+succinilcolina:[["Intubación IV",1,1.5,"mg/kg",{note:"Peso real"}],["IM (sin vía)",3,4,"mg/kg"]],
+rocuronio:[["Intubación",0.6,1,"mg/kg",{conc:[10,"10 mg/mL"]}],["Secuencia rápida",1,1.2,"mg/kg",{conc:[10,"10 mg/mL"]}],["Dosis suplementaria",0.1,0.15,"mg/kg"]],
+cisatracurio:[["Intubación",0.15,0.2,"mg/kg",{conc:[2,"2 mg/mL"]}],["Infusión",1,2,"µg/kg/min"]],
+sugammadex:[["Bloqueo moderado",2,2,"mg/kg",{conc:[100,"100 mg/mL"]}],["Bloqueo profundo",4,4,"mg/kg",{conc:[100,"100 mg/mL"]}],["Reversión inmediata",16,16,"mg/kg",{conc:[100,"100 mg/mL"]}]],
+neostigmina:[["TOF 3–4 con fade",0.04,0.05,"mg/kg",{max:5}],["TOF 4 sin fade",0.02,0.02,"mg/kg",{max:5}],["Atropina asociada",0.015,0.02,"mg/kg"]],
+lidocaina:[["Dosis máxima sin adrenalina",4.5,4.5,"mg/kg",{max:300,conc:[20,"2%"]}],["Dosis máxima con adrenalina",7,7,"mg/kg",{max:500,conc:[20,"2%"]}],["Bolo IV (laringoscopia o antiarrítmico)",1,1.5,"mg/kg"],["Infusión perioperatoria",1,2,"mg/kg/h",{note:"Peso ideal"}],["Emulsión lipídica 20% (LAST): bolo",1.5,1.5,"mL/kg"],["Emulsión lipídica 20% (LAST): infusión",0.25,0.25,"mL/kg/min"]],
+bupivacaina:[["Dosis máxima sin adrenalina",2.5,2.5,"mg/kg",{max:175,conc:[5,"0,5%"]}],["Dosis máxima con adrenalina",3,3,"mg/kg",{max:225,conc:[5,"0,5%"]}],["Emulsión lipídica 20% (LAST): bolo",1.5,1.5,"mL/kg"],["Emulsión lipídica 20% (LAST): infusión",0.25,0.25,"mL/kg/min"]],
+ropivacaina:[["Dosis máxima",3,3,"mg/kg",{max:200,conc:[7.5,"0,75%"]}],["Emulsión lipídica 20% (LAST): bolo",1.5,1.5,"mL/kg"]],
+noradrenalina:[["Infusión",0.01,0.5,"µg/kg/min"]],
+adrenalina:[["Anafilaxia IM",0.01,0.01,"mg/kg",{max:0.5,conc:[1,"1 mg/mL"]}],["Infusión",0.01,0.5,"µg/kg/min"]],
+dobutamina:[["Infusión",2,20,"µg/kg/min"]],
+esmolol:[["Bolo (en 1 min)",0.5,0.5,"mg/kg"],["Infusión",50,300,"µg/kg/min"],["Atenuar laringoscopia",1,1.5,"mg/kg"]],
+atropina:[["Con neostigmina",0.015,0.02,"mg/kg"]],
+ondansetron:[["Pediatría",0.1,0.1,"mg/kg",{max:4}]],
+dexametasona:[["Crup (pediatría)",0.15,0.6,"mg/kg",{max:16}]],
+paracetamol:[["Dosis (≤ 50 kg o pediatría)",10,15,"mg/kg",{max:1000}],["Máximo diario",60,60,"mg/kg/día",{max:4000}]],
+dipirona:[["Pediatría",10,15,"mg/kg/dosis",{max:1000}]],
+ibuprofeno:[["Pediatría",5,10,"mg/kg/dosis",{max:400}],["Máximo diario (pediatría)",40,40,"mg/kg/día",{max:2400}]],
+heparina:[["TEV: bolo",80,80,"UI/kg"],["TEV: infusión",18,18,"UI/kg/h"],["SCA: bolo",60,60,"UI/kg",{max:4000}],["SCA: infusión",12,12,"UI/kg/h",{max:1000}],["Cirugía vascular",70,100,"UI/kg"],["Circulación extracorpórea",300,400,"UI/kg"]],
+enoxaparina:[["Tratamiento c/12 h",1,1,"mg/kg"],["Tratamiento c/24 h",1.5,1.5,"mg/kg"]],
+tranexamico:[["Ortopedia (preincisión)",10,15,"mg/kg"]],
+insulina:[["Cetoacidosis: infusión",0.1,0.1,"U/kg/h"],["Cetoacidosis: bolo (opcional)",0.1,0.1,"U/kg"]],
+glargina:[["Inicio en DM2",0.1,0.2,"U/kg/día"]],
+cefazolina:[["Profilaxis pediátrica",30,30,"mg/kg",{max:2000}]],
+magnesio:[["Analgesia: bolo",30,50,"mg/kg"],["Analgesia: infusión",6,20,"mg/kg/h"]],
+vancomicina:[["Carga",20,35,"mg/kg",{max:3000}],["Mantenimiento",15,20,"mg/kg",{note:"c/8–12 h; ajustar por AUC"}],["Profilaxis quirúrgica",15,15,"mg/kg"]],
+gentamicina:[["Dosis única diaria",5,7,"mg/kg/día"]],
+amoxicilina:[["Pediatría (otitis)",80,90,"mg/kg/día",{note:"En 2–3 tomas"}]],
+aciclovir:[["Encefalitis herpética",10,10,"mg/kg",{note:"c/8 h; peso ideal"}]],
+levetiracetam:[["Estado epiléptico",60,60,"mg/kg",{max:4500}]],
+fenitoina:[["Carga IV",20,20,"mg/kg",{note:"≤ 50 mg/min"}]],
+valproato:[["Estado epiléptico",40,40,"mg/kg",{max:3000}]],
+nac:[["Paso 1 (1 h)",150,150,"mg/kg"],["Paso 2 (4 h)",50,50,"mg/kg"],["Paso 3 (16 h)",100,100,"mg/kg"]],
+carbonactivado:[["Dosis única",1,1,"g/kg",{max:50}],["Dosis múltiples",0.5,0.5,"g/kg"]],
+isoniazida:[["Dosis diaria",5,5,"mg/kg/día",{max:300}]],
+rifampicina:[["Dosis diaria",10,10,"mg/kg/día",{max:600}]],
+pirazinamida:[["Dosis diaria",25,25,"mg/kg/día",{max:2000}]],
+etambutol:[["Dosis diaria",15,20,"mg/kg/día"]],
+ivermectina:[["Dosis única",0.2,0.2,"mg/kg"]],
+albendazol:[["Neurocisticercosis",15,15,"mg/kg/día",{max:1200}]],
+metilfenidato:[["Pediatría (por dosis)",0.3,0.3,"mg/kg/dosis",{max:20}]],
+atomoxetina:[["Inicio",0.5,0.5,"mg/kg/día"],["Objetivo",1.2,1.2,"mg/kg/día",{max:100}]],
+ursodiol:[["Colangitis biliar primaria",13,15,"mg/kg/día"],["Colestasis del embarazo",10,15,"mg/kg/día"]],
+polietilenglicol:[["Pediatría",0.4,0.8,"g/kg/día",{max:17}]],
+sulfatoferroso:[["Pediatría (hierro elemental)",3,6,"mg/kg/día"]]
+};
+
+const PESO_KEY = "farmacodos:peso";
+function getPeso(){ try{ return localStorage.getItem(PESO_KEY) || ""; }catch(e){ return ""; } }
+function setPeso(v){ try{ localStorage.setItem(PESO_KEY, v); }catch(e){} }
+function fmt(x){
+  const a = Math.abs(x);
+  const dec = a >= 100 ? 0 : a >= 10 ? 1 : a >= 1 ? 2 : 3;
+  return Number(x.toFixed(dec)).toLocaleString("es-AR");
+}
+const OUT_UNIT = u => u.replace("/kg","");
+function calcRow(row, kg){
+  const [label, lo, hi, unit, o = {}] = row;
+  const out = OUT_UNIT(unit);
+  let a = lo*kg, b = hi*kg, capped = false;
+  if(o.max !== undefined){ if(b > o.max){ b = o.max; capped = true; } if(a > o.max){ a = o.max; capped = true; } }
+  let res = (a === b) ? `${fmt(a)} ${out}` : `${fmt(a)}–${fmt(b)} ${out}`;
+  if(/µg\/min$/.test(out)) res += ` <span class="sub">(${fmt(a*60/1000)}${a===b?"":"–"+fmt(b*60/1000)} mg/h)</span>`;
+  if(/mL\/min$/.test(out)) res += ` <span class="sub">(${fmt(a*60)}${a===b?"":"–"+fmt(b*60)} mL/h)</span>`;
+  if(o.conc){ const c = o.conc[0]; res += `<br><span class="sub">= ${fmt(a/c)}${a===b?"":"–"+fmt(b/c)} mL de ${o.conc[1]}</span>`; }
+  const ref = `${String(lo).replace(".",",")}${lo===hi?"":"–"+String(hi).replace(".",",")} ${unit}`;
+  const extra = [capped ? `tope ${fmt(o.max)} ${out.split("/")[0]}` : "", o.note || ""].filter(Boolean).join(" · ");
+  return `<tr><th scope="row">${esc(label)}<span class="ref">${esc(ref)}${extra?" · "+esc(extra):""}</span></th><td>${res}</td></tr>`;
+}
+function calcBody(d, kg){
+  if(!(kg > 0 && kg <= 300)) return `<tr><td colspan="2" class="empty">Ingresar el peso para calcular las dosis.</td></tr>`;
+  return CALC[d.id].map(r => calcRow(r, kg)).join("");
+}
+function calcHTML(d){
+  if(!CALC[d.id]) return "";
+  const p = getPeso(), kg = parseFloat(String(p).replace(",","."));
+  return `<div class="calc" data-id="${d.id}">
+    <div class="calc-head"><h3>Calculadora de dosis</h3>
+      <label class="peso"><input type="text" inputmode="decimal" id="peso" value="${esc(p)}" placeholder="70" aria-label="Peso del paciente en kilos" autocomplete="off"><span>kg</span></label></div>
+    <div class="kv-wrap"><table class="kv dose calc-t"><tbody>${calcBody(d, kg)}</tbody></table></div>
+    <p class="calc-note">Resultado orientativo según peso real. En obesidad, ajustar al peso ideal o corregido según el fármaco y el protocolo institucional.</p>
+  </div>`;
+}
+document.addEventListener("input", e => {
+  if(e.target.id !== "peso") return;
+  const v = e.target.value.replace(/[^0-9.,]/g,""); if(v !== e.target.value) e.target.value = v;
+  setPeso(v);
+  const box = e.target.closest(".calc"); const d = DB.find(x => x.id === box.dataset.id);
+  box.querySelector(".calc-t tbody").innerHTML = calcBody(d, parseFloat(v.replace(",",".")));
+});
+
 function panelHTML(d, tab){
   const sec = {
     mec: () => `<h3>Mecanismo de acción</h3><div class="prose">${d.mec.map(p => `<p>${md(p)}</p>`).join("")}</div>`,
     pk:  () => `<h3>Farmacocinética</h3>${kv(d.pk)}`,
     ea:  () => `<h3>Efectos adversos</h3>${list(d.ea)}`,
     ci:  () => `<h3>Contraindicaciones y precauciones</h3>${list(d.ci)}`,
-    uso: () => `<h3>Usos e indicaciones</h3>${list(d.usos)}<h3>Dosificación</h3>${kv(d.dosis,"dose")}`,
+    uso: () => `<h3>Usos e indicaciones</h3>${list(d.usos)}<h3>Dosificación</h3>${kv(d.dosis,"dose")}${calcHTML(d)}`,
     emb: () => embHTML(d),
     tox: () => `<h3>Toxicidad e intoxicación</h3><div class="toxbox">${list(d.tox)}</div>`
   };
