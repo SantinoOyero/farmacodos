@@ -5,22 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>farmacodos · vademécum de bolsillo para médicos</title>
 <meta name="description" content="Vademécum de consulta rápida: mecanismo de acción, farmacocinética, efectos adversos, contraindicaciones, usos, dosificación, embarazo y lactancia, y toxicidad de los fármacos de uso más frecuente.">
-<meta property="og:title" content="farmacodos · vademécum de bolsillo para médicos">
-<meta property="og:description" content="Vademécum de bolsillo para médicos: mecanismo de acción, farmacocinética, dosis y toxicidad de los fármacos más usados.">
+<meta property="og:title" content="farmacodos">
+<meta property="og:description" content="Vademécum de bolsillo para médicos: mecanismo, farmacocinética, dosis y toxicidad de los fármacos más usados.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="es_AR">
-<meta property="og:url" content="https://www.farmacodos.com.ar/">
-<meta property="og:site_name" content="farmacodos">
-<meta property="og:image" content="https://www.farmacodos.com.ar/preview.png">
-<meta property="og:image:secure_url" content="https://www.farmacodos.com.ar/preview.png">
-<meta property="og:image:type" content="image/png">
-<meta property="og:image:width" content="1728">
-<meta property="og:image:height" content="910">
-<meta property="og:image:alt" content="farmacodos, vademécum de bolsillo para médicos">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="farmacodos · vademécum de bolsillo para médicos">
-<meta name="twitter:description" content="Consulta rápida de mecanismos de acción, dosis y toxicidad de fármacos frecuentes.">
-<meta name="twitter:image" content="https://www.farmacodos.com.ar/preview.png">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💉</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -222,6 +210,39 @@ html{scrollbar-color:var(--line-strong) transparent;scrollbar-width:thin;}
 .calc .sub{font-weight:500;font-size:13.5px;color:var(--muted);}
 .calc .empty{color:var(--muted);font-family:var(--sans);font-weight:500;}
 .calc-note{margin:8px 0 0;font-size:13px;color:var(--muted);}
+/* ---------- Interacciones ---------- */
+.sev{display:inline-block;font-size:12.5px;font-weight:700;letter-spacing:.02em;padding:2px 9px;border-radius:999px;color:#fff;white-space:nowrap;}
+.sev0{background:#B3261E;} .sev1{background:#C2410C;} .sev2{background:#A16207;}
+.ix-sum{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0 12px;}
+.ix-open{display:block;width:100%;margin:0 0 14px;padding:10px 14px;border:1.5px solid var(--accent);border-radius:var(--r-md);background:var(--accent-soft);color:var(--accent);font-weight:650;font-size:15px;cursor:pointer;text-align:left;}
+.ix-open::before{content:"+ ";}
+.ix-open:hover{background:var(--surface);}
+.ix-item{border:1px solid var(--line);border-radius:var(--r-md);padding:12px 14px;margin-bottom:10px;background:var(--surface);}
+.ix-top{display:flex;align-items:flex-start;gap:8px;flex-wrap:wrap;margin-bottom:6px;}
+.ix-top b{font-size:16px;line-height:1.35;}
+.ix-with{display:flex;flex-wrap:wrap;gap:5px;align-items:center;margin-bottom:6px;}
+.ix-with a{font-size:14px;padding:2px 10px;border:1px solid var(--line-strong);border-radius:999px;color:var(--ink);text-decoration:none;background:var(--bg);}
+.ix-with a:hover{border-color:var(--accent);color:var(--accent);}
+.ix-plus{color:var(--muted);font-weight:700;}
+.ix-item p{margin:6px 0 0;font-size:15px;line-height:1.5;}
+.ix-none{color:var(--muted);}
+.ix-alc,.ix-foot{font-size:13.5px;color:var(--muted);margin:12px 0 0;}
+.ix-alc a{color:var(--accent);}
+.ixc{margin-top:22px;border:1px solid var(--line);border-radius:var(--r-lg);background:var(--surface);}
+.ixc-head{display:flex;align-items:center;gap:10px;width:100%;border:0;background:transparent;padding:14px 16px;font-size:17px;font-weight:700;color:var(--ink);cursor:pointer;text-align:left;font-family:inherit;}
+.ixc-n{font-size:13.5px;font-weight:600;color:var(--accent);}
+.chev{margin-left:auto;width:10px;height:10px;border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);transform:rotate(45deg);transition:transform .15s;}
+.ixc-head[aria-expanded="true"] .chev{transform:rotate(-135deg);}
+.ixc-body{padding:0 16px 16px;}
+.ixc-search{margin-top:0;}
+.ixc-search input{font-size:16px;padding:12px 14px;}
+.ixchips{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0 4px;align-items:center;}
+.ixchip{display:inline-flex;align-items:center;gap:4px;padding:3px 4px 3px 12px;border-radius:999px;background:var(--accent-soft);border:1px solid var(--accent);font-size:14.5px;font-weight:600;}
+.ixchip button{border:0;background:transparent;color:var(--muted);font-size:18px;line-height:1;width:24px;height:24px;border-radius:50%;cursor:pointer;}
+.ixchip button:hover{background:var(--surface);color:var(--danger);}
+.ixc-clear{border:0;background:transparent;color:var(--muted);text-decoration:underline;font-size:14px;cursor:pointer;}
+.ixc-help{color:var(--muted);font-size:14.5px;margin:10px 0;}
+
 /* ---------- Bandera + Malvinas (igual que alcoholito) ---------- */
 .ar-mark{display:flex;align-items:center;justify-content:center;gap:9px;margin-top:16px;}
 .ar-mark .flag{width:30px;height:20px;border-radius:3px;display:block;box-shadow:0 1px 3px rgba(0,0,0,.18);border:1px solid var(--line-strong);}
@@ -250,7 +271,7 @@ footer p{margin:0;}
       <span class="word">farmacodos</span>
       <span class="conc" aria-hidden="true">mg/kg</span>
     </a>
-    <p class="tagline">Vademécum de consulta rápida y repaso para médicos: mecanismo de acción, farmacocinética, efectos adversos, contraindicaciones, usos y dosificación, embarazo y lactancia, y toxicidad, con fundamento bibliográfico.</p>
+    <p class="tagline">Vademécum de consulta rápida y repaso para médicos: mecanismo de acción, farmacocinética, efectos adversos, contraindicaciones, interacciones, usos y dosificación, embarazo y lactancia, y toxicidad, con fundamento bibliográfico.</p>
   </header>
 
   <div class="search" role="combobox" aria-expanded="false" aria-haspopup="listbox" aria-owns="sugg" id="combo">
@@ -261,6 +282,20 @@ footer p{margin:0;}
   <div class="recent" id="recent" hidden></div>
 
   <div id="result" aria-live="polite"></div>
+
+  <section class="ixc" id="ixc" aria-label="Verificador de interacciones">
+    <button class="ixc-head" id="ixc-toggle" aria-expanded="false" aria-controls="ixc-body">
+      <span>Verificar interacciones</span><span class="ixc-n" id="ixc-n"></span><span class="chev" aria-hidden="true"></span>
+    </button>
+    <div class="ixc-body" id="ixc-body" hidden>
+      <div class="search ixc-search">
+        <input id="ixq" type="text" inputmode="search" autocomplete="off" spellcheck="false" placeholder="Agregar fármaco…" aria-label="Agregar fármaco al verificador" aria-autocomplete="list" aria-controls="ixsugg">
+        <ul class="suggest" id="ixsugg" role="listbox"></ul>
+      </div>
+      <div class="ixchips" id="ixchips"></div>
+      <div id="ixres"></div>
+    </div>
+  </section>
 
   <section class="browse" aria-label="Explorar fármacos">
     <div class="browse-head">
@@ -286,7 +321,7 @@ footer p{margin:0;}
 <dialog id="info">
   <div class="dlg">
     <h2>Sobre farmacodos</h2>
-    <p>Vademécum de consulta rápida destinado a médicos. Cada ficha parte de la fisiología y del mecanismo de acción para llegar a su aplicación clínica, e incluye resumen, mecanismo de acción, farmacocinética, efectos adversos, contraindicaciones, usos con dosificación, embarazo y lactancia, toxicidad y bibliografía. Reúne los fármacos de uso más frecuente en la práctica clínica y un bloque específico de anestesia y cuidados críticos.</p>
+    <p>Vademécum de consulta rápida destinado a médicos. Cada ficha parte de la fisiología y del mecanismo de acción para llegar a su aplicación clínica, e incluye resumen, mecanismo de acción, farmacocinética, efectos adversos, contraindicaciones, usos con dosificación, interacciones, embarazo y lactancia, toxicidad y bibliografía. Reúne los fármacos de uso más frecuente en la práctica clínica y un bloque específico de anestesia y cuidados críticos.</p>
     <h3>Colores de las etiquetas</h3>
     <p>Cada ficha usa el color de etiqueta de jeringa de la norma ISO 26825, el utilizado en quirófano. Los fármacos sin categoría ISO llevan etiqueta blanca. Las rayas blancas marcan antagonistas, reversores e hipotensores.</p>
     <div class="legend" id="legend"></div>
@@ -298,6 +333,9 @@ footer p{margin:0;}
       <li>Gropper MA, et al. (eds.). Miller. Anestesia. 9.ª ed. Elsevier; 2021.</li>
       <li>Rang &amp; Dale's Pharmacology, 10.ª ed.</li>
       <li>APILAM. e-lactancia.org: compatibilidad de medicamentos con la lactancia (consulta: octubre de 2026).</li>
+      <li>U.S. Food and Drug Administration. Drug Development and Drug Interactions: Table of Substrates, Inhibitors and Inducers.</li>
+      <li>CredibleMeds. QTdrugs List: clasificación del riesgo de prolongación del QT y torsade de pointes.</li>
+      <li>U.S. Food and Drug Administration. Drug Safety Communications: opioides y benzodiacepinas (2016); gabapentinoides y depresión respiratoria (2019).</li>
       <li>Prospectos aprobados por ANMAT y guías y ensayos clínicos citados en la bibliografía de cada ficha.</li>
     </ul>
     <h3>Importante</h3>
@@ -3257,7 +3295,7 @@ function labelBg(l){
 
 const TABS = [
   ["mec","Mecanismo"],["pk","Farmacocinética"],["ea","Efectos adversos"],
-  ["ci","Contraindicaciones"],["uso","Usos y dosis"],["emb","Embarazo y lactancia"],["tox","Toxicidad"],["all","Todo"]
+  ["ci","Contraindicaciones"],["ix","Interacciones"],["uso","Usos y dosis"],["emb","Embarazo y lactancia"],["tox","Toxicidad"],["all","Todo"]
 ];
 
 /* ---------- utilidades ---------- */
@@ -3537,6 +3575,465 @@ document.addEventListener("input", e => {
   box.querySelector(".calc-t tbody").innerHTML = calcBody(d, parseFloat(v.replace(",",".")));
 });
 
+/* =============== INTERACCIONES ===============
+   Motor basado en mecanismos: cada fármaco se clasifica según sus
+   propiedades farmacocinéticas y farmacodinámicas (TAGS); las reglas
+   (IX_RULES) describen el resultado de combinar dos propiedades.
+   IX_PAIRS contiene interacciones específicas de un par de fármacos.
+   Severidad: 0 = contraindicada, 1 = mayor, 2 = moderada.
+=============================================== */
+const T = {
+SERO_S:["sertralina","fluoxetina","escitalopram","citalopram","paroxetina","venlafaxina","duloxetina","vortioxetina","clomipramina","tramadol","linezolid"],
+SERO_W:["fentanilo","ondansetron","sumatriptan","trazodona","mirtazapina","amitriptilina","litio","buspirona","metoclopramida"],
+MAOI:["linezolid"],
+SYMP:["efedrina","fenilefrina","noradrenalina","adrenalina","dobutamina","metilfenidato","atomoxetina","bupropion"],
+QT_K:["amiodarona","citalopram","escitalopram","haloperidol","ondansetron","domperidona","azitromicina","claritromicina","ciprofloxacina","fluconazol","levomepromazina","sevoflurano"],
+QT_P:["quetiapina","risperidona","olanzapina","clozapina","clomipramina","amitriptilina","trazodona","venlafaxina","litio","loperamida","famotidina","tramadol","atomoxetina","mirtazapina","fluoxetina","ivabradina","octreotida"],
+HYPOK:["furosemida","hidroclorotiazida","salbutamol","insulina"],
+OPI:["fentanilo","remifentanilo","morfina","tramadol"],
+BZD:["midazolam","diazepam","lorazepam","alprazolam","clonazepam","bromazepam","zolpidem"],
+GABAP:["pregabalina"],
+CNS:["propofol","ketamina","dexmedetomidina","etomidato","sevoflurano","quetiapina","olanzapina","clozapina","levomepromazina","mirtazapina","trazodona","difenhidramina","amitriptilina","clomipramina","haloperidol","risperidona","fentanilo","remifentanilo","morfina","tramadol","midazolam","diazepam","lorazepam","alprazolam","clonazepam","bromazepam","zolpidem","pregabalina"],
+ANTICOAG:["heparina","enoxaparina","acenocumarol","warfarina","apixaban","rivaroxaban"],
+AVK:["acenocumarol","warfarina"],
+DOAC:["apixaban","rivaroxaban"],
+ANTIPLT:["aspirina","clopidogrel"],
+NSAID:["ketorolac","ibuprofeno","diclofenac","celecoxib"],
+SSRI:["sertralina","fluoxetina","escitalopram","citalopram","paroxetina","venlafaxina","duloxetina","vortioxetina"],
+CORT:["prednisona","hidrocortisona","dexametasona"],
+INH2C9:["amiodarona","metronidazol","tmpsmx","fluconazol","ciprofloxacina","claritromicina"],
+AVK_PD:["paracetamol","levotiroxina"],
+INDUCER:["rifampicina","carbamazepina","fenitoina"],
+INH3A4_S:["claritromicina"],
+INH3A4_M:["fluconazol","verapamilo","diltiazem"],
+SUB3A4:["atorvastatina","colchicina","midazolam","fentanilo","alprazolam","quetiapina","apixaban","rivaroxaban","amlodipina","nifedipina","sildenafil","budesonida","clonazepam","zolpidem","buspirona","aripiprazol","trazodona","ivabradina","domperidona","dexametasona","carbamazepina","diazepam","bromazepam","loperamida","clozapina","haloperidol","aco","levonorgestrelemergencia","progesterona","dolutegravir","verapamilo","diltiazem","amiodarona"],
+SUB3A4_CRIT:["colchicina","ivabradina","domperidona"],
+SUB_IND_MAJOR:["aco","levonorgestrelemergencia","apixaban","rivaroxaban","dolutegravir","clozapina","quetiapina"],
+SUB_UGT:["lamotrigina","valproato","levotiroxina"],
+INH2D6:["fluoxetina","paroxetina","bupropion","duloxetina","levomepromazina"],
+SUB2D6:["tramadol","risperidona","aripiprazol","atomoxetina","venlafaxina","amitriptilina","clomipramina","haloperidol","vortioxetina","carvedilol","metoclopramida","donepecilo"],
+INH1A2:["ciprofloxacina"],
+SUB1A2:["clozapina","olanzapina","duloxetina","ropivacaina","lidocaina"],
+ACEI:["enalapril","ramipril"],
+ARB:["losartan","valsartan"],
+ARNI:["sacubitrilovalsartan"],
+RAAS:["enalapril","ramipril","losartan","valsartan","sacubitrilovalsartan"],
+KSPAR:["espironolactona"],
+HYPERK_O:["tmpsmx","heparina","enoxaparina"],
+DIUR:["furosemida","hidroclorotiazida","espironolactona"],
+LITHIUM:["litio"],
+LITHIUM_UP:["hidroclorotiazida","enalapril","ramipril","losartan","valsartan","sacubitrilovalsartan","ketorolac","ibuprofeno","diclofenac","celecoxib"],
+NEPHRO:["vancomicina","gentamicina","ketorolac","ibuprofeno","diclofenac","celecoxib","tenofovir","aciclovir"],
+HYPOGLY:["insulina","glargina","glibenclamida"],
+ANTIDIAB:["insulina","glargina","glibenclamida","metformina","sitagliptina","dapagliflozina","semaglutida"],
+SU:["glibenclamida"],
+SU_BOOST:["fluconazol","tmpsmx","claritromicina"],
+FQ:["ciprofloxacina"],
+BB:["bisoprolol","carvedilol","atenolol","esmolol","labetalol","timolol"],
+BB_NS:["carvedilol","labetalol","timolol"],
+NDHP:["verapamilo","diltiazem"],
+AVNODE:["bisoprolol","carvedilol","atenolol","esmolol","labetalol","timolol","verapamilo","diltiazem","digoxina","amiodarona","ivabradina","dexmedetomidina","donepecilo"],
+DIG:["digoxina"],
+DIGUP:["amiodarona","verapamilo","diltiazem","claritromicina"],
+PDE5:["sildenafil"],
+NITRATE:["nitroglicerina"],
+ALPHA:["tamsulosina","carvedilol","labetalol"],
+ANTICH:["difenhidramina","amitriptilina","clomipramina","atropina","hioscina","olanzapina","clozapina","quetiapina","levomepromazina","paroxetina"],
+ACHEI_C:["donepecilo"],
+LDOPA:["levodopa"],
+DOPA_ANT:["haloperidol","risperidona","metoclopramida","levomepromazina","olanzapina","aripiprazol"],
+APS:["haloperidol","risperidona","levomepromazina","olanzapina","aripiprazol","quetiapina","clozapina"],
+METO:["metoclopramida"],
+SEIZ:["bupropion","tramadol","clozapina","clomipramina","amitriptilina","ciprofloxacina"],
+BNM:["rocuronio","cisatracurio","succinilcolina"],
+BNM_POT:["gentamicina","magnesio","sevoflurano","clindamicina","litio"],
+ACHE:["neostigmina","donepecilo"],
+SCH:["succinilcolina"],
+NDBNM:["rocuronio","cisatracurio"],
+SUGA:["sugammadex"],
+HORM:["aco","levonorgestrelemergencia","progesterona"],
+NALT:["naltrexona"],
+ABS_SENS:["ciprofloxacina","doxiciclina","dolutegravir","levotiroxina","levodopa"],
+CATION:["sulfatoferroso","sucralfato"],
+ACIDSUP:["omeprazol","esomeprazol","pantoprazol","famotidina"],
+IRON_LT4:["sulfatoferroso","levotiroxina"],
+MYELO:["clozapina","carbamazepina","metimazol","dipirona","linezolid","tmpsmx"],
+HEPATO:["isoniazida","rifampicina","pirazinamida","valproato","disulfiram","amiodarona"],
+STATIN:["atorvastatina","rosuvastatina"],
+COLCH:["colchicina"],
+ADR:["adrenalina"],
+SALB:["salbutamol"]
+};
+
+const IX_RULES = [
+/* --- Serotoninérgicos --- */
+{id:"sero1",a:"SERO_S",b:"SERO_S",s:1,f:"sero",t:"Síndrome serotoninérgico",
+ m:"Ambos aumentan la neurotransmisión serotoninérgica (inhibición de la recaptación, inhibición de la MAO o agonismo). El exceso de estimulación de receptores 5-HT1A y 5-HT2A en el SNC y la periferia produce alteración del estado mental, hiperactividad autonómica (hipertermia, taquicardia, diaforesis) y alteraciones neuromusculares (clonus, hiperreflexia).",
+ x:"Evitar la asociación o utilizar la menor dosis eficaz con vigilancia clínica estrecha. Ante clonus inducible o hiperreflexia con fiebre (criterios de Hunter), suspender ambos fármacos. Con linezolid, suspender el ISRS o IRSN y vigilar durante 2 semanas (5 semanas con fluoxetina)."},
+{id:"sero2",a:"SERO_S",b:"SERO_W",s:2,f:"sero",t:"Riesgo de síndrome serotoninérgico",
+ m:"Suma de efectos serotoninérgicos: un fármaco con acción serotoninérgica principal y otro con acción serotoninérgica secundaria (agonismo 5-HT1B/1D, antagonismo 5-HT3 o efecto serotoninérgico débil).",
+ x:"Asociación habitual y en general segura, pero debe vigilarse la aparición de agitación, temblor, clonus, diaforesis o hipertermia, especialmente al iniciar o aumentar dosis."},
+{id:"maoi",a:"MAOI",b:"SYMP",s:1,f:"maoi",t:"Respuesta presora exagerada (crisis hipertensiva)",
+ m:"El linezolid es un inhibidor débil, reversible y no selectivo de la MAO: reduce la degradación de la noradrenalina y potencia el efecto de los simpaticomiméticos, en especial los de acción indirecta.",
+ x:"Evitar los simpaticomiméticos de acción indirecta. Si se requiere un vasopresor, iniciar con dosis bajas y titular según la presión arterial."},
+/* --- QT --- */
+{id:"qt1",a:"QT_K",b:"QT_K",s:1,f:"qt",t:"Prolongación del QT y riesgo de torsade de pointes",
+ m:"Ambos bloquean la corriente rectificadora tardía de K⁺ (IKr, canal hERG) y prolongan la repolarización ventricular. El efecto es aditivo: aumenta la dispersión de la repolarización y la probabilidad de posdespolarizaciones precoces que desencadenan torsade de pointes.",
+ x:"Evitar la asociación si existen alternativas. Si es necesaria, obtener ECG basal y de control (suspender si QTc > 500 ms o aumento > 60 ms), corregir K⁺ y Mg²⁺ y evitar la bradicardia."},
+{id:"qt2",a:"QT_K",b:"QT_P",s:2,f:"qt",t:"Prolongación aditiva del QT",
+ m:"Un fármaco con riesgo establecido de torsade de pointes se asocia a otro con riesgo posible o condicionado (dosis altas, insuficiencia renal, bradicardia o alteraciones electrolíticas). Ambos prolongan la repolarización ventricular.",
+ x:"Obtener ECG en pacientes con factores de riesgo (sexo femenino, edad avanzada, cardiopatía, hipopotasemia, hipomagnesemia, bradicardia) y corregir los electrolitos."},
+{id:"qtk",a:"HYPOK",b:"QT_K",s:2,f:"qtk",t:"Hipopotasemia que potencia la prolongación del QT",
+ m:"La hipopotasemia reduce la corriente IKr y prolonga la repolarización; además aumenta la afinidad de varios fármacos por el canal hERG. Por ello potencia el riesgo de torsade de pointes de los fármacos que prolongan el QT.",
+ x:"Controlar y corregir K⁺ y Mg²⁺ antes y durante la asociación."},
+/* --- SNC --- */
+{id:"cns1",a:"OPI",b:"BZD",s:1,f:"cns",t:"Depresión respiratoria y del SNC grave",
+ m:"Sinergia farmacodinámica: los opioides deprimen la respuesta ventilatoria al CO₂ a través de receptores µ del tronco encefálico, y las benzodiacepinas y fármacos Z potencian el receptor GABA-A. La combinación produce una depresión respiratoria mayor que la suma de ambos efectos (advertencia de recuadro negro de la FDA, 2016).",
+ x:"Fuera del ámbito anestésico y de cuidados críticos, evitar la asociación o usar las menores dosis con monitoreo de la sedación y la frecuencia respiratoria. En anestesia la asociación es habitual y deliberada, con monitoreo continuo y soporte ventilatorio disponible."},
+{id:"cns2",a:"OPI",b:"GABAP",s:1,f:"cns",t:"Depresión respiratoria",
+ m:"Los gabapentinoides suman depresión del SNC y aumentan el riesgo de depresión respiratoria asociada a opioides, especialmente en ancianos, EPOC e insuficiencia renal (advertencia de la FDA, 2019).",
+ x:"Iniciar con dosis bajas de pregabalina, ajustarla a la función renal y vigilar la sedación y la frecuencia respiratoria."},
+{id:"cns3",a:"CNS",b:"CNS",s:2,f:"cns",t:"Depresión aditiva del SNC",
+ m:"Ambos fármacos deprimen el SNC por mecanismos complementarios (GABAérgico, opioide, antihistamínico H1, α2 adrenérgico o antagonismo NMDA), con efecto sedante y depresor respiratorio aditivo o sinérgico.",
+ x:"En anestesia la asociación es habitual (anestesia balanceada) y permite reducir la dosis de cada fármaco. Fuera de ese ámbito, reducir dosis y vigilar sedación, caídas y depresión respiratoria, sobre todo en ancianos."},
+/* --- Hemostasia --- */
+{id:"bl1",a:"ANTICOAG",b:"ANTICOAG",s:1,f:"bleed",t:"Duplicación de anticoagulantes",
+ m:"Suma de efectos anticoagulantes por inhibición de distintos factores de la coagulación, con aumento del riesgo hemorrágico.",
+ x:"Evitar la superposición, salvo en situaciones protocolizadas: superposición de heparina con un antagonista de la vitamina K hasta lograr un RIN en rango, o transición entre anticoagulantes según su vida media."},
+{id:"bl2",a:"ANTICOAG",b:"ANTIPLT",s:1,f:"bleed",t:"Aumento del riesgo hemorrágico",
+ m:"La anticoagulación inhibe la generación de trombina y la antiagregación inhibe la función plaquetaria: se afectan simultáneamente la hemostasia primaria y la secundaria.",
+ x:"Indicar la asociación sólo con indicación clara (p. ej., síndrome coronario o stent reciente en un paciente anticoagulado), por el menor tiempo posible y con protección gástrica (IBP)."},
+{id:"bl3",a:"ANTICOAG",b:"NSAID",s:1,f:"bleed",t:"Hemorragia, en especial digestiva",
+ m:"Los AINE inhiben la COX-1 plaquetaria (antiagregación) y la síntesis de prostaglandinas gástricas protectoras; sumados a la anticoagulación aumentan marcadamente el riesgo de hemorragia digestiva.",
+ x:"Evitar los AINE en pacientes anticoagulados; preferir paracetamol. Si son imprescindibles, uso breve con IBP."},
+{id:"bl4",a:"NSAID",b:"NSAID",s:1,f:"bleed",t:"Duplicación de AINE",
+ m:"La asociación de dos AINE no aumenta la eficacia analgésica y suma toxicidad gastrointestinal, renal y cardiovascular.",
+ x:"No asociar AINE entre sí."},
+{id:"bl5",a:"ANTIPLT",b:"ANTIPLT",s:2,f:"bleed",t:"Doble antiagregación",
+ m:"Inhibición plaquetaria por dos vías (tromboxano A₂ y receptor P2Y12) con aumento del riesgo hemorrágico.",
+ x:"Asociación indicada tras síndrome coronario agudo o angioplastia con stent, por el tiempo definido por cardiología. Considerar IBP (pantoprazol)."},
+{id:"bl6",a:"ANTIPLT",b:"NSAID",s:2,f:"bleed",t:"Aumento del riesgo hemorrágico digestivo",
+ m:"Suma de inhibición plaquetaria y de toxicidad sobre la mucosa gástrica.",
+ x:"Evitar el uso prolongado; preferir paracetamol y asociar IBP si la combinación es necesaria."},
+{id:"bl7",a:"SSRI",b:"ANTICOAG",s:2,f:"bleed2",t:"Aumento del riesgo hemorrágico",
+ m:"Los ISRS e IRSN reducen la captación de serotonina por las plaquetas, que no la sintetizan, con menor agregación plaquetaria; el efecto se suma al del anticoagulante.",
+ x:"Vigilar signos de sangrado; considerar IBP en pacientes con riesgo digestivo."},
+{id:"bl8",a:"SSRI",b:"ANTIPLT",s:2,f:"bleed2",t:"Aumento del riesgo hemorrágico",
+ m:"Los ISRS e IRSN reducen la serotonina plaquetaria y la agregación; el efecto se suma al del antiagregante.",
+ x:"Vigilar signos de sangrado; considerar IBP en pacientes con riesgo digestivo."},
+{id:"bl9",a:"SSRI",b:"NSAID",s:2,f:"bleed2",t:"Hemorragia digestiva",
+ m:"La reducción de la serotonina plaquetaria por los ISRS se suma al daño de la mucosa y a la antiagregación de los AINE.",
+ x:"Preferir paracetamol; si se asocian, indicar IBP."},
+{id:"gi1",a:"CORT",b:"NSAID",s:2,f:"gi",t:"Úlcera y hemorragia digestiva",
+ m:"Los corticoides alteran la reparación de la mucosa y los AINE reducen las prostaglandinas protectoras: el riesgo de úlcera se multiplica.",
+ x:"Indicar IBP durante la asociación y limitar su duración."},
+/* --- Antagonistas de la vitamina K --- */
+{id:"avk1",a:"AVK",b:"INH2C9",s:1,f:"avk",t:"Aumento del RIN y riesgo hemorrágico",
+ m:"El enantiómero S de los cumarínicos se metaboliza por CYP2C9. Su inhibición (o la alteración de la flora intestinal productora de vitamina K) aumenta la concentración del anticoagulante y el RIN.",
+ x:"Evitar si existe alternativa. Si se asocia, controlar el RIN a los 3–5 días y ajustar la dosis (con amiodarona suele requerirse una reducción de 30–50%)."},
+{id:"avk2",a:"AVK",b:"INDUCER",s:1,f:"avk",t:"Disminución del RIN y pérdida del efecto anticoagulante",
+ m:"La inducción de CYP2C9 y CYP3A4 acelera el metabolismo del anticoagulante; el efecto se instala en 1–2 semanas y persiste semanas después de suspender el inductor.",
+ x:"Controlar el RIN con frecuencia y ajustar la dosis al iniciar y al suspender el inductor."},
+{id:"avk3",a:"AVK",b:"AVK_PD",s:2,f:"avk",t:"Aumento del RIN",
+ m:"Paracetamol en dosis altas sostenidas (más de 2 g/día durante varios días): interfiere con el ciclo de la vitamina K. Levotiroxina: el aumento del metabolismo acelera el catabolismo de los factores de coagulación.",
+ x:"Controlar el RIN al iniciar o modificar la dosis."},
+/* --- CYP3A4 --- */
+{id:"cyp1",a:"INH3A4_S",b:"SUB3A4_CRIT",s:0,f:"cyp3a4",t:"Toxicidad grave por aumento de concentraciones",
+ m:"La claritromicina es un inhibidor potente del CYP3A4 (y de la glicoproteína P). Colchicina, ivabradina y domperidona tienen un margen terapéutico estrecho y dependen de esa vía: su concentración aumenta varias veces (miotoxicidad y falla multiorgánica con colchicina; bradicardia con ivabradina; arritmias ventriculares con domperidona).",
+ x:"Contraindicada. Utilizar un antibiótico alternativo (p. ej., azitromicina, que inhibe escasamente el CYP3A4)."},
+{id:"cyp2",a:"INH3A4_S",b:"SUB3A4",s:1,f:"cyp3a4",t:"Aumento marcado de la concentración del sustrato del CYP3A4",
+ m:"La claritromicina inhibe de forma potente y dependiente del tiempo el CYP3A4: la exposición al sustrato puede aumentar varias veces, con toxicidad dosis-dependiente (sedación prolongada con benzodiacepinas y opioides, miopatía con estatinas, hipotensión con bloqueantes cálcicos, sangrado con anticoagulantes directos).",
+ x:"Preferir azitromicina. Si no es posible, reducir la dosis del sustrato o suspenderlo transitoriamente y vigilar su toxicidad."},
+{id:"cyp3",a:"INH3A4_M",b:"SUB3A4",s:2,f:"cyp3a4",t:"Aumento de la concentración del sustrato del CYP3A4",
+ m:"Inhibición moderada del CYP3A4 (fluconazol, verapamilo, diltiazem): la exposición al sustrato aumenta aproximadamente 2 a 5 veces.",
+ x:"Considerar reducir la dosis del sustrato y vigilar sus efectos adversos."},
+{id:"ind1",a:"INDUCER",b:"SUB_IND_MAJOR",s:1,f:"ind",t:"Pérdida de eficacia por inducción enzimática",
+ m:"Rifampicina, carbamazepina y fenitoína inducen CYP3A4, UGT y glicoproteína P a través de los receptores nucleares PXR y CAR; la concentración del fármaco afectado puede reducirse más de 50% (falla anticonceptiva, trombosis con anticoagulantes directos, falla virológica con dolutegravir, recaída con antipsicóticos).",
+ x:"Evitar la asociación o ajustar la dosis según el fármaco: anticoncepción no hormonal o DIU; anticoagulante alternativo; dolutegravir 50 mg c/12 h con rifampicina. El efecto persiste 2–4 semanas tras suspender el inductor."},
+{id:"ind2",a:"INDUCER",b:"SUB3A4",s:2,f:"ind",t:"Disminución de la concentración por inducción enzimática",
+ m:"La inducción del CYP3A4 acelera el metabolismo del sustrato y reduce su eficacia; el efecto se instala en 1–2 semanas y revierte de forma gradual tras la suspensión del inductor.",
+ x:"Vigilar la eficacia clínica y ajustar la dosis al iniciar y al suspender el inductor."},
+{id:"ind3",a:"INDUCER",b:"SUB_UGT",s:2,f:"ind",t:"Disminución de la concentración por inducción de la glucuronidación",
+ m:"La inducción de las UGT acelera la eliminación de lamotrigina, valproato y levotiroxina.",
+ x:"Controlar niveles plasmáticos o TSH y ajustar la dosis."},
+{id:"ind4",a:"INDUCER",b:"HORM",s:1,f:"ind",t:"Falla del método anticonceptivo hormonal",
+ m:"La inducción del CYP3A4 reduce las concentraciones de etinilestradiol y progestágenos por debajo del umbral anticonceptivo.",
+ x:"Utilizar un método no afectado (DIU de cobre o levonorgestrel, preservativo). Para la anticoncepción de emergencia, duplicar la dosis de levonorgestrel (3 mg) o preferir el DIU de cobre."},
+/* --- CYP2D6 y CYP1A2 --- */
+{id:"d6",a:"INH2D6",b:"SUB2D6",s:2,f:"cyp2d6",t:"Interacción por inhibición del CYP2D6",
+ m:"La inhibición del CYP2D6 aumenta la concentración de los sustratos (más efectos adversos, prolongación del QT). En el caso del tramadol, reduce la formación del metabolito activo O-desmetiltramadol y la analgesia, mientras aumenta el riesgo serotoninérgico.",
+ x:"Ajustar la dosis del sustrato y vigilar su toxicidad; con tramadol, considerar un analgésico alternativo."},
+{id:"a2",a:"INH1A2",b:"SUB1A2",s:2,f:"cyp1a2",t:"Aumento de la concentración del sustrato del CYP1A2",
+ m:"La ciprofloxacina inhibe el CYP1A2. Con clozapina u olanzapina puede producir sedación marcada, hipotensión y convulsiones (clozapina).",
+ x:"Preferir otra fluoroquinolona o antibiótico; si se asocian, controlar niveles de clozapina y reducir su dosis."},
+/* --- Potasio, SRAA y riñón --- */
+{id:"raas1",a:"ACEI",b:"ARB",s:1,f:"raas",t:"Doble bloqueo del sistema renina-angiotensina",
+ m:"La asociación de IECA y ARA II no aporta beneficio cardiovascular adicional y aumenta la hiperpotasemia, la hipotensión y la insuficiencia renal aguda (ensayo ONTARGET).",
+ x:"Evitar la asociación."},
+{id:"raas2",a:"ACEI",b:"ARNI",s:0,f:"raas",t:"Angioedema grave",
+ m:"La neprilisina y la ECA degradan la bradicinina. Su inhibición simultánea produce acumulación marcada de bradicinina y angioedema potencialmente mortal.",
+ x:"Contraindicada. Suspender el IECA al menos 36 h antes de iniciar sacubitrilo-valsartán."},
+{id:"raas3",a:"ARB",b:"ARNI",s:1,f:"raas",t:"Duplicación de antagonistas del receptor AT1",
+ m:"El sacubitrilo-valsartán ya contiene un ARA II: la asociación duplica el bloqueo AT1 (hipotensión, hiperpotasemia, insuficiencia renal).",
+ x:"No asociar; suspender el ARA II al iniciar sacubitrilo-valsartán."},
+{id:"raas4",a:"RAAS",b:"KSPAR",s:1,f:"k",t:"Hiperpotasemia",
+ m:"El bloqueo del SRAA reduce la aldosterona y la espironolactona antagoniza su receptor: ambos disminuyen la secreción de K⁺ en el túbulo colector.",
+ x:"Asociación indicada en la insuficiencia cardíaca con fracción de eyección reducida. Controlar K⁺ y creatinina a la semana y luego periódicamente; evitar con K⁺ > 5 mEq/L o FG < 30 mL/min."},
+{id:"raas5",a:"RAAS",b:"HYPERK_O",s:2,f:"k",t:"Hiperpotasemia",
+ m:"La trimetoprima bloquea los canales ENaC del túbulo colector (efecto similar a la amilorida) y las heparinas inhiben la síntesis de aldosterona; ambos se suman al bloqueo del SRAA.",
+ x:"Controlar el K⁺, especialmente en ancianos y en la insuficiencia renal."},
+{id:"raas6",a:"KSPAR",b:"HYPERK_O",s:2,f:"k",t:"Hiperpotasemia",
+ m:"Suma de mecanismos que reducen la excreción renal de K⁺.",
+ x:"Controlar el K⁺ y la función renal."},
+{id:"nsr",a:"NSAID",b:"RAAS",s:2,f:"renal",t:"Menor efecto antihipertensivo e insuficiencia renal aguda",
+ m:"Los AINE reducen las prostaglandinas que mantienen dilatada la arteriola aferente, mientras el bloqueo del SRAA dilata la eferente: cae la presión de filtración glomerular. Además, la retención de sodio reduce el efecto antihipertensivo. El riesgo es máximo si se suma un diurético (triple whammy).",
+ x:"Evitar en hipovolemia, ancianos e insuficiencia renal o cardíaca; si se asocian, controlar creatinina, K⁺ y presión arterial."},
+{id:"nsd",a:"NSAID",b:"DIUR",s:2,f:"renal",t:"Menor efecto diurético e insuficiencia renal aguda",
+ m:"La inhibición de prostaglandinas renales reduce la natriuresis y el flujo renal; con depleción de volumen aumenta el riesgo de insuficiencia renal aguda.",
+ x:"Evitar el uso prolongado; controlar la función renal y el peso."},
+{id:"li",a:"LITHIUM",b:"LITHIUM_UP",s:1,f:"li",t:"Intoxicación por litio",
+ m:"El túbulo proximal reabsorbe el litio junto con el sodio. Tiazidas, IECA, ARA II y AINE producen depleción de sodio o reducción del filtrado y aumentan la reabsorción de litio: la litemia puede aumentar 25–40%.",
+ x:"Evitar la asociación; si es necesaria, reducir la dosis de litio y controlar litemia a los 5–7 días y ante síntomas (temblor grosero, ataxia, confusión)."},
+{id:"nep",a:"NEPHRO",b:"NEPHRO",s:2,f:"nephro",t:"Nefrotoxicidad aditiva",
+ m:"Ambos fármacos pueden producir daño renal por mecanismos distintos (necrosis tubular, alteración hemodinámica glomerular, nefritis intersticial o cristaluria).",
+ x:"Evitar la asociación si es posible; asegurar hidratación y controlar la creatinina y los niveles de fármacos de margen estrecho (vancomicina, aminoglucósidos)."},
+/* --- Glucemia --- */
+{id:"gl1",a:"HYPOGLY",b:"ANTIDIAB",s:2,f:"gly",t:"Riesgo aditivo de hipoglucemia",
+ m:"Ambos reducen la glucemia; la insulina y las sulfonilureas pueden producir hipoglucemia aun en monoterapia, y la asociación aumenta el riesgo.",
+ x:"Asociación habitual en el tratamiento de la diabetes; ajustar la dosis de insulina o sulfonilurea y reforzar el automonitoreo."},
+{id:"gl2",a:"HYPOGLY",b:"BB",s:2,f:"gly2",t:"Enmascaramiento de la hipoglucemia",
+ m:"Los β-bloqueantes atenúan los síntomas adrenérgicos de la hipoglucemia (taquicardia, temblor; no la sudoración) y, los no selectivos, retrasan la recuperación al inhibir la glucogenólisis.",
+ x:"Preferir β-bloqueantes cardioselectivos y educar al paciente sobre síntomas no adrenérgicos."},
+{id:"gl3",a:"CORT",b:"ANTIDIAB",s:2,f:"gly3",t:"Hiperglucemia",
+ m:"Los glucocorticoides aumentan la gluconeogénesis hepática y la resistencia a la insulina, con hiperglucemia de predominio vespertino.",
+ x:"Controlar la glucemia y ajustar el tratamiento antidiabético mientras dure el corticoide."},
+{id:"gl4",a:"SU",b:"SU_BOOST",s:1,f:"gly4",t:"Hipoglucemia grave",
+ m:"Fluconazol y TMP-SMX inhiben el CYP2C9 y claritromicina el CYP3A4 y la glicoproteína P: aumenta la concentración de la sulfonilurea. La TMP-SMX además estimula la secreción de insulina.",
+ x:"Evitar o reducir la dosis de la sulfonilurea y controlar la glucemia."},
+{id:"gl5",a:"FQ",b:"HYPOGLY",s:2,f:"gly4",t:"Disglucemia",
+ m:"Las fluoroquinolonas pueden producir hipoglucemia (bloqueo de canales de K⁺ dependientes de ATP de la célula β) o hiperglucemia, en especial en ancianos y con sulfonilureas.",
+ x:"Controlar la glucemia durante el tratamiento."},
+/* --- Ritmo y conducción --- */
+{id:"av1",a:"BB",b:"NDHP",s:1,f:"av",t:"Bradicardia, bloqueo AV e insuficiencia cardíaca",
+ m:"Suma de efectos cronotrópicos, dromotrópicos e inotrópicos negativos (bloqueo β1 más bloqueo de canales de Ca²⁺ tipo L en el nodo AV y el miocardio).",
+ x:"Contraindicada la administración IV de ambos en forma próxima (riesgo de asistolia). Por vía oral, sólo con función ventricular conservada y monitoreo de FC y PR."},
+{id:"av2",a:"NDHP",b:"T_IVAB",s:0,f:"av",t:"Bradicardia grave",
+ m:"Verapamilo y diltiazem reducen la frecuencia cardíaca y, como inhibidores del CYP3A4, aumentan la concentración de ivabradina.",
+ x:"Contraindicada."},
+{id:"av3",a:"AVNODE",b:"AVNODE",s:2,f:"av",t:"Bradicardia y bloqueo AV aditivos",
+ m:"Ambos reducen la frecuencia sinusal o la conducción por el nodo AV (bloqueo β, bloqueo cálcico, efecto vagal, bloqueo de la corriente If o agonismo α2).",
+ x:"Vigilar FC, intervalo PR y presión arterial, sobre todo en ancianos y con trastornos de conducción previos."},
+{id:"dig1",a:"DIG",b:"DIGUP",s:1,f:"dig",t:"Intoxicación digitálica",
+ m:"Amiodarona, verapamilo, diltiazem y claritromicina inhiben la glicoproteína P intestinal y renal, que elimina la digoxina: la digoxinemia puede duplicarse. Verapamilo y diltiazem suman además bloqueo AV.",
+ x:"Reducir la dosis de digoxina 30–50% al iniciar la asociación y controlar digoxinemia, FC y ECG."},
+{id:"dig2",a:"DIG",b:"HYPOK",s:2,f:"dig2",t:"Aumento de la toxicidad digitálica",
+ m:"La hipopotasemia aumenta la unión de la digoxina a la Na⁺/K⁺-ATPasa (menor competencia del K⁺) y su arritmogenicidad.",
+ x:"Controlar y corregir K⁺ y Mg²⁺."},
+{id:"adr",a:"ADR",b:"BB_NS",s:1,f:"adr",t:"Hipertensión grave y bradicardia refleja",
+ m:"Con el bloqueo β no selectivo, la adrenalina actúa sobre receptores α1 sin la vasodilatación β2 que la contrarresta: aumenta la RVS y la presión arterial, con bradicardia refleja. Además, la anafilaxia puede ser refractaria a la adrenalina.",
+ x:"Titular la adrenalina con monitoreo; en anafilaxia refractaria en pacientes β-bloqueados considerar glucagón."},
+{id:"salb",a:"SALB",b:"BB_NS",s:2,f:"bronq",t:"Antagonismo del efecto broncodilatador",
+ m:"Los β-bloqueantes no selectivos bloquean los receptores β2 bronquiales, antagonizan el salbutamol y pueden desencadenar broncoespasmo.",
+ x:"En pacientes con asma o EPOC, preferir β-bloqueantes cardioselectivos."},
+/* --- Vasodilatadores --- */
+{id:"pde",a:"PDE5",b:"NITRATE",s:0,f:"vaso",t:"Hipotensión grave",
+ m:"Los nitratos aumentan la producción de GMPc (vía óxido nítrico) y los inhibidores de PDE-5 impiden su degradación: la vasodilatación sistémica es masiva.",
+ x:"Contraindicada. No administrar nitratos dentro de las 24 h de sildenafil (48 h con tadalafil)."},
+{id:"pde2",a:"PDE5",b:"ALPHA",s:2,f:"vaso",t:"Hipotensión ortostática",
+ m:"Suma de vasodilatación por GMPc y por bloqueo α1.",
+ x:"Iniciar el inhibidor de PDE-5 a la menor dosis con el α-bloqueante estabilizado."},
+/* --- Anticolinérgicos y dopaminérgicos --- */
+{id:"ach1",a:"ANTICH",b:"ANTICH",s:2,f:"ach",t:"Carga anticolinérgica aditiva",
+ m:"Suma de bloqueo muscarínico central y periférico: confusión y delirium, retención urinaria, constipación, sequedad bucal, taquicardia e hipertermia.",
+ x:"Evitar en ancianos y en pacientes con deterioro cognitivo, hiperplasia prostática o glaucoma de ángulo cerrado."},
+{id:"ach2",a:"ACHEI_C",b:"ANTICH",s:2,f:"ach2",t:"Antagonismo farmacodinámico",
+ m:"El donepecilo aumenta la acetilcolina central; los anticolinérgicos bloquean sus receptores y reducen su eficacia, además de empeorar el estado cognitivo.",
+ x:"Evitar los anticolinérgicos en pacientes con demencia tratados con inhibidores de la colinesterasa."},
+{id:"dopa",a:"LDOPA",b:"DOPA_ANT",s:1,f:"dopa",t:"Antagonismo del efecto antiparkinsoniano",
+ m:"El bloqueo de receptores D2 estriatales antagoniza la dopamina generada a partir de la levodopa y empeora el parkinsonismo.",
+ x:"Evitar. Como antiemético, usar domperidona u ondansetrón; como antipsicótico, quetiapina o clozapina."},
+{id:"meto",a:"METO",b:"APS",s:1,f:"eps",t:"Extrapiramidalismo y síndrome neuroléptico maligno",
+ m:"Suma de bloqueo D2 central: distonía, acatisia, parkinsonismo y, raramente, síndrome neuroléptico maligno.",
+ x:"Evitar la asociación; preferir un antiemético sin bloqueo D2 central (ondansetrón)."},
+{id:"seiz",a:"SEIZ",b:"SEIZ",s:2,f:"seiz",t:"Descenso aditivo del umbral convulsivo",
+ m:"Ambos reducen el umbral convulsivo por mecanismos distintos (antagonismo GABA-A, efecto monoaminérgico o bloqueo de canales).",
+ x:"Evitar en pacientes con epilepsia o factores de riesgo; respetar las dosis máximas."},
+/* --- Bloqueo neuromuscular --- */
+{id:"bnm",a:"BNM_POT",b:"BNM",s:2,f:"bnm",t:"Potenciación del bloqueo neuromuscular",
+ m:"Aminoglucósidos, magnesio y clindamicina reducen la liberación presináptica de acetilcolina (dependiente de Ca²⁺); los halogenados y el litio potencian el efecto postsináptico. El bloqueo se prolonga y aumenta el riesgo de parálisis residual.",
+ x:"Reducir la dosis del bloqueante, monitorear con TOF cuantitativo y confirmar TOF ≥ 0,9 antes de la extubación."},
+{id:"ache1",a:"ACHE",b:"SCH",s:1,f:"bnm2",t:"Prolongación del bloqueo por succinilcolina",
+ m:"Los anticolinesterásicos inhiben también la butirilcolinesterasa plasmática que hidroliza la succinilcolina; además, el exceso de acetilcolina mantiene la despolarización de la placa.",
+ x:"La neostigmina no revierte el bloqueo despolarizante: lo prolonga. En pacientes con donepecilo, considerar una duración mayor del bloqueo."},
+{id:"ache2",a:"ACHEI_C",b:"NDBNM",s:2,f:"bnm2",t:"Resistencia a los bloqueantes no despolarizantes",
+ m:"El aumento crónico de acetilcolina en la placa por el donepecilo compite con el bloqueante no despolarizante.",
+ x:"Puede requerirse una dosis mayor; titular según el TOF."},
+{id:"suga",a:"SUGA",b:"HORM",s:2,f:"suga",t:"Reducción del efecto anticonceptivo hormonal",
+ m:"El sugammadex puede encapsular progestágenos y reducir su concentración, con un efecto equivalente a la omisión de una toma.",
+ x:"Indicar un método anticonceptivo adicional no hormonal durante 7 días."},
+/* --- Absorción --- */
+{id:"abs1",a:"ABS_SENS",b:"CATION",s:2,f:"abs",t:"Disminución de la absorción por quelación",
+ m:"El hierro y el aluminio del sucralfato forman complejos insolubles con fluoroquinolonas, tetraciclinas, dolutegravir, levotiroxina y levodopa, y reducen su absorción.",
+ x:"Separar las tomas: el fármaco afectado 2 h antes o 4–6 h después del hierro o el sucralfato."},
+{id:"abs2",a:"ACIDSUP",b:"IRON_LT4",s:2,f:"abs2",t:"Disminución de la absorción",
+ m:"El pH gástrico ácido favorece la absorción del hierro no hemo (reducción a Fe²⁺) y la disolución de la levotiroxina; los antisecretores la reducen.",
+ x:"Controlar ferritina o TSH durante el tratamiento prolongado y ajustar la dosis."},
+/* --- Toxicidad orgánica aditiva --- */
+{id:"mye",a:"MYELO",b:"MYELO",s:2,f:"myelo",t:"Mielotoxicidad aditiva",
+ m:"Ambos pueden producir neutropenia o agranulocitosis por mecanismos idiosincráticos o tóxicos.",
+ x:"Evitar la asociación, en especial con clozapina; si es necesaria, controlar el hemograma con frecuencia."},
+{id:"hep",a:"HEPATO",b:"HEPATO",s:2,f:"hepato",t:"Hepatotoxicidad aditiva",
+ m:"Ambos fármacos pueden producir daño hepatocelular o colestásico.",
+ x:"Obtener hepatograma basal y de control; suspender si las transaminasas superan 3 veces el límite superior con síntomas o 5 veces sin ellos."},
+{id:"col",a:"COLCH",b:"STATIN",s:2,f:"myo",t:"Miopatía y rabdomiólisis",
+ m:"Suma de toxicidad muscular; la colchicina altera los microtúbulos de la fibra muscular y las estatinas reducen la síntesis de coenzima Q10 y de proteínas de membrana.",
+ x:"Vigilar mialgias y debilidad y controlar la CK, especialmente en la insuficiencia renal."},
+{id:"nal",a:"NALT",b:"OPI",s:0,f:"nal",t:"Bloqueo del efecto opioide y abstinencia",
+ m:"La naltrexona es un antagonista competitivo de alta afinidad del receptor µ: bloquea la analgesia opioide y precipita abstinencia en pacientes con dependencia.",
+ x:"Contraindicada. Suspender la naltrexona al menos 72 h antes del uso programado de opioides; en urgencias, utilizar analgesia multimodal y regional."}
+];
+T.T_IVAB = ["ivabradina"];
+
+const IX_PAIRS = [
+{d:["tramadol","warfarina"],s:2,t:"Aumento del RIN",
+ m:"Se describieron elevaciones del RIN y hemorragias al asociar tramadol con warfarina; el mecanismo no está establecido (posible competencia metabólica en el CYP3A4/CYP2C9).",
+ x:"Controlar el RIN al iniciar o suspender tramadol y ajustar la dosis de warfarina según el resultado."},
+{d:["dantroleno","verapamilo"],s:0,t:"Hiperpotasemia y colapso cardiovascular",
+ m:"En modelos animales, la asociación de dantroleno intravenoso con bloqueantes cálcicos no dihidropiridínicos produjo hiperpotasemia, depresión miocárdica y fibrilación ventricular; ambos fármacos reducen la disponibilidad de calcio intracelular por mecanismos complementarios.",
+ x:"Contraindicada según prospecto. Durante el tratamiento de la hipertermia maligna, controlar las arritmias con otros fármacos (p. ej., amiodarona, betabloqueantes)."},
+{d:["dantroleno","diltiazem"],s:0,t:"Hiperpotasemia y colapso cardiovascular",
+ m:"En modelos animales, la asociación de dantroleno intravenoso con bloqueantes cálcicos no dihidropiridínicos produjo hiperpotasemia, depresión miocárdica y fibrilación ventricular; ambos fármacos reducen la disponibilidad de calcio intracelular por mecanismos complementarios.",
+ x:"Contraindicada según prospecto. Durante el tratamiento de la hipertermia maligna, controlar las arritmias con otros fármacos (p. ej., amiodarona, betabloqueantes)."},
+{d:["lidocaina","amiodarona"],s:2,t:"Aumento de la concentración de lidocaína",
+ m:"La amiodarona inhibe el CYP3A4 y el CYP1A2, vías del metabolismo hepático de la lidocaína, y reduce su depuración; el efecto depresor sobre la conducción es además aditivo.",
+ x:"En infusión de lidocaína, reducir la dosis y vigilar signos precoces de toxicidad sistémica (parestesias periorales, acúfenos, disartria) y bradicardia."},
+{d:["tranexamico","aco"],s:2,t:"Aumento del riesgo trombótico",
+ m:"Los estrógenos incrementan la síntesis hepática de factores procoagulantes y el ácido tranexámico inhibe la fibrinólisis: el efecto protrombótico es aditivo.",
+ x:"Evitar la asociación en pacientes con factores de riesgo tromboembólico; preferir un método anticonceptivo sin estrógenos si se requiere ácido tranexámico prolongado."},
+{d:["valproato","meropenem"],s:0,t:"Descenso drástico de los niveles de valproato",
+ m:"Los carbapenems inhiben la acilpeptidohidrolasa que libera valproato de su glucurónido: las concentraciones caen 60–100% en 24 h y el efecto persiste días tras suspender el antibiótico.",
+ x:"Contraindicada. Usar otro antibiótico o cambiar transitoriamente el anticonvulsivante (p. ej., levetiracetam)."},
+{d:["valproato","lamotrigina"],s:1,t:"Aumento de la concentración de lamotrigina",
+ m:"El valproato inhibe la glucuronidación de la lamotrigina y duplica su vida media; aumenta el riesgo de síndrome de Stevens-Johnson.",
+ x:"Reducir la dosis de lamotrigina a la mitad y titular más lentamente."},
+{d:["carbamazepina","clozapina"],s:0,t:"Agranulocitosis y menor eficacia de la clozapina",
+ m:"Suma de mielotoxicidad, e inducción del metabolismo de la clozapina.",
+ x:"Contraindicada."},
+{d:["clopidogrel","omeprazol"],s:1,t:"Menor efecto antiagregante",
+ m:"El omeprazol inhibe el CYP2C19, que activa la prodroga clopidogrel: se reduce la formación del metabolito activo.",
+ x:"Utilizar pantoprazol como protector gástrico."},
+{d:["clopidogrel","esomeprazol"],s:1,t:"Menor efecto antiagregante",
+ m:"El esomeprazol inhibe el CYP2C19 y reduce la activación del clopidogrel.",
+ x:"Utilizar pantoprazol."},
+{d:["metronidazol","disulfiram"],s:0,t:"Psicosis aguda y confusión",
+ m:"Se describieron psicosis y estados confusionales con la asociación, posiblemente por alteración del metabolismo de la dopamina.",
+ x:"Contraindicada; dejar al menos 2 semanas desde la última dosis de disulfiram."},
+{d:["doxiciclina","isotretinoina"],s:0,t:"Hipertensión endocraneana",
+ m:"Ambos pueden producir hipertensión endocraneana idiopática y el riesgo se suma.",
+ x:"Contraindicada."},
+{d:["ibuprofeno","aspirina"],s:2,t:"Antagonismo del efecto antiagregante de la aspirina",
+ m:"El ibuprofeno ocupa reversiblemente el canal de la COX-1 plaquetaria e impide que la aspirina acetile la serina 529.",
+ x:"Administrar la aspirina al menos 30 min antes o el ibuprofeno 8 h antes; preferir paracetamol."},
+{d:["ciprofloxacina","prednisona"],s:2,t:"Tendinopatía y rotura tendinosa",
+ m:"Las fluoroquinolonas y los corticoides alteran la matriz de colágeno del tendón; el riesgo se multiplica, en especial en mayores de 60 años.",
+ x:"Evitar la asociación; suspender ante dolor tendinoso."},
+{d:["ciprofloxacina","dexametasona"],s:2,t:"Tendinopatía y rotura tendinosa",
+ m:"Efecto aditivo sobre la matriz de colágeno del tendón.",
+ x:"Evitar la asociación; suspender ante dolor tendinoso."},
+{d:["ciprofloxacina","hidrocortisona"],s:2,t:"Tendinopatía y rotura tendinosa",
+ m:"Efecto aditivo sobre la matriz de colágeno del tendón.",
+ x:"Evitar la asociación; suspender ante dolor tendinoso."},
+{d:["isoniazida","fenitoina"],s:1,t:"Intoxicación por fenitoína",
+ m:"La isoniazida inhibe el CYP2C9 y CYP2C19 y aumenta la concentración de fenitoína, sobre todo en acetiladores lentos.",
+ x:"Controlar niveles de fenitoína y ajustar la dosis."},
+{d:["isoniazida","carbamazepina"],s:1,t:"Intoxicación por carbamazepina y hepatotoxicidad",
+ m:"La isoniazida inhibe el metabolismo de la carbamazepina y esta aumenta la formación de metabolitos hepatotóxicos de la isoniazida.",
+ x:"Controlar niveles de carbamazepina y hepatograma."},
+{d:["metformina","dolutegravir"],s:2,t:"Aumento de la concentración de metformina",
+ m:"El dolutegravir inhibe los transportadores OCT2 y MATE1, que secretan la metformina en el túbulo renal.",
+ x:"Limitar la metformina a 1 g/día y controlar la glucemia y la función renal."},
+{d:["oxitocina","misoprostol"],s:2,t:"Hiperestimulación uterina",
+ m:"Suma de efectos uterotónicos.",
+ x:"En la inducción del parto, no iniciar oxitocina antes de 4 h desde la última dosis de misoprostol; en la hemorragia posparto la asociación es deliberada."},
+{d:["magnesio","nifedipina"],s:2,t:"Hipotensión y debilidad neuromuscular",
+ m:"Ambos reducen la entrada de Ca²⁺ al músculo liso y a la terminal presináptica.",
+ x:"Vigilar presión arterial, reflejos osteotendinosos y frecuencia respiratoria."},
+{d:["gentamicina","furosemida"],s:1,t:"Ototoxicidad y nefrotoxicidad",
+ m:"Los diuréticos de asa y los aminoglucósidos dañan las células ciliadas de la cóclea por mecanismos complementarios; la depleción de volumen aumenta además la nefrotoxicidad.",
+ x:"Evitar la asociación; si es necesaria, controlar niveles de gentamicina, función renal y audición."},
+{d:["gentamicina","vancomicina"],s:1,t:"Nefrotoxicidad y ototoxicidad",
+ m:"Suma de toxicidad tubular renal y coclear.",
+ x:"Controlar niveles de ambos fármacos y la creatinina."},
+{d:["vancomicina","piptazo"],s:2,t:"Insuficiencia renal aguda",
+ m:"La asociación se acompañó de mayor incidencia de insuficiencia renal aguda que vancomicina con cefepime o meropenem.",
+ x:"Controlar la creatinina; considerar otro β-lactámico si el riesgo renal es alto."},
+{d:["amiodarona","atorvastatina"],s:2,t:"Miopatía",
+ m:"La amiodarona inhibe débilmente el CYP3A4 y aumenta la exposición a la estatina.",
+ x:"Vigilar mialgias; considerar rosuvastatina."},
+{d:["amiodarona","apixaban"],s:2,t:"Aumento de la exposición al anticoagulante",
+ m:"La amiodarona inhibe la glicoproteína P.",
+ x:"Vigilar signos de sangrado."},
+{d:["amiodarona","rivaroxaban"],s:2,t:"Aumento de la exposición al anticoagulante",
+ m:"La amiodarona inhibe la glicoproteína P.",
+ x:"Vigilar signos de sangrado, en especial con insuficiencia renal."},
+{d:["tramadol","ondansetron"],s:2,t:"Menor analgesia del tramadol",
+ m:"El componente monoaminérgico de la analgesia del tramadol depende en parte de receptores 5-HT3 espinales que el ondansetrón bloquea.",
+ x:"Puede requerirse un analgésico alternativo o de rescate."}
+];
+
+const SEV = [["Contraindicada","sev0"],["Mayor","sev1"],["Moderada","sev2"]];
+const TAGSOF = {};
+for(const [tag, ids] of Object.entries(T)) for(const id of ids) (TAGSOF[id] = TAGSOF[id] || new Set()).add(tag);
+function hasT(id, tag){ return TAGSOF[id] ? TAGSOF[id].has(tag) : false; }
+
+/* Interacciones entre dos fármacos; dentro de cada familia se conserva la más grave */
+function ixPair(a, b){
+  if(a === b) return [];
+  const out = [];
+  for(const r of IX_RULES){
+    if((hasT(a,r.a) && hasT(b,r.b)) || (hasT(a,r.b) && hasT(b,r.a))) out.push({...r, key:r.id});
+  }
+  const best = {};
+  for(const r of out){ if(!best[r.f] || r.s < best[r.f].s) best[r.f] = r; }
+  const res = Object.values(best);
+  for(const p of IX_PAIRS){ if((p.d[0]===a && p.d[1]===b) || (p.d[0]===b && p.d[1]===a)) res.push({...p, key:"p:"+p.d.join("+")}); }
+  return res.sort((x,y) => x.s - y.s);
+}
+
+/* Todas las interacciones de un fármaco, agrupadas por mecanismo */
+function ixFor(id){
+  const groups = {};
+  for(const d of DB){
+    if(d.id === id) continue;
+    for(const r of ixPair(id, d.id)){
+      const g = groups[r.key] || (groups[r.key] = {r, with:[]});
+      g.with.push(d);
+    }
+  }
+  return Object.values(groups).sort((x,y) => x.r.s - y.r.s || y.with.length - x.with.length);
+}
+
+function sevBadge(s){ return `<span class="sev ${SEV[s][1]}">${SEV[s][0]}</span>`; }
+
+function ixHTML(d){
+  const gs = ixFor(d.id);
+  const head = `<h3>Interacciones</h3>`;
+  const tool = `<button class="ix-open" data-add="${d.id}">Verificar ${esc(d.n)} con otros fármacos</button>`;
+  const alc = `<p class="ix-alc">Para las interacciones con el alcohol, consultar <a href="https://alcoholito.com.ar" target="_blank" rel="noopener">alcoholito.com.ar</a>.</p>`;
+  const foot = `<p class="ix-foot">Interacciones farmacocinéticas y farmacodinámicas de relevancia clínica con los fármacos incluidos en farmacodos; no es un listado exhaustivo.</p>`;
+  if(!gs.length) return head + `<p class="ix-none">No se identificaron interacciones de relevancia clínica con los fármacos incluidos en farmacodos.</p>` + tool + alc + foot;
+  const cnt = [0,1,2].map(s => gs.filter(g => g.r.s === s).reduce((n,g) => n + g.with.length, 0));
+  const sum = `<div class="ix-sum">${cnt.map((n,s) => n ? `<span class="sev ${SEV[s][1]}">${SEV[s][0]}: ${n}</span>` : "").join("")}</div>`;
+  const items = gs.map(({r, with:w}) => `
+    <div class="ix-item">
+      <div class="ix-top">${sevBadge(r.s)}<b>${esc(r.t)}</b></div>
+      <div class="ix-with">${w.map(x => `<a href="/${x.id}" data-open="${x.id}">${esc(x.n)}</a>`).join("")}</div>
+      <p><strong>Mecanismo:</strong> ${md(r.m)}</p>
+      <p><strong>Conducta:</strong> ${md(r.x)}</p>
+    </div>`).join("");
+  return head + sum + tool + items + alc + foot;
+}
+
 function panelHTML(d, tab){
   const sec = {
     mec: () => `<h3>Mecanismo de acción</h3><div class="prose">${d.mec.map(p => `<p>${md(p)}</p>`).join("")}</div>`,
@@ -3544,10 +4041,11 @@ function panelHTML(d, tab){
     ea:  () => `<h3>Efectos adversos</h3>${list(d.ea)}`,
     ci:  () => `<h3>Contraindicaciones y precauciones</h3>${list(d.ci)}`,
     uso: () => `<h3>Usos e indicaciones</h3>${list(d.usos)}<h3>Dosificación</h3>${kv(d.dosis,"dose")}${calcHTML(d)}`,
+    ix:  () => ixHTML(d),
     emb: () => embHTML(d),
     tox: () => `<h3>Toxicidad e intoxicación</h3><div class="toxbox">${list(d.tox)}</div>`
   };
-  if(tab === "all") return ["mec","pk","ea","ci","uso","emb","tox"].map(k => sec[k]()).join("");
+  if(tab === "all") return ["mec","pk","ea","ci","ix","uso","emb","tox"].map(k => sec[k]()).join("");
   return sec[tab]();
 }
 
@@ -3680,6 +4178,84 @@ function fromHash(){
 }
 window.addEventListener("popstate", fromHash);
 $("#home").addEventListener("click", e => { e.preventDefault(); history.pushState(null,"","/"); fromHash(); q.focus(); });
+
+/* ---------- verificador de interacciones ---------- */
+const IXKEY = "farmacodos:ix";
+let ixSel = [];
+try{ ixSel = (JSON.parse(localStorage.getItem(IXKEY)) || []).filter(id => DB.some(d => d.id === id)); }catch(e){ ixSel = []; }
+function ixSave(){ try{ localStorage.setItem(IXKEY, JSON.stringify(ixSel)); }catch(e){} }
+const ixBody = $("#ixc-body"), ixToggle = $("#ixc-toggle"), ixq = $("#ixq"), ixsugg = $("#ixsugg");
+function ixOpen(on){
+  ixBody.hidden = !on; ixToggle.setAttribute("aria-expanded", on);
+}
+function ixRender(){
+  $("#ixc-n").textContent = ixSel.length ? `${ixSel.length} seleccionado${ixSel.length>1?"s":""}` : "";
+  $("#ixchips").innerHTML = ixSel.map(id => { const d = DB.find(x => x.id === id);
+    return `<span class="ixchip">${esc(d.n)}<button data-rm="${id}" aria-label="Quitar ${esc(d.n)}">×</button></span>`; }).join("") +
+    (ixSel.length ? `<button class="ixc-clear" id="ixc-clear">Vaciar</button>` : "");
+  const out = $("#ixres");
+  if(ixSel.length < 2){ out.innerHTML = `<p class="ixc-help">${ixSel.length ? "Agregá al menos otro fármaco." : "Agregá dos o más fármacos para buscar interacciones entre ellos."}</p>`; return; }
+  const found = [];
+  for(let i = 0; i < ixSel.length; i++) for(let j = i+1; j < ixSel.length; j++)
+    for(const r of ixPair(ixSel[i], ixSel[j])) found.push({r, a:DB.find(x => x.id === ixSel[i]), b:DB.find(x => x.id === ixSel[j])});
+  found.sort((x,y) => x.r.s - y.r.s);
+  const pairs = ixSel.length * (ixSel.length - 1) / 2;
+  if(!found.length){ out.innerHTML = `<p class="ix-none">No se identificaron interacciones de relevancia clínica entre los ${ixSel.length} fármacos seleccionados (${pairs} combinaciones analizadas).</p>`; return; }
+  out.innerHTML = `<p class="ixc-help">${found.length} interacci${found.length>1?"ones":"ón"} en ${pairs} combinaci${pairs>1?"ones":"ón"} analizada${pairs>1?"s":""}.</p>` +
+    found.map(({r,a,b}) => `
+    <div class="ix-item">
+      <div class="ix-top">${sevBadge(r.s)}<b>${esc(r.t)}</b></div>
+      <div class="ix-with"><a href="/${a.id}" data-open="${a.id}">${esc(a.n)}</a><span class="ix-plus">+</span><a href="/${b.id}" data-open="${b.id}">${esc(b.n)}</a></div>
+      <p><strong>Mecanismo:</strong> ${md(r.m)}</p>
+      <p><strong>Conducta:</strong> ${md(r.x)}</p>
+    </div>`).join("") +
+    `<p class="ix-foot">Analiza interacciones de relevancia clínica entre los fármacos incluidos en farmacodos; no es un listado exhaustivo ni reemplaza la revisión de la medicación completa del paciente.</p>`;
+}
+function ixAdd(id){
+  if(!ixSel.includes(id)) ixSel.push(id);
+  ixSave(); ixRender();
+}
+let ixRes = [], ixAct = -1;
+function ixSuggest(){
+  const v = ixq.value;
+  if(!norm(v)){ ixsugg.classList.remove("show"); return; }
+  ixRes = search(v).filter(d => !ixSel.includes(d.id)).slice(0,8); ixAct = ixRes.length ? 0 : -1;
+  ixsugg.innerHTML = ixRes.length ? ixRes.map((d,i) => `<li role="option" data-id="${d.id}" aria-selected="${i===ixAct}"><span class="sw" style="background:${labelBg(d.l)}"></span><span><span class="sn">${esc(d.n)}</span><br><span class="sg">${esc(d.g)}</span></span></li>`).join("")
+    : `<li class="empty" aria-disabled="true">Sin resultados para “${esc(v)}”.</li>`;
+  ixsugg.classList.add("show");
+}
+function ixPick(id){ ixAdd(id); ixq.value = ""; ixsugg.classList.remove("show"); ixq.focus(); }
+ixq.addEventListener("input", ixSuggest);
+ixq.addEventListener("keydown", e => {
+  const lis = [...ixsugg.querySelectorAll("li[data-id]")];
+  if(e.key === "ArrowDown" || e.key === "ArrowUp"){ if(!lis.length) return; e.preventDefault();
+    ixAct = (ixAct + (e.key === "ArrowDown" ? 1 : -1) + lis.length) % lis.length;
+    lis.forEach((li,j) => li.setAttribute("aria-selected", j===ixAct)); lis[ixAct].scrollIntoView({block:"nearest"}); }
+  else if(e.key === "Enter"){ if(ixAct >= 0 && ixRes[ixAct]){ e.preventDefault(); ixPick(ixRes[ixAct].id); } }
+  else if(e.key === "Escape"){ ixsugg.classList.remove("show"); }
+});
+ixsugg.addEventListener("mousedown", e => { const li = e.target.closest("li[data-id]"); if(li){ e.preventDefault(); ixPick(li.dataset.id); } });
+ixq.addEventListener("blur", () => setTimeout(() => ixsugg.classList.remove("show"), 120));
+ixToggle.addEventListener("click", () => { const on = ixBody.hidden; ixOpen(on); if(on) ixq.focus(); });
+$("#ixc").addEventListener("click", e => {
+  const rm = e.target.closest("button[data-rm]");
+  if(rm){ ixSel = ixSel.filter(x => x !== rm.dataset.rm); ixSave(); ixRender(); return; }
+  if(e.target.id === "ixc-clear"){ ixSel = []; ixSave(); ixRender(); }
+});
+/* enlaces a otras fichas y botón "Verificar con otros fármacos" */
+document.addEventListener("click", e => {
+  const a = e.target.closest("a[data-open]");
+  if(a && !e.ctrlKey && !e.metaKey && !e.shiftKey){ e.preventDefault(); openDrug(a.dataset.open); return; }
+  const add = e.target.closest("button[data-add]");
+  if(add){
+    ixAdd(add.dataset.add); ixOpen(true);
+    if(resultEl.classList.contains("inline")) placeResult(null);
+    const smooth = matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth";
+    window.scrollTo({top: $("#ixc").getBoundingClientRect().top + window.scrollY - 12, behavior: smooth});
+    ixq.focus({preventScroll:true});
+  }
+});
+ixRender();
 
 renderRecent();
 fromHash();
