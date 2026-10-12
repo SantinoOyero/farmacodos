@@ -212,7 +212,8 @@ html{scrollbar-color:var(--line-strong) transparent;scrollbar-width:thin;}
 .calc-note{margin:8px 0 0;font-size:13px;color:var(--muted);}
 /* ---------- Interacciones ---------- */
 .sev{display:inline-block;font-size:12.5px;font-weight:700;letter-spacing:.02em;padding:2px 9px;border-radius:999px;color:#fff;white-space:nowrap;}
-.sev0{background:#B3261E;} .sev1{background:#C2410C;} .sev2{background:#A16207;}
+.sev0{background:#B3261E;} .sev1{background:#C2410C;} .sev2{background:#A16207;} .sev3{background:#5F6B68;}
+.ix-ref{font-size:13px !important;color:var(--muted);font-style:italic;}
 .ix-sum{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0 12px;}
 .ix-open{display:block;width:100%;margin:0 0 14px;padding:10px 14px;border:1.5px solid var(--accent);border-radius:var(--r-md);background:var(--accent-soft);color:var(--accent);font-weight:650;font-size:15px;cursor:pointer;text-align:left;}
 .ix-open::before{content:"+ ";}
@@ -327,18 +328,15 @@ footer p{margin:0;}
     <div class="legend" id="legend"></div>
     <h3>Fuentes</h3>
     <ul>
-      <li>Goodman &amp; Gilman. Las bases farmacológicas de la terapéutica, 14.ª ed.</li>
-      <li>Velázquez. Farmacología básica y clínica.</li>
-      <li>Katzung. Basic and Clinical Pharmacology, 16.ª ed.</li>
-      <li>Gropper MA, et al. (eds.). Miller. Anestesia. 9.ª ed. Elsevier; 2021.</li>
-      <li>Rang &amp; Dale's Pharmacology, 10.ª ed.</li>
-      <li>APILAM. e-lactancia.org: compatibilidad de medicamentos con la lactancia (consulta: octubre de 2026).</li>
-      <li>U.S. Food and Drug Administration. Drug Development and Drug Interactions: Table of Substrates, Inhibitors and Inducers.</li>
-      <li>Baillargeon J, et al. Concurrent use of warfarin and antibiotics and the risk of bleeding in older adults. Am J Med. 2012;125:183-9.</li>
-      <li>CredibleMeds. QTdrugs List: clasificación del riesgo de prolongación del QT y torsade de pointes.</li>
-      <li>U.S. Food and Drug Administration. Drug Safety Communications: opioides y benzodiacepinas (2016); gabapentinoides y depresión respiratoria (2019).</li>
-      <li>Prospectos aprobados por ANMAT y guías y ensayos clínicos citados en la bibliografía de cada ficha.</li>
+      <li>Goodman &amp; Gilman (14.ª ed.), Katzung (16.ª ed.), Velázquez (20.ª ed.), Rang &amp; Dale (10.ª ed.), Miller (9.ª ed.).</li>
+      <li>Editorial Sciens, Serra HA y col.</li>
+      <li>FDA.</li>
+      <li>CredibleMeds.</li>
+      <li>PubMed.</li>
+      <li>Lactancia: e-lactancia.org (APILAM).</li>
+      <li>Prospectos ANMAT, guías y ensayos clínicos.</li>
     </ul>
+    <p class="note">La bibliografía completa figura al pie de cada ficha.</p>
     <h3>Importante</h3>
     <p>No reemplaza el criterio clínico ni el prospecto. Ante discrepancias, mandan el prospecto vigente y el protocolo institucional.</p>
     <button class="dlg-close" id="info-close">Cerrar</button>
@@ -480,7 +478,7 @@ mec:[
 "**Respiratorio:** deprime la respuesta ventilatoria del tronco encefálico al CO₂ (desplazamiento a la derecha y aplanamiento de la curva): disminuye en primer lugar la frecuencia respiratoria y aparecen apneas. Las dosis altas administradas rápidamente producen **rigidez torácica** (mediada por receptores µ supraespinales) que dificulta la ventilación.",
 "**Otros:** miosis, náuseas, íleo, retención urinaria, prurito."],
 pk:[["Inicio","IV 1–2 min (pico 3–5 min)"],["Duración (bolo)","30–60 min, por redistribución"],["Liposolubilidad","Muy alta: entra rápido al SNC y se deposita en grasa"],["Fisicoquímica","pKa 8,4; unión a proteínas ≈ 84%; coeficiente de partición octanol/agua ≈ 813 (morfina 1,4)"],["Metabolismo","CYP3A4 a norfentanilo (inactivo)"],["Eliminación","Renal, metabolitos inactivos: útil en insuficiencia renal"],["t½ contexto-sensible","Aumenta con la duración de la infusión: tras 1 h es ≈ 6 veces la del alfentanilo o el sufentanilo (el depósito periférico lo devuelve al plasma)"]],
-ea:["**Depresión respiratoria**, potenciada por benzodiacepinas, hipnóticos y halogenados.","**Rigidez torácica** con bolos rápidos y altos (tratar con BNM o naloxona).","Bradicardia.","Náuseas, vómitos, íleo, retención urinaria, prurito.","Tolerancia e hiperalgesia inducida por opioides con dosis altas.","Riesgo de síndrome serotoninérgico con IMAO u otros serotoninérgicos (descripto, raro)."],
+ea:["**Depresión respiratoria**, potenciada por benzodiacepinas, hipnóticos y halogenados.","**Rigidez torácica** (\"tórax leñoso\") con bolos rápidos y altos: compromete diafragma, pared torácica y vía aérea superior (tratar con BNM o naloxona).","**Depresión respiratoria tardía:** descripta horas después de la dosis, atribuida a la recirculación enterohepática y a la redistribución desde el depósito graso.","Bradicardia.","Náuseas, vómitos, íleo, retención urinaria, prurito.","Tolerancia e hiperalgesia inducida por opioides con dosis altas.","Riesgo de síndrome serotoninérgico con IMAO u otros serotoninérgicos (descripto, raro)."],
 ci:["Depresión respiratoria sin capacidad de ventilar al paciente.","Hipersensibilidad.","Precaución: inhibidores potentes de CYP3A4 (ritonavir, claritromicina, ketoconazol) prolongan su efecto; IMAO."],
 usos:["Analgesia intraoperatoria.","Atenuar la respuesta simpática a la laringoscopia.","Componente de la inducción.","Analgesia posoperatoria (PCA, epidural, intratecal).","Sedoanalgesia en UTI.","Dolor crónico oncológico (transdérmico)."],
 dosis:[["Analgesia intraoperatoria","1–2 µg/kg IV en bolo, repetir 0,5–1 µg/kg según estímulo"],["Inducción","1–3 µg/kg IV (hasta 5 µg/kg)"],["Anestesia cardíaca (opioide de alta dosis)","10–50 µg/kg IV"],["Infusión (anestesia balanceada)","0,5–2 µg/kg/h"],["TIVA basada en opioides","Carga 4–20 µg/kg; infusión 2–10 µg/kg/h; bolos adicionales de 25–100 µg"],["Intratecal","10–25 µg"],["Epidural","50–100 µg en bolo; 2 µg/mL en mezclas de infusión"]],
@@ -525,7 +523,7 @@ perla:"¿La morfina es venodilatadora? Sí, pero indirectamente: por liberación
 a:["tramadol","calmador","tramal"],
 res:"Opioide 'atípico': parte de su analgesia es opioide (a través de un metabolito) y parte monoaminérgica. Muy usado en el posoperatorio, con tres problemas típicos: náuseas, convulsiones y síndrome serotoninérgico.",
 mec:[
-"**Componente opioide:** el tramadol es agonista µ débil; el principal agonista del receptor µ es su metabolito **O-desmetiltramadol (M1)**, generado por **CYP2D6**, con afinidad ≈ 200 veces mayor.",
+"**Componente opioide:** el tramadol es agonista µ débil; el principal agonista del receptor µ es su metabolito **O-desmetiltramadol (M1)**, generado por **CYP2D6**, agonista µ ≈ 300 veces más potente que el tramadol.",
 "**Componente monoaminérgico:** inhibe la recaptación de serotonina y noradrenalina → refuerza las vías inhibitorias descendentes.",
 "**Consecuencia de la farmacogenética:** los metabolizadores lentos del CYP2D6 obtienen escasa analgesia; los **ultrarrápidos** generan concentraciones elevadas de M1 y pueden presentar depresión respiratoria (se describieron muertes en niños tras amigdalectomía).",
 "**Cardiovascular y respiratorio:** a dosis equianalgésicas produce menor depresión respiratoria que la morfina y escasa repercusión hemodinámica."],
@@ -548,7 +546,7 @@ pk:[["Inicio","IV 1–2 min; IM o intranasal 2–5 min"],["Duración","30–60 m
 ea:["Dolor y agitación al revertir la analgesia.","Taquicardia, hipertensión, arritmias.","Edema pulmonar agudo.","Síndrome de abstinencia en dependientes.","Náuseas y vómitos."],
 ci:["Hipersensibilidad.","Precaución: cardiopatía, dependencia de opioides (titular con dosis muy bajas)."],
 usos:["Depresión respiratoria posoperatoria por opioides.","Intoxicación por opioides.","Prurito por opioides neuroaxiales (dosis muy bajas en infusión).","Depresión respiratoria neonatal por opioides maternos (uso actual restringido)."],
-dosis:[["Depresión respiratoria posoperatoria","20–40 µg IV cada 2–3 min hasta FR adecuada"],["Intoxicación (paciente en apnea o paro)","Inicio con 0,4–0,8 mg IV (hasta 2 mg), IM o intranasal; repetir cada 2–3 min (máx habitual 10 mg). Sin acceso venoso, la vía intratraqueal con dosis similares es eficaz"],["Infusión","2/3 de la dosis que revirtió el cuadro, por hora"],["Prurito neuroaxial","0,25–1 µg/kg/h"]],
+dosis:[["Depresión respiratoria posoperatoria","20–40 µg IV cada 2–3 min hasta FR adecuada"],["Intoxicación (paciente en apnea o paro)","Inicio con 0,4–0,8 mg IV (hasta 2 mg), IM o intranasal; repetir cada 2–3 min (máx habitual 10 mg). Sin acceso venoso: misma dosis por vía IM, intranasal o intraósea (la vía intratraqueal no figura en las guías actuales por su absorción errática)"],["Infusión","2/3 de la dosis que revirtió el cuadro, por hora"],["Prurito neuroaxial","0,25–1 µg/kg/h"]],
 tox:["Riesgo principal: **renarcotización** cuando pasa su efecto. Observar al menos 2 h tras la última dosis (más con opioides de acción larga).","Sobredosis de naloxona: crisis hipertensiva, edema pulmonar, arritmias. Tratamiento de soporte."],
 perla:"Si la naloxona no revierte el cuadro deben considerarse otras causas: benzodiacepinas, hipoglucemia, hipercapnia, BNM residual o un evento neurológico."},
 
@@ -811,7 +809,7 @@ mec:[
 "**Clase IV:** bloqueo de canales de Ca²⁺ tipo L.",
 "**Bajo riesgo de torsade de pointes pese a prolongar el QT:** prolonga la repolarización de manera homogénea en el miocardio (menor dispersión de la repolarización), lo que reduce el riesgo respecto de otros antiarrítmicos de clase III.",
 "**IV aguda:** predominan los efectos β-bloqueante y bloqueante cálcico → bradicardia e hipotensión (también contribuye el solvente polisorbato 80)."],
-pk:[["Inicio","IV minutos a horas; VO días a semanas"],["Vd","Enorme (≈ 60 L/kg): se deposita en grasa, hígado, pulmón, piel"],["t½","40–55 días"],["Metabolismo","Hepático (CYP3A4) a desetilamiodarona (activo)"],["Inhibe","CYP3A4, CYP2C9, CYP2D6 y glicoproteína P"],["Contenido de yodo","≈ 37% del peso de la molécula"]],
+pk:[["Inicio","IV minutos a horas; VO días a semanas"],["Vd","Enorme (≈ 60 L/kg): se deposita en grasa, hígado, pulmón, piel"],["t½","≈ 40–55 días (rango descripto 28–110 días)"],["Metabolismo","Hepático (CYP3A4) a desetilamiodarona (activo)"],["Inhibe","CYP3A4, CYP2C9, CYP2D6 y glicoproteína P"],["Contenido de yodo","≈ 37% del peso de la molécula"]],
 ea:["**IV:** hipotensión, bradicardia, flebitis (usar vía central si es concentrada).","**Tiroides:** hipotiroidismo (efecto Wolff-Chaikoff por el yodo) o hipertiroidismo (tipo 1 por carga de yodo, tipo 2 por tiroiditis destructiva).","**Pulmón:** neumonitis y fibrosis (dosis acumulada; toxicidad más grave).","**Hígado:** aumento de transaminasas, hepatitis.","Microdepósitos corneales, neuropatía óptica, fotosensibilidad, coloración gris azulada de la piel, neuropatía periférica.","Prolongación del QT."],
 ci:["Bradicardia sinusal, enfermedad del nódulo sinusal o bloqueo AV avanzado sin marcapasos.","Disfunción tiroidea no controlada.","Hipersensibilidad al yodo (relativa).","QT largo, uso con otros fármacos que prolongan el QT.","Embarazo y lactancia (relativa)."],
 usos:["Paro cardíaco con FV o TV sin pulso refractarias a la desfibrilación.","TV con pulso hemodinámicamente estable.","FA: control de ritmo o de frecuencia en insuficiencia cardíaca; profilaxis de FA posoperatoria en cirugía cardíaca."],
@@ -1026,7 +1024,7 @@ mec:[
 "**Sitio:** análogo sintético de la lisina. Bloquea los **sitios de unión a lisina** del plasminógeno.",
 "**Consecuencia:** el plasminógeno no puede unirse a la fibrina, que es donde se activa a plasmina → el coágulo formado se degrada menos.",
 "A concentraciones altas inhibe la plasmina en forma directa.",
-"**Convulsiones:** a dosis altas antagoniza receptores GABA-A y de glicina en el SNC (por similitud estructural) ; ello explica las convulsiones descriptas en cirugía cardíaca con dosis altas y los efectos graves de la administración intratecal accidental."],
+"**Convulsiones:** a dosis altas antagoniza receptores GABA-A y de glicina en el SNC (por similitud estructural); ello explica las convulsiones descriptas en cirugía cardíaca con dosis altas y los efectos graves de la administración intratecal accidental."],
 pk:[["Inicio","IV inmediato"],["t½","2–3 h"],["Metabolismo","Mínimo"],["Eliminación","Renal, sin cambios (≈ 95%): ajustar en insuficiencia renal"]],
 ea:["Náuseas, vómitos, diarrea.","Hipotensión con inyección IV rápida.","**Convulsiones** (dosis altas, cirugía cardíaca, insuficiencia renal).","Trombosis: riesgo teórico; los grandes ensayos (CRASH-2, WOMAN) no mostraron aumento de eventos trombóticos.","Alteraciones visuales (uso prolongado)."],
 ci:["Trombosis arterial o venosa activa.","Coagulación intravascular diseminada en fase trombótica.","Hematuria del tracto urinario superior (riesgo de obstrucción ureteral por coágulos).","Antecedente de convulsiones (relativa).","Insuficiencia renal grave (ajustar o evitar).","**Nunca intratecal:** confusión de ampollas en anestesia raquídea → convulsiones, arritmias y muerte."],
@@ -1072,7 +1070,7 @@ perla:"La metformina en monoterapia no produce hipoglucemia; ante una hipoglucem
 {id:"cefazolina",n:"Cefazolina",g:"Cefalosporina de primera generación",l:"otro",cat:"atb",
 a:["cefazolina","cefazolin","cefalosporina","profilaxis antibiotica"],
 res:"El antibiótico de profilaxis quirúrgica por excelencia: cubre los gérmenes de piel que más infectan heridas. El momento y la redosis importan tanto como la dosis.",
-mec:["**Sitio de acción:** el anillo β-lactámico es un análogo estructural del extremo D-alanil-D-alanina del pentapéptido precursor del peptidoglicano. Acila de forma covalente la serina del sitio activo de las **proteínas fijadoras de penicilina (PBP)**, transpeptidasas que catalizan el entrecruzamiento de las cadenas de peptidoglicano, y las inactiva.", "**Muerte bacteriana:** la inhibición de las PBP detiene la síntesis de la pared, pero por sí sola solo inhibe el crecimiento. El efecto bactericida depende de las **autolisinas** (hidrolasas de mureína: amidasas, endopeptidasas y transglicosilasas líticas), enzimas de la propia bacteria que abren la pared para permitir el crecimiento y la división. Con las PBP bloqueadas, la degradación continúa sin síntesis compensatoria y se establece un ciclo fútil de síntesis y degradación del peptidoglicano: la pared pierde resistencia mecánica y la bacteria se lisa por su presión osmótica interna. Las cepas con autolisinas deficientes o reprimidas (**tolerancia**) son inhibidas pero no destruidas, con una CBM muy superior a la CIM.", "**Farmacodinamia:** actúa solo sobre bacterias en crecimiento activo. Bactericida tiempo-dependiente: el parámetro predictor de eficacia es el porcentaje del intervalo con concentración libre por encima de la CIM (%fT>CIM ≈ 60–70%), no el pico; de allí el fraccionamiento de la dosis y la utilidad de la infusión extendida en pacientes graves.", "**Particularidades:** el núcleo cefem le confiere estabilidad frente a la penicilinasa estafilocócica. Carece de afinidad por la PBP2a de SAMR y por las PBP de baja afinidad del enterococo (resistencia intrínseca).", "**Espectro:** cocos grampositivos (**Staphylococcus aureus sensible a meticilina**, estreptococos) y algunos gramnegativos (E. coli, Klebsiella, Proteus mirabilis).", "**No cubre:** SAMR, enterococos, anaerobios (Bacteroides), Pseudomonas, Listeria.", "**Alergia a penicilinas:** la reactividad cruzada depende de las cadenas laterales R1. La cefazolina tiene una cadena lateral distinta de la de las penicilinas, con reactividad cruzada muy baja. Las guías actuales permiten su uso en la alergia a penicilina no grave e incluso en muchas reacciones graves, salvo que la reacción haya sido a la propia cefazolina."],
+mec:["**Sitio de acción:** el anillo β-lactámico es un análogo estructural del extremo D-alanil-D-alanina del pentapéptido precursor del peptidoglicano. Acila de forma covalente la serina del sitio activo de las **proteínas fijadoras de penicilina (PBP)**, transpeptidasas que catalizan el entrecruzamiento de las cadenas de peptidoglicano, y las inactiva.", "**Muerte bacteriana:** la inhibición de las PBP detiene la síntesis de la pared, pero no explica por sí sola el efecto bactericida. Este depende de las **autolisinas** (hidrolasas de mureína: amidasas, endopeptidasas y transglicosilasas líticas), enzimas de la propia bacteria que abren la pared para permitir el crecimiento y la división. Con las PBP bloqueadas, la hidrólisis continúa sin síntesis compensatoria y se establece un ciclo fútil de síntesis y degradación del peptidoglicano: la bacteria queda sin pared, no puede dividirse y se lisa por acción de sus propias hidrolasas, en un proceso descrito como de tipo apoptótico. El shock osmótico no alcanza a explicar este efecto: la presión osmótica intracelular de los gramnegativos no es alta respecto de los líquidos biológicos y, en ausencia de autolisinas, no hay efecto bactericida. Las cepas con autolisinas deficientes o reprimidas (**tolerancia**) son inhibidas pero no destruidas, con una CBM muy superior a la CIM.", "**Farmacodinamia:** actúa solo sobre bacterias en crecimiento activo. Bactericida tiempo-dependiente: el parámetro predictor de eficacia es el porcentaje del intervalo con concentración libre por encima de la CIM (%fT>CIM ≈ 60–70%), no el pico; de allí el fraccionamiento de la dosis y la utilidad de la infusión extendida en pacientes graves.", "**Particularidades:** el núcleo cefem le confiere estabilidad frente a la penicilinasa estafilocócica. Carece de afinidad por la PBP2a de SAMR y por las PBP de baja afinidad del enterococo (resistencia intrínseca).", "**Espectro:** cocos grampositivos (**Staphylococcus aureus sensible a meticilina**, estreptococos) y algunos gramnegativos (E. coli, Klebsiella, Proteus mirabilis).", "**No cubre:** SAMR, enterococos, anaerobios (Bacteroides), Pseudomonas, Listeria.", "**Alergia a penicilinas:** la reactividad cruzada depende de las cadenas laterales R1. La cefazolina tiene una cadena lateral distinta de la de las penicilinas, con reactividad cruzada muy baja. Las guías actuales permiten su uso en la alergia a penicilina no grave e incluso en muchas reacciones graves, salvo que la reacción haya sido a la propia cefazolina."],
 pk:[["Administración","IV en bolo lento (3–5 min) o infusión"],["t½","1,8 h (se prolonga en insuficiencia renal)"],["Unión a proteínas","≈ 80%"],["Eliminación","Renal sin cambios: ajustar en insuficiencia renal (tratamiento, no profilaxis única)"]],
 ea:["Reacciones alérgicas (exantema, urticaria, anafilaxia, rara).","Flebitis.","Diarrea, colitis por Clostridioides difficile.","Prueba de Coombs positiva, neutropenia (uso prolongado).","Convulsiones con dosis muy altas en insuficiencia renal."],
 ci:["Anafilaxia previa a cefalosporinas (en particular a cefazolina).","Precaución en alergia grave a penicilinas: seguir el protocolo institucional de alergias."],
@@ -1530,7 +1528,7 @@ perla:"No es eficaz como rescate en la crisis: es un controlador."},
 {id:"amoxicilina",n:"Amoxicilina",g:"Aminopenicilina (β-lactámico)",l:"otro",cat:"atb",
 a:["amoxicilina","amoxidal","amoxil","penicilina","betalactamico"],
 res:"El antibiótico oral más recetado del mundo. Primera línea en otitis, faringitis estreptocócica, sinusitis y neumonía de la comunidad en pacientes sanos.",
-mec:["**Sitio de acción:** el anillo β-lactámico es un análogo estructural del extremo D-alanil-D-alanina del pentapéptido precursor del peptidoglicano. Acila de forma covalente la serina del sitio activo de las **proteínas fijadoras de penicilina (PBP)**, transpeptidasas que catalizan el entrecruzamiento de las cadenas de peptidoglicano, y las inactiva.", "**Muerte bacteriana:** la inhibición de las PBP detiene la síntesis de la pared, pero por sí sola solo inhibe el crecimiento. El efecto bactericida depende de las **autolisinas** (hidrolasas de mureína: amidasas, endopeptidasas y transglicosilasas líticas), enzimas de la propia bacteria que abren la pared para permitir el crecimiento y la división. Con las PBP bloqueadas, la degradación continúa sin síntesis compensatoria y se establece un ciclo fútil de síntesis y degradación del peptidoglicano: la pared pierde resistencia mecánica y la bacteria se lisa por su presión osmótica interna. Las cepas con autolisinas deficientes o reprimidas (**tolerancia**) son inhibidas pero no destruidas, con una CBM muy superior a la CIM.", "**Farmacodinamia:** actúa solo sobre bacterias en crecimiento activo. Bactericida tiempo-dependiente: el parámetro predictor de eficacia es el porcentaje del intervalo con concentración libre por encima de la CIM (%fT>CIM ≈ 40–50%), no el pico; de allí el fraccionamiento de la dosis y la utilidad de la infusión extendida en pacientes graves.", "**Particularidades:** el grupo amino de la cadena lateral facilita el paso a través de las porinas de la membrana externa de los gramnegativos y le confiere buena biodisponibilidad oral. Es hidrolizada por las β-lactamasas.", "**Espectro:** estreptococos (incluido neumococo), enterococo sensible, Listeria, H. pylori, algunos gramnegativos (E. coli y H. influenzae no productores de β-lactamasa).", "**Resistencia:** las β-lactamasas (estafilococos, numerosas cepas de H. influenzae, Moraxella, E. coli) se cubren con el agregado de clavulánico. En el neumococo la resistencia se debe a PBP alteradas de menor afinidad, que se supera con dosis altas."],
+mec:["**Sitio de acción:** el anillo β-lactámico es un análogo estructural del extremo D-alanil-D-alanina del pentapéptido precursor del peptidoglicano. Acila de forma covalente la serina del sitio activo de las **proteínas fijadoras de penicilina (PBP)**, transpeptidasas que catalizan el entrecruzamiento de las cadenas de peptidoglicano, y las inactiva.", "**Muerte bacteriana:** la inhibición de las PBP detiene la síntesis de la pared, pero no explica por sí sola el efecto bactericida. Este depende de las **autolisinas** (hidrolasas de mureína: amidasas, endopeptidasas y transglicosilasas líticas), enzimas de la propia bacteria que abren la pared para permitir el crecimiento y la división. Con las PBP bloqueadas, la hidrólisis continúa sin síntesis compensatoria y se establece un ciclo fútil de síntesis y degradación del peptidoglicano: la bacteria queda sin pared, no puede dividirse y se lisa por acción de sus propias hidrolasas, en un proceso descrito como de tipo apoptótico. El shock osmótico no alcanza a explicar este efecto: la presión osmótica intracelular de los gramnegativos no es alta respecto de los líquidos biológicos y, en ausencia de autolisinas, no hay efecto bactericida. Las cepas con autolisinas deficientes o reprimidas (**tolerancia**) son inhibidas pero no destruidas, con una CBM muy superior a la CIM.", "**Farmacodinamia:** actúa solo sobre bacterias en crecimiento activo. Bactericida tiempo-dependiente: el parámetro predictor de eficacia es el porcentaje del intervalo con concentración libre por encima de la CIM (%fT>CIM ≈ 40–50%), no el pico; de allí el fraccionamiento de la dosis y la utilidad de la infusión extendida en pacientes graves.", "**Particularidades:** el grupo amino de la cadena lateral facilita el paso a través de las porinas de la membrana externa de los gramnegativos y le confiere buena biodisponibilidad oral. Es hidrolizada por las β-lactamasas.", "**Espectro:** estreptococos (incluido neumococo), enterococo sensible, Listeria, H. pylori, algunos gramnegativos (E. coli y H. influenzae no productores de β-lactamasa).", "**Resistencia:** las β-lactamasas (estafilococos, numerosas cepas de H. influenzae, Moraxella, E. coli) se cubren con el agregado de clavulánico. En el neumococo la resistencia se debe a PBP alteradas de menor afinidad, que se supera con dosis altas."],
 pk:[["Biodisponibilidad","≈ 90% (no la afecta la comida)"],["t½","≈ 1 h"],["Eliminación","Renal: ajustar con ClCr < 30"]],
 ea:["Diarrea, náuseas.","Exantema (≈ 90% en mononucleosis infecciosa: no es alergia verdadera).","**Alergia** (urticaria, anafilaxia).","Colitis por C. difficile.","Candidiasis."],
 ci:["Alergia a penicilinas.","Mononucleosis (por el exantema)."],
@@ -1554,7 +1552,7 @@ perla:"Mordedura de perro o gato con indicación de profilaxis: amoxicilina-clav
 {id:"penicilinabenzatinica",n:"Penicilina G benzatínica",g:"Penicilina natural de depósito",l:"otro",cat:"atb",
 a:["penicilina benzatinica","penicilina g benzatinica","benzatinica","bencilpenicilina","penicilina","sifilis"],
 res:"Penicilina IM de liberación lenta: una sola aplicación mantiene niveles por semanas. Tratamiento de elección de la sífilis y la faringitis estreptocócica (cuando no se asegura la vía oral).",
-mec:["**Sitio de acción:** el anillo β-lactámico es un análogo estructural del extremo D-alanil-D-alanina del pentapéptido precursor del peptidoglicano. Acila de forma covalente la serina del sitio activo de las **proteínas fijadoras de penicilina (PBP)**, transpeptidasas que catalizan el entrecruzamiento de las cadenas de peptidoglicano, y las inactiva.", "**Muerte bacteriana:** la inhibición de las PBP detiene la síntesis de la pared, pero por sí sola solo inhibe el crecimiento. El efecto bactericida depende de las **autolisinas** (hidrolasas de mureína: amidasas, endopeptidasas y transglicosilasas líticas), enzimas de la propia bacteria que abren la pared para permitir el crecimiento y la división. Con las PBP bloqueadas, la degradación continúa sin síntesis compensatoria y se establece un ciclo fútil de síntesis y degradación del peptidoglicano: la pared pierde resistencia mecánica y la bacteria se lisa por su presión osmótica interna. Las cepas con autolisinas deficientes o reprimidas (**tolerancia**) son inhibidas pero no destruidas, con una CBM muy superior a la CIM.", "**Duración prolongada:** es una sal muy poco soluble; desde el depósito muscular se libera bencilpenicilina lentamente durante 2–4 semanas. Por tratarse de un antibiótico tiempo-dependiente, concentraciones bajas pero sostenidas por encima de la CIM resultan eficaces frente a gérmenes muy sensibles (Treponema pallidum, S. pyogenes).", "Las concentraciones alcanzadas son bajas: **no es eficaz** en infecciones graves ni en la neurosífilis (no alcanza concentraciones terapéuticas en el LCR)."],
+mec:["**Sitio de acción:** el anillo β-lactámico es un análogo estructural del extremo D-alanil-D-alanina del pentapéptido precursor del peptidoglicano. Acila de forma covalente la serina del sitio activo de las **proteínas fijadoras de penicilina (PBP)**, transpeptidasas que catalizan el entrecruzamiento de las cadenas de peptidoglicano, y las inactiva.", "**Muerte bacteriana:** la inhibición de las PBP detiene la síntesis de la pared, pero no explica por sí sola el efecto bactericida. Este depende de las **autolisinas** (hidrolasas de mureína: amidasas, endopeptidasas y transglicosilasas líticas), enzimas de la propia bacteria que abren la pared para permitir el crecimiento y la división. Con las PBP bloqueadas, la hidrólisis continúa sin síntesis compensatoria y se establece un ciclo fútil de síntesis y degradación del peptidoglicano: la bacteria queda sin pared, no puede dividirse y se lisa por acción de sus propias hidrolasas, en un proceso descrito como de tipo apoptótico. El shock osmótico no alcanza a explicar este efecto: la presión osmótica intracelular de los gramnegativos no es alta respecto de los líquidos biológicos y, en ausencia de autolisinas, no hay efecto bactericida. Las cepas con autolisinas deficientes o reprimidas (**tolerancia**) son inhibidas pero no destruidas, con una CBM muy superior a la CIM.", "**Duración prolongada:** es una sal muy poco soluble; desde el depósito muscular se libera bencilpenicilina lentamente durante 2–4 semanas. Por tratarse de un antibiótico tiempo-dependiente, concentraciones bajas pero sostenidas por encima de la CIM resultan eficaces frente a gérmenes muy sensibles (Treponema pallidum, S. pyogenes).", "Las concentraciones alcanzadas son bajas: **no es eficaz** en infecciones graves ni en la neurosífilis (no alcanza concentraciones terapéuticas en el LCR)."],
 pk:[["Vía","Sólo IM profunda (glúteo)"],["Niveles","Detectables 2–4 semanas"],["Eliminación","Renal"]],
 ea:["Dolor en el sitio de inyección.","**Reacción de Jarisch-Herxheimer** en sífilis: fiebre, escalofríos, mialgias en las primeras 24 h por liberación de antígenos treponémicos (no es alergia).","**Alergia**, anafilaxia.","**Síndrome de Hoigné** (pseudoanafilaxia por microembolias de procaína, en preparados con procaína).","Inyección intravascular accidental: isquemia, síndrome de Nicolau."],
 ci:["Alergia a penicilinas (en embarazadas con sífilis se recomienda **desensibilizar**, porque es el único tratamiento eficaz para el feto).","**Nunca IV:** paro cardíaco y muerte."],
@@ -1566,7 +1564,7 @@ perla:"Embarazada con sífilis y alergia a penicilina: se desensibiliza y se tra
 {id:"cefalexina",n:"Cefalexina",g:"Cefalosporina oral de primera generación",l:"otro",cat:"atb",
 a:["cefalexina","keforal","cefalosporina"],
 res:"Antibiótico oral para infecciones de piel por estafilococo sensible y estreptococo, e infecciones urinarias no complicadas.",
-mec:["**Sitio de acción:** el anillo β-lactámico es un análogo estructural del extremo D-alanil-D-alanina del pentapéptido precursor del peptidoglicano. Acila de forma covalente la serina del sitio activo de las **proteínas fijadoras de penicilina (PBP)**, transpeptidasas que catalizan el entrecruzamiento de las cadenas de peptidoglicano, y las inactiva.", "**Muerte bacteriana:** la inhibición de las PBP detiene la síntesis de la pared, pero por sí sola solo inhibe el crecimiento. El efecto bactericida depende de las **autolisinas** (hidrolasas de mureína: amidasas, endopeptidasas y transglicosilasas líticas), enzimas de la propia bacteria que abren la pared para permitir el crecimiento y la división. Con las PBP bloqueadas, la degradación continúa sin síntesis compensatoria y se establece un ciclo fútil de síntesis y degradación del peptidoglicano: la pared pierde resistencia mecánica y la bacteria se lisa por su presión osmótica interna. Las cepas con autolisinas deficientes o reprimidas (**tolerancia**) son inhibidas pero no destruidas, con una CBM muy superior a la CIM.", "**Farmacodinamia:** actúa solo sobre bacterias en crecimiento activo. Bactericida tiempo-dependiente: el parámetro predictor de eficacia es el porcentaje del intervalo con concentración libre por encima de la CIM (%fT>CIM ≈ 60–70%), no el pico; de allí el fraccionamiento de la dosis y la utilidad de la infusión extendida en pacientes graves.", "**Particularidades:** el núcleo cefem (anillo β-lactámico fusionado a un anillo dihidrotiazínico) confiere mayor estabilidad frente a la penicilinasa estafilocócica que las aminopenicilinas. Las cefalosporinas carecen de afinidad por la PBP2a de SAMR y por las PBP de baja afinidad del enterococo, lo que explica su resistencia intrínseca.", "**Espectro:** S. aureus sensible a meticilina, estreptococos, algunos gramnegativos (E. coli, Proteus, Klebsiella).", "No cubre SAMR, enterococo, H. influenzae de forma fiable, anaerobios."],
+mec:["**Sitio de acción:** el anillo β-lactámico es un análogo estructural del extremo D-alanil-D-alanina del pentapéptido precursor del peptidoglicano. Acila de forma covalente la serina del sitio activo de las **proteínas fijadoras de penicilina (PBP)**, transpeptidasas que catalizan el entrecruzamiento de las cadenas de peptidoglicano, y las inactiva.", "**Muerte bacteriana:** la inhibición de las PBP detiene la síntesis de la pared, pero no explica por sí sola el efecto bactericida. Este depende de las **autolisinas** (hidrolasas de mureína: amidasas, endopeptidasas y transglicosilasas líticas), enzimas de la propia bacteria que abren la pared para permitir el crecimiento y la división. Con las PBP bloqueadas, la hidrólisis continúa sin síntesis compensatoria y se establece un ciclo fútil de síntesis y degradación del peptidoglicano: la bacteria queda sin pared, no puede dividirse y se lisa por acción de sus propias hidrolasas, en un proceso descrito como de tipo apoptótico. El shock osmótico no alcanza a explicar este efecto: la presión osmótica intracelular de los gramnegativos no es alta respecto de los líquidos biológicos y, en ausencia de autolisinas, no hay efecto bactericida. Las cepas con autolisinas deficientes o reprimidas (**tolerancia**) son inhibidas pero no destruidas, con una CBM muy superior a la CIM.", "**Farmacodinamia:** actúa solo sobre bacterias en crecimiento activo. Bactericida tiempo-dependiente: el parámetro predictor de eficacia es el porcentaje del intervalo con concentración libre por encima de la CIM (%fT>CIM ≈ 60–70%), no el pico; de allí el fraccionamiento de la dosis y la utilidad de la infusión extendida en pacientes graves.", "**Particularidades:** el núcleo cefem (anillo β-lactámico fusionado a un anillo dihidrotiazínico) confiere mayor estabilidad frente a la penicilinasa estafilocócica que las aminopenicilinas. Las cefalosporinas carecen de afinidad por la PBP2a de SAMR y por las PBP de baja afinidad del enterococo, lo que explica su resistencia intrínseca.", "**Espectro:** S. aureus sensible a meticilina, estreptococos, algunos gramnegativos (E. coli, Proteus, Klebsiella).", "No cubre SAMR, enterococo, H. influenzae de forma fiable, anaerobios."],
 pk:[["Biodisponibilidad","≈ 90%"],["t½","≈ 1 h"],["Eliminación","Renal sin cambios (alta concentración urinaria)"]],
 ea:["Diarrea, náuseas.","Alergia (reactividad cruzada con penicilinas muy baja; mayor con aminopenicilinas por cadena lateral similar).","C. difficile."],
 ci:["Anafilaxia a cefalosporinas.","Precaución en alergia grave a ampicilina o amoxicilina (cadena lateral R1 parecida)."],
@@ -1578,7 +1576,7 @@ perla:"A diferencia de la cefazolina, la cefalexina comparte cadena lateral con 
 {id:"ceftriaxona",n:"Ceftriaxona",g:"Cefalosporina de tercera generación",l:"otro",cat:"atb",
 a:["ceftriaxona","rocephin","cefalosporina de tercera","c3g"],
 res:"Antibiótico parenteral de amplio uso en internación y guardia: una dosis diaria, buena penetración en el SNC y cobertura de los principales patógenos de la comunidad. No cubre Pseudomonas.",
-mec:["**Sitio de acción:** el anillo β-lactámico es un análogo estructural del extremo D-alanil-D-alanina del pentapéptido precursor del peptidoglicano. Acila de forma covalente la serina del sitio activo de las **proteínas fijadoras de penicilina (PBP)**, transpeptidasas que catalizan el entrecruzamiento de las cadenas de peptidoglicano, y las inactiva.", "**Muerte bacteriana:** la inhibición de las PBP detiene la síntesis de la pared, pero por sí sola solo inhibe el crecimiento. El efecto bactericida depende de las **autolisinas** (hidrolasas de mureína: amidasas, endopeptidasas y transglicosilasas líticas), enzimas de la propia bacteria que abren la pared para permitir el crecimiento y la división. Con las PBP bloqueadas, la degradación continúa sin síntesis compensatoria y se establece un ciclo fútil de síntesis y degradación del peptidoglicano: la pared pierde resistencia mecánica y la bacteria se lisa por su presión osmótica interna. Las cepas con autolisinas deficientes o reprimidas (**tolerancia**) son inhibidas pero no destruidas, con una CBM muy superior a la CIM.", "**Farmacodinamia:** actúa solo sobre bacterias en crecimiento activo. Bactericida tiempo-dependiente: el parámetro predictor de eficacia es el porcentaje del intervalo con concentración libre por encima de la CIM (%fT>CIM ≈ 60–70%), no el pico; de allí el fraccionamiento de la dosis y la utilidad de la infusión extendida en pacientes graves.", "**Particularidades:** el grupo metoxiimino de la cadena lateral la protege de la hidrólisis por las β-lactamasas de espectro reducido (TEM-1, SHV-1), pero es hidrolizada por las BLEE y las AmpC desreprimidas.", "**Espectro:** neumococo (incluso con sensibilidad disminuida a penicilina), estreptococos, H. influenzae, Moraxella, enterobacterias de la comunidad, Neisseria (meningococo y gonococo), S. aureus sensible (menos que cefazolina).", "**No cubre:** Pseudomonas, enterococo, Listeria, SAMR, anaerobios, atípicos, gramnegativos con BLEE.", "**Dosis única diaria:** su alta unión a proteínas (≈ 90%) y su eliminación biliar y renal determinan una vida media prolongada (6–9 h)."],
+mec:["**Sitio de acción:** el anillo β-lactámico es un análogo estructural del extremo D-alanil-D-alanina del pentapéptido precursor del peptidoglicano. Acila de forma covalente la serina del sitio activo de las **proteínas fijadoras de penicilina (PBP)**, transpeptidasas que catalizan el entrecruzamiento de las cadenas de peptidoglicano, y las inactiva.", "**Muerte bacteriana:** la inhibición de las PBP detiene la síntesis de la pared, pero no explica por sí sola el efecto bactericida. Este depende de las **autolisinas** (hidrolasas de mureína: amidasas, endopeptidasas y transglicosilasas líticas), enzimas de la propia bacteria que abren la pared para permitir el crecimiento y la división. Con las PBP bloqueadas, la hidrólisis continúa sin síntesis compensatoria y se establece un ciclo fútil de síntesis y degradación del peptidoglicano: la bacteria queda sin pared, no puede dividirse y se lisa por acción de sus propias hidrolasas, en un proceso descrito como de tipo apoptótico. El shock osmótico no alcanza a explicar este efecto: la presión osmótica intracelular de los gramnegativos no es alta respecto de los líquidos biológicos y, en ausencia de autolisinas, no hay efecto bactericida. Las cepas con autolisinas deficientes o reprimidas (**tolerancia**) son inhibidas pero no destruidas, con una CBM muy superior a la CIM.", "**Farmacodinamia:** actúa solo sobre bacterias en crecimiento activo. Bactericida tiempo-dependiente: el parámetro predictor de eficacia es el porcentaje del intervalo con concentración libre por encima de la CIM (%fT>CIM ≈ 60–70%), no el pico; de allí el fraccionamiento de la dosis y la utilidad de la infusión extendida en pacientes graves.", "**Particularidades:** el grupo metoxiimino de la cadena lateral la protege de la hidrólisis por las β-lactamasas de espectro reducido (TEM-1, SHV-1), pero es hidrolizada por las BLEE y las AmpC desreprimidas.", "**Espectro:** neumococo (incluso con sensibilidad disminuida a penicilina), estreptococos, H. influenzae, Moraxella, enterobacterias de la comunidad, Neisseria (meningococo y gonococo), S. aureus sensible (menos que cefazolina).", "**No cubre:** Pseudomonas, enterococo, Listeria, SAMR, anaerobios, atípicos, gramnegativos con BLEE.", "**Dosis única diaria:** su alta unión a proteínas (≈ 90%) y su eliminación biliar y renal determinan una vida media prolongada (6–9 h)."],
 pk:[["t½","≈ 8 h"],["SNC","Buena penetración con meninges inflamadas"],["Eliminación","Biliar (≈ 40%) y renal: sin ajuste en insuficiencia renal aislada"]],
 ea:["Alergia, diarrea, C. difficile.","**Barro biliar** (pseudolitiasis) por precipitación con calcio en la bilis.","**Hiperbilirrubinemia en neonatos:** desplaza a la bilirrubina de la albúmina → kernicterus.","**Precipitados con calcio IV** en neonatos (muertes descriptas)."],
 ci:["Anafilaxia a cefalosporinas.","**Neonatos** con hiperbilirrubinemia o que reciben calcio IV (usar cefotaxima).","No mezclar con soluciones con calcio (Ringer lactato) en la misma vía."],
@@ -1590,7 +1588,7 @@ perla:"La ceftriaxona no debe utilizarse en neonatos: desplaza la bilirrubina de
 {id:"piptazo",n:"Piperacilina-tazobactam",g:"Ureidopenicilina antipseudomónica + inhibidor de β-lactamasas",l:"otro",cat:"atb",
 a:["piperacilina tazobactam","piperacilina-tazobactam","pip-tazo","piptazo","tazocin"],
 res:"Antibiótico de amplio espectro para infecciones nosocomiales: cubre Pseudomonas, anaerobios, enterococo sensible y la mayoría de gramnegativos.",
-mec:["**Sitio de acción:** el anillo β-lactámico es un análogo estructural del extremo D-alanil-D-alanina del pentapéptido precursor del peptidoglicano. Acila de forma covalente la serina del sitio activo de las **proteínas fijadoras de penicilina (PBP)**, transpeptidasas que catalizan el entrecruzamiento de las cadenas de peptidoglicano, y las inactiva.", "**Muerte bacteriana:** la inhibición de las PBP detiene la síntesis de la pared, pero por sí sola solo inhibe el crecimiento. El efecto bactericida depende de las **autolisinas** (hidrolasas de mureína: amidasas, endopeptidasas y transglicosilasas líticas), enzimas de la propia bacteria que abren la pared para permitir el crecimiento y la división. Con las PBP bloqueadas, la degradación continúa sin síntesis compensatoria y se establece un ciclo fútil de síntesis y degradación del peptidoglicano: la pared pierde resistencia mecánica y la bacteria se lisa por su presión osmótica interna. Las cepas con autolisinas deficientes o reprimidas (**tolerancia**) son inhibidas pero no destruidas, con una CBM muy superior a la CIM.", "**Farmacodinamia:** actúa solo sobre bacterias en crecimiento activo. Bactericida tiempo-dependiente: el parámetro predictor de eficacia es el porcentaje del intervalo con concentración libre por encima de la CIM (%fT>CIM ≈ 50%), no el pico; de allí el fraccionamiento de la dosis y la utilidad de la infusión extendida en pacientes graves.", "**Piperacilina:** la cadena lateral ureido aumenta la penetración por las porinas de la membrana externa de Pseudomonas y la afinidad por la PBP3 de los gramnegativos.", "**Tazobactam:** inhibidor irreversible de β-lactamasas de clase A (penicilinasas y numerosas BLEE in vitro); actividad escasa frente a AmpC y nula frente a carbapenemasas.", "**Espectro:** Pseudomonas aeruginosa, enterobacterias, anaerobios, estreptococos, Enterococcus faecalis sensible a ampicilina, S. aureus sensible.", "**No cubre:** SAMR, BLEE de forma fiable (en bacteriemia por BLEE es inferior a meropenem, ensayo MERINO), carbapenemasas, atípicos."],
+mec:["**Sitio de acción:** el anillo β-lactámico es un análogo estructural del extremo D-alanil-D-alanina del pentapéptido precursor del peptidoglicano. Acila de forma covalente la serina del sitio activo de las **proteínas fijadoras de penicilina (PBP)**, transpeptidasas que catalizan el entrecruzamiento de las cadenas de peptidoglicano, y las inactiva.", "**Muerte bacteriana:** la inhibición de las PBP detiene la síntesis de la pared, pero no explica por sí sola el efecto bactericida. Este depende de las **autolisinas** (hidrolasas de mureína: amidasas, endopeptidasas y transglicosilasas líticas), enzimas de la propia bacteria que abren la pared para permitir el crecimiento y la división. Con las PBP bloqueadas, la hidrólisis continúa sin síntesis compensatoria y se establece un ciclo fútil de síntesis y degradación del peptidoglicano: la bacteria queda sin pared, no puede dividirse y se lisa por acción de sus propias hidrolasas, en un proceso descrito como de tipo apoptótico. El shock osmótico no alcanza a explicar este efecto: la presión osmótica intracelular de los gramnegativos no es alta respecto de los líquidos biológicos y, en ausencia de autolisinas, no hay efecto bactericida. Las cepas con autolisinas deficientes o reprimidas (**tolerancia**) son inhibidas pero no destruidas, con una CBM muy superior a la CIM.", "**Farmacodinamia:** actúa solo sobre bacterias en crecimiento activo. Bactericida tiempo-dependiente: el parámetro predictor de eficacia es el porcentaje del intervalo con concentración libre por encima de la CIM (%fT>CIM ≈ 50%), no el pico; de allí el fraccionamiento de la dosis y la utilidad de la infusión extendida en pacientes graves.", "**Piperacilina:** la cadena lateral ureido aumenta la penetración por las porinas de la membrana externa de Pseudomonas y la afinidad por la PBP3 de los gramnegativos.", "**Tazobactam:** inhibidor irreversible de β-lactamasas de clase A (penicilinasas y numerosas BLEE in vitro); actividad escasa frente a AmpC y nula frente a carbapenemasas.", "**Espectro:** Pseudomonas aeruginosa, enterobacterias, anaerobios, estreptococos, Enterococcus faecalis sensible a ampicilina, S. aureus sensible.", "**No cubre:** SAMR, BLEE de forma fiable (en bacteriemia por BLEE es inferior a meropenem, ensayo MERINO), carbapenemasas, atípicos."],
 pk:[["t½","≈ 1 h"],["Administración","Infusión extendida (4 h) mejora el tiempo sobre la CIM"],["Eliminación","Renal: ajustar"]],
 ea:["Diarrea, C. difficile.","Alergia.","Trombocitopenia, neutropenia (uso prolongado).","**Nefrotoxicidad aditiva con vancomicina** (más IRA que vancomicina + cefepime).","Hipopotasemia (anión no reabsorbible)."],
 ci:["Alergia a penicilinas."],
@@ -1602,7 +1600,7 @@ perla:"Si hay bacteriemia por gramnegativo con BLEE, el carbapenem es superior a
 {id:"meropenem",n:"Meropenem",g:"Carbapenem",l:"otro",cat:"atb",
 a:["meropenem","merrem","carbapenem","imipenem","ertapenem"],
 res:"El antibiótico de más amplio espectro de uso habitual. Reservado para infecciones graves, gramnegativos con BLEE o gérmenes multirresistentes.",
-mec:["**Sitio de acción:** el anillo β-lactámico es un análogo estructural del extremo D-alanil-D-alanina del pentapéptido precursor del peptidoglicano. Acila de forma covalente la serina del sitio activo de las **proteínas fijadoras de penicilina (PBP)**, transpeptidasas que catalizan el entrecruzamiento de las cadenas de peptidoglicano, y las inactiva.", "**Muerte bacteriana:** la inhibición de las PBP detiene la síntesis de la pared, pero por sí sola solo inhibe el crecimiento. El efecto bactericida depende de las **autolisinas** (hidrolasas de mureína: amidasas, endopeptidasas y transglicosilasas líticas), enzimas de la propia bacteria que abren la pared para permitir el crecimiento y la división. Con las PBP bloqueadas, la degradación continúa sin síntesis compensatoria y se establece un ciclo fútil de síntesis y degradación del peptidoglicano: la pared pierde resistencia mecánica y la bacteria se lisa por su presión osmótica interna. Las cepas con autolisinas deficientes o reprimidas (**tolerancia**) son inhibidas pero no destruidas, con una CBM muy superior a la CIM.", "**Farmacodinamia:** actúa solo sobre bacterias en crecimiento activo. Bactericida tiempo-dependiente: el parámetro predictor de eficacia es el porcentaje del intervalo con concentración libre por encima de la CIM (%fT>CIM ≈ 40%), no el pico; de allí el fraccionamiento de la dosis y la utilidad de la infusión extendida en pacientes graves.", "**Particularidades:** alta afinidad por la PBP2 (y por las PBP1 y PBP3). La configuración trans del grupo hidroxietilo lo hace estable frente a casi todas las β-lactamasas, incluidas BLEE y AmpC. Ingresa en Pseudomonas por la porina OprD, cuya pérdida es un mecanismo de resistencia. Presenta efecto postantibiótico frente a gramnegativos.", "**Espectro:** gramnegativos (incluidos BLEE y Pseudomonas), anaerobios, grampositivos sensibles.", "**No cubre:** SAMR, Enterococcus faecium, Stenotrophomonas, gérmenes productores de carbapenemasas (KPC, NDM), atípicos.", "**Ertapenem:** sin cobertura de Pseudomonas ni Acinetobacter, una dosis diaria."],
+mec:["**Sitio de acción:** el anillo β-lactámico es un análogo estructural del extremo D-alanil-D-alanina del pentapéptido precursor del peptidoglicano. Acila de forma covalente la serina del sitio activo de las **proteínas fijadoras de penicilina (PBP)**, transpeptidasas que catalizan el entrecruzamiento de las cadenas de peptidoglicano, y las inactiva.", "**Muerte bacteriana:** la inhibición de las PBP detiene la síntesis de la pared, pero no explica por sí sola el efecto bactericida. Este depende de las **autolisinas** (hidrolasas de mureína: amidasas, endopeptidasas y transglicosilasas líticas), enzimas de la propia bacteria que abren la pared para permitir el crecimiento y la división. Con las PBP bloqueadas, la hidrólisis continúa sin síntesis compensatoria y se establece un ciclo fútil de síntesis y degradación del peptidoglicano: la bacteria queda sin pared, no puede dividirse y se lisa por acción de sus propias hidrolasas, en un proceso descrito como de tipo apoptótico. El shock osmótico no alcanza a explicar este efecto: la presión osmótica intracelular de los gramnegativos no es alta respecto de los líquidos biológicos y, en ausencia de autolisinas, no hay efecto bactericida. Las cepas con autolisinas deficientes o reprimidas (**tolerancia**) son inhibidas pero no destruidas, con una CBM muy superior a la CIM.", "**Farmacodinamia:** actúa solo sobre bacterias en crecimiento activo. Bactericida tiempo-dependiente: el parámetro predictor de eficacia es el porcentaje del intervalo con concentración libre por encima de la CIM (%fT>CIM ≈ 40%), no el pico; de allí el fraccionamiento de la dosis y la utilidad de la infusión extendida en pacientes graves.", "**Particularidades:** alta afinidad por la PBP2 (y por las PBP1 y PBP3). La configuración trans del grupo hidroxietilo lo hace estable frente a casi todas las β-lactamasas, incluidas BLEE y AmpC. Ingresa en Pseudomonas por la porina OprD, cuya pérdida es un mecanismo de resistencia. Presenta efecto postantibiótico frente a gramnegativos.", "**Espectro:** gramnegativos (incluidos BLEE y Pseudomonas), anaerobios, grampositivos sensibles.", "**No cubre:** SAMR, Enterococcus faecium, Stenotrophomonas, gérmenes productores de carbapenemasas (KPC, NDM), atípicos.", "**Ertapenem:** sin cobertura de Pseudomonas ni Acinetobacter, una dosis diaria."],
 pk:[["t½","≈ 1 h"],["Administración","Infusión extendida (3 h) en gérmenes con CIM alta"],["Eliminación","Renal: ajustar"]],
 ea:["Diarrea, C. difficile.","Convulsiones (menos que imipenem).","Alergia (reactividad cruzada con penicilinas ≈ 1%).","Selección de gérmenes resistentes (carbapenemasas)."],
 ci:["Anafilaxia a carbapenems.","**Ácido valproico:** el carbapenem reduce drásticamente sus niveles → convulsiones. Evitar la combinación."],
@@ -1774,7 +1772,7 @@ res:"Antiparasitario de amplio espectro para helmintos intestinales y tisulares 
 mec:["**Sitio:** se une a la **β-tubulina** del parásito → impide la polimerización de microtúbulos → ↓ captación de glucosa y agotamiento de glucógeno → muerte del parásito.","Selectivo por mayor afinidad a la tubulina del helminto que a la humana.","**Absorción:** baja; aumenta marcadamente con comidas grasas (lo que es deseable en las infecciones tisulares e indiferente en las intestinales)."],
 pk:[["Metabolismo","Primer paso hepático a albendazol sulfóxido (activo)"],["t½","8–12 h (sulfóxido)"]],
 ea:["Molestias digestivas, cefalea.","Aumento de transaminasas.","Neutropenia, alopecia (tratamientos prolongados).","En neurocisticercosis: inflamación por muerte de quistes (convulsiones, hipertensión endocraneana) → se asocian corticoides."],
-ci:["Embarazo (primer trimestre).","Neurocisticercosis con quistes en el atención o hipertensión endocraneana no controlada (riesgo inflamatorio)."],
+ci:["Embarazo (primer trimestre).","Neurocisticercosis con quistes en el ojo o hipertensión endocraneana no controlada (riesgo inflamatorio)."],
 usos:["Ascariasis, oxiuriasis, uncinariasis, tricuriasis (dosis única o 3 días).","Neurocisticercosis (con corticoides).","Hidatidosis (con cirugía o punción).","Larva migrans, toxocariasis, giardiasis (alternativa)."],
 dosis:[["Helmintos intestinales","400 mg VO dosis única (repetir en 2 semanas en oxiuriasis)"],["Neurocisticercosis","15 mg/kg/día en 2 tomas (máx 1,2 g/día) por 10–14 días, con comida"],["Hidatidosis","400 mg c/12 h en ciclos de 28 días"]],
 tox:["Sobredosis: poca toxicidad aguda. Soporte; controlar hemograma y hepatograma en tratamientos largos."],
@@ -1869,7 +1867,7 @@ perla:"Síndrome neuroléptico maligno (antagonista dopaminérgico, rigidez, bra
 a:["litio","carbonato de litio","ceglution","estabilizador del animo"],
 res:"El estabilizador del ánimo de referencia en el trastorno bipolar, único con efecto antisuicida claro. Margen terapéutico muy estrecho: niveles, función renal y tiroides.",
 mec:["**Mecanismo:** no del todo aclarado. Inhibe la inositol monofosfatasa (agotamiento de inositol y ↓ señalización por fosfoinosítidos) y la **GSK-3β** → efectos neuroprotectores y de estabilización.","**Riñón:** el túbulo lo maneja **de forma análoga al sodio**. En la depleción de sodio o de volumen aumenta la reabsorción de Na⁺ y de litio, con elevación de la litemia. Por ello las tiazidas, los IECA, los ARA II, los AINE y la deshidratación pueden producir intoxicación.","**Diabetes insípida nefrogénica:** ingresa a las células del túbulo colector por ENaC e inhibe la vía de señalización de la vasopresina (acuaporina 2)."],
-pk:[["t½","≈ 24 h (más en ancianos e insuficiencia renal)"],["Unión a proteínas","Nula"],["Eliminación","Renal (filtración y reabsorción como sodio)"],["Nivel terapéutico","0,6–1,0 mEq/L (12 h tras la última dosis); manía aguda hasta 1,2"]],
+pk:[["t½","≈ 24 h (más en ancianos e insuficiencia renal)"],["Unión a proteínas","Nula"],["Eliminación","Renal (filtración y reabsorción como sodio)"],["Nivel terapéutico","0,6–1,0 mEq/L (12 h tras la última dosis); manía aguda 1,0–1,5"]],
 ea:["Temblor fino, poliuria y polidipsia, aumento de peso.","**Diabetes insípida nefrogénica.**","**Hipotiroidismo** (frecuente), bocio; hiperparatiroidismo con hipercalcemia.","Insuficiencia renal crónica (uso prolongado).","Acné, psoriasis.","Malformación de Ebstein (riesgo bajo, primer trimestre)."],
 ci:["Insuficiencia renal grave.","Deshidratación o depleción de sodio.","Insuficiencia cardíaca grave.","Interacciones: tiazidas, IECA, ARA II, AINE (↑ niveles).","Embarazo (relativa, evaluar riesgo-beneficio)."],
 usos:["Trastorno bipolar (manía aguda, mantenimiento).","Depresión resistente (potenciación).","Prevención de suicidio en trastornos del ánimo."],
@@ -1935,7 +1933,7 @@ ea:["**Teratogenicidad**: defectos del tubo neural (≈ 1–2%), malformaciones,
 ci:["**Mujeres en edad fértil** salvo que no haya alternativa y se cumpla un programa de prevención de embarazo (EMA).","Embarazo (en epilepsia o bipolaridad).","Hepatopatía, enfermedades mitocondriales (POLG).","Trastornos del ciclo de la urea."],
 usos:["Epilepsias generalizadas (ausencias, mioclónicas, tónico-clónicas) y focales.","Estado epiléptico (segunda línea).","Trastorno bipolar (manía, mantenimiento).","Profilaxis de migraña."],
 dosis:[["Epilepsia","10–15 mg/kg/día, titular hasta 60 mg/kg/día"],["Estado epiléptico","40 mg/kg IV (máx 3000 mg) en 10 min"],["Manía","20–30 mg/kg/día"]],
-tox:["Intoxicación: depresión del SNC, miosis, hipotensión, hiperamonemia, acidosis, hipernatremia, edema cerebral.","Tratamiento: soporte; **L-carnitina** en hiperamonemia o hepatotoxicidad; hemodiálisis en casos graves (niveles > 850–900 µg/mL o encefalopatía)."],
+tox:["Intoxicación: depresión del SNC, miosis, hipotensión, hiperamonemia, acidosis, hipernatremia, edema cerebral.","Tratamiento: soporte; **L-carnitina** en hiperamonemia o hepatotoxicidad; hemodiálisis en casos graves (EXTRIP: recomendada con niveles > 1300 µg/mL, sugerida > 900 µg/mL, o ante encefalopatía, edema cerebral o shock)."],
 perla:"La letargia en un paciente con valproato y transaminasas normales obliga a determinar la amonemia."},
 
 {id:"carbamazepina",n:"Carbamazepina",g:"Anticonvulsivante (bloqueante de canales de Na⁺)",l:"otro",cat:"neuro",
@@ -2321,7 +2319,7 @@ perla:"La aparición de clonus e hipertermia en un paciente con sertralina que r
 {id:"aztreonam",n:"Aztreonam",g:"Monobactam",l:"otro",cat:"atb",
 a:["aztreonam","azactam","monobactam"],
 res:"β-lactámico sólo para gramnegativos aerobios (incluida Pseudomonas), con reactividad cruzada casi nula con penicilinas: opción en alergia grave a β-lactámicos.",
-mec:["**Sitio de acción:** monobactam (anillo β-lactámico aislado, sin anillo fusionado). Acila de forma covalente la **PBP3** de los gramnegativos, transpeptidasa del septo de división: la bacteria no puede dividirse y forma filamentos.", "**Muerte bacteriana:** la inhibición de las PBP detiene la síntesis de la pared, pero por sí sola solo inhibe el crecimiento. El efecto bactericida depende de las **autolisinas** (hidrolasas de mureína: amidasas, endopeptidasas y transglicosilasas líticas), enzimas de la propia bacteria que abren la pared para permitir el crecimiento y la división. Con las PBP bloqueadas, la degradación continúa sin síntesis compensatoria y se establece un ciclo fútil de síntesis y degradación del peptidoglicano: la pared pierde resistencia mecánica y la bacteria se lisa por su presión osmótica interna. Las cepas con autolisinas deficientes o reprimidas (**tolerancia**) son inhibidas pero no destruidas, con una CBM muy superior a la CIM.", "**Farmacodinamia:** actúa solo sobre bacterias en crecimiento activo. Bactericida tiempo-dependiente: el parámetro predictor de eficacia es el porcentaje del intervalo con concentración libre por encima de la CIM (%fT>CIM ≈ 60%), no el pico; de allí el fraccionamiento de la dosis y la utilidad de la infusión extendida en pacientes graves.", "**Espectro:** enterobacterias, Pseudomonas aeruginosa, H. influenzae. Carece de actividad sobre grampositivos y anaerobios, cuyas PBP no reconoce.", "**Alergia:** su estructura monocíclica no presenta reactividad cruzada con penicilinas ni cefalosporinas, **excepto con la ceftazidima**, con la que comparte una cadena lateral idéntica.", "Estable frente a metalo-β-lactamasas (NDM); se asocia a ceftazidima-avibactam para gérmenes con NDM."],
+mec:["**Sitio de acción:** monobactam (anillo β-lactámico aislado, sin anillo fusionado). Acila de forma covalente la **PBP3** de los gramnegativos, transpeptidasa del septo de división: la bacteria no puede dividirse y forma filamentos.", "**Muerte bacteriana:** la inhibición de las PBP detiene la síntesis de la pared, pero no explica por sí sola el efecto bactericida. Este depende de las **autolisinas** (hidrolasas de mureína: amidasas, endopeptidasas y transglicosilasas líticas), enzimas de la propia bacteria que abren la pared para permitir el crecimiento y la división. Con las PBP bloqueadas, la hidrólisis continúa sin síntesis compensatoria y se establece un ciclo fútil de síntesis y degradación del peptidoglicano: la bacteria queda sin pared, no puede dividirse y se lisa por acción de sus propias hidrolasas, en un proceso descrito como de tipo apoptótico. El shock osmótico no alcanza a explicar este efecto: la presión osmótica intracelular de los gramnegativos no es alta respecto de los líquidos biológicos y, en ausencia de autolisinas, no hay efecto bactericida. Las cepas con autolisinas deficientes o reprimidas (**tolerancia**) son inhibidas pero no destruidas, con una CBM muy superior a la CIM.", "**Farmacodinamia:** actúa solo sobre bacterias en crecimiento activo. Bactericida tiempo-dependiente: el parámetro predictor de eficacia es el porcentaje del intervalo con concentración libre por encima de la CIM (%fT>CIM ≈ 60%), no el pico; de allí el fraccionamiento de la dosis y la utilidad de la infusión extendida en pacientes graves.", "**Espectro:** enterobacterias, Pseudomonas aeruginosa, H. influenzae. Carece de actividad sobre grampositivos y anaerobios, cuyas PBP no reconoce.", "**Alergia:** su estructura monocíclica no presenta reactividad cruzada con penicilinas ni cefalosporinas, **excepto con la ceftazidima**, con la que comparte una cadena lateral idéntica.", "Estable frente a metalo-β-lactamasas (NDM); se asocia a ceftazidima-avibactam para gérmenes con NDM."],
 pk:[["t½","≈ 2 h"],["Eliminación","Renal: ajustar"]],
 ea:["Exantema, flebitis.","Aumento de transaminasas.","C. difficile."],
 ci:["Alergia a aztreonam.","Precaución en alergia grave a ceftazidima."],
@@ -2558,7 +2556,7 @@ pk:[["Inicio","20–30 min"],["Duración","12–24 h"]],
 ea:["Ardor ocular.","**Bradicardia**, bloqueo AV, hipotensión.","**Broncoespasmo** (asma, EPOC).","Fatiga, depresión, disfunción sexual.","Enmascara síntomas de hipoglucemia."],
 ci:["**Asma** o EPOC grave.","Bradicardia sinusal, bloqueo AV de 2.º o 3.er grado, insuficiencia cardíaca descompensada."],
 usos:["Glaucoma de ángulo abierto.","Hipertensión ocular.","Glaucoma agudo de ángulo cerrado (coadyuvante).","Hemangioma infantil superficial (uso tópico, fuera de prospecto)."],
-dosis:[["Adultos","Timolol 0,5%: 1 gota en el atención afectado c/12 h (o gel 1 vez/día)"]],
+dosis:[["Adultos","Timolol 0,5%: 1 gota en el ojo afectado c/12 h (o gel 1 vez/día)"]],
 tox:["Ingestión o sobredosis: efectos β-bloqueantes sistémicos. Glucagón, atropina, soporte."],
 perla:"Ante un broncoespasmo de causa no aclarada debe interrogarse el uso de colirios: el timolol oftálmico puede desencadenarlo."},
 
@@ -2570,7 +2568,7 @@ pk:[["Inicio","3–4 h; pico 8–12 h"],["Duración","24 h"],["Conservación","H
 ea:["Hiperemia conjuntival.","**Hiperpigmentación del iris** (irreversible, más en iris mixtos) y de la piel periocular.","**Crecimiento de pestañas** (de ahí el uso cosmético del bimatoprost).","Edema macular cistoide (afáquicos, pseudofáquicos de riesgo), uveítis."],
 ci:["Uveítis activa, edema macular (relativas).","Hipersensibilidad."],
 usos:["Glaucoma de ángulo abierto.","Hipertensión ocular."],
-dosis:[["Adultos","Latanoprost 0,005%: 1 gota a la noche en el atención afectado (más gotas no mejoran el efecto)"]],
+dosis:[["Adultos","Latanoprost 0,005%: 1 gota a la noche en el ojo afectado (más gotas no mejoran el efecto)"]],
 tox:["Ingestión: escasa toxicidad. Soporte."],
 perla:"El uso unilateral de latanoprost puede producir heterocromía de iris."},
 
@@ -3412,7 +3410,7 @@ const BASE_REFS = [
   "Brunton LL, Knollmann BC (eds.). Goodman & Gilman. Las bases farmacológicas de la terapéutica. 14.ª ed. McGraw-Hill; 2023.",
   "Vanderah TW (ed.). Katzung. Basic and Clinical Pharmacology. 16.ª ed. McGraw-Hill; 2024.",
   "Ritter JM, et al. Rang & Dale's Pharmacology. 10.ª ed. Elsevier; 2023.",
-  "Lorenzo P, et al. Velázquez. Farmacología básica y clínica. Editorial Médica Panamericana."
+  "Lorenzo P, et al. Velázquez. Farmacología básica y clínica. 20.ª ed. Madrid: Editorial Médica Panamericana; 2025."
 ];
 const REF_RULES = [
   [/ASRA/, d => ["lidocaina","bupivacaina","ropivacaina"].includes(d.id) ? "Neal JM, et al. ASRA Practice Advisory on Local Anesthetic Systemic Toxicity: 2020 version. Reg Anesth Pain Med. 2021;46:81-82." : "Horlocker TT, et al. Regional anesthesia in the patient receiving antithrombotic or thrombolytic therapy: ASRA Evidence-Based Guidelines (4th ed.). Reg Anesth Pain Med. 2018;43:263-309."],
@@ -3466,8 +3464,12 @@ function refsFor(d){
   const out = [...BASE_REFS];
   if(["hip","opi","bnm","al","vaso"].includes(d.cat) || ["esmolol","labetalol","ondansetron","dexametasona","metoclopramida","magnesio","dantroleno","sugammadex","neostigmina"].includes(d.id))
     out.unshift("Gropper MA, Miller RD, et al. (eds.). Miller. Anestesia. 9.ª ed. Barcelona: Elsevier; 2021.");
+  if(d.cat === "atb" || ["isoniazida","rifampicina","pirazinamida","etambutol"].includes(d.id)){ out.push("Serra HA y col. Farmacología antibacteriana I: quimioantibioticoterapia antibacteriana. 1.ª ed. Buenos Aires: Editorial Sciens; 2023."); out.push("Serra HA y col. Farmacología antibacteriana II: quimioantibioticoterapia antibacteriana. 1.ª ed. Buenos Aires: Editorial Sciens; 2023."); }
+  if(["acenocumarol","warfarina","apixaban","rivaroxaban"].includes(d.id)) out.push("Zaidel EJ y col. Farmacología de los anticoagulantes orales. 1.ª ed. Buenos Aires: Editorial Sciens; 2021.");
+  if(["analg","opi","hip","al","bnm"].includes(d.cat) || ["prednisona","hidrocortisona","dexametasona","sugammadex","neostigmina"].includes(d.id)) out.push("Sánchez Toranzo A, Serra HA y col. Farmacología: de la molécula al paciente. Antiinflamatorios, analgésicos y anestesia. 1.ª ed. Buenos Aires: Editorial Sciens; 2017.");
   REF_RULES.forEach(([re, f]) => { if(re.test(text)){ const r = f(d); if(!out.includes(r)) out.push(r); } });
   if(d.cat === "al"){ const r = "Neal JM, et al. ASRA Practice Advisory on Local Anesthetic Systemic Toxicity: 2020 version. Reg Anesth Pain Med. 2021;46:81-82."; if(!out.includes(r)) out.push(r); }
+  ixRefsFor(d.id).forEach(r => { if(!out.includes(r)) out.push(r); });
   out.push("APILAM. e-lactancia.org. Compatibilidad de medicamentos con la lactancia materna. Consulta: octubre de 2026.");
   out.push("Prospecto aprobado por la Administración Nacional de Medicamentos, Alimentos y Tecnología Médica (ANMAT).");
   return out;
@@ -3586,9 +3588,21 @@ const T = {
 SERO_S:["sertralina","fluoxetina","escitalopram","citalopram","paroxetina","venlafaxina","duloxetina","vortioxetina","clomipramina","tramadol","linezolid"],
 SERO_W:["fentanilo","ondansetron","sumatriptan","trazodona","mirtazapina","amitriptilina","litio","buspirona","metoclopramida"],
 MAOI:["linezolid"],
+BLACT:["amoxicilina","amoxiclav","penicilinabenzatinica","cefalexina","cefazolina","ceftriaxona","piptazo","meropenem","aztreonam"],
+BLACT_OAT:["amoxicilina","amoxiclav","penicilinabenzatinica","cefalexina","cefazolina","ceftriaxona","piptazo","meropenem"],
+LOOPTZ:["furosemida","hidroclorotiazida"],
+ATB_CHE:["amoxicilina","amoxiclav","cefalexina","doxiciclina","azitromicina","claritromicina","clindamicina"],
+ACO_EE:["aco"],
+MACRO:["azitromicina","claritromicina"],
+CEF1:["cefazolina"],
+NEPH_CEF:["gentamicina","vancomicina","furosemida"],
+LA:["lidocaina","bupivacaina","ropivacaina"],
+BNM_POT_W:["doxiciclina","lidocaina","verapamilo","diltiazem"],
+ANEST_HYPO:["propofol","sevoflurano"],
+SUB_IND_CORT:["prednisona","hidrocortisona"],
 PEN:["amoxicilina","amoxiclav","penicilinabenzatinica","piptazo"],
 TETRA:["doxiciclina"],
-AVK_ATB:["amoxicilina","amoxiclav","cefalexina","cefazolina","ceftriaxona","piptazo","meropenem","aztreonam","azitromicina","doxiciclina","clindamicina","ivermectina"],
+AVK_ATB:["amoxicilina","amoxiclav","cefalexina","cefazolina","ceftriaxona","piptazo","meropenem","aztreonam","azitromicina","doxiciclina","clindamicina","ivermectina","linezolid"],
 SUB2C9_NTI:["fenitoina"],
 ANEST:["propofol","etomidato","ketamina","sevoflurano"],
 VANCO:["vancomicina"],
@@ -3609,7 +3623,7 @@ NSAID:["ketorolac","ibuprofeno","diclofenac","celecoxib"],
 SSRI:["sertralina","fluoxetina","escitalopram","citalopram","paroxetina","venlafaxina","duloxetina","vortioxetina"],
 CORT:["prednisona","hidrocortisona","dexametasona"],
 INH2C9:["amiodarona","metronidazol","tmpsmx","fluconazol","ciprofloxacina","claritromicina"],
-AVK_PD:["paracetamol","levotiroxina"],
+AVK_PD:["paracetamol","levotiroxina","alopurinol","valproato","prednisona","dexametasona"],
 INDUCER:["rifampicina","carbamazepina","fenitoina"],
 INH3A4_S:["claritromicina"],
 INH3A4_M:["fluconazol","verapamilo","diltiazem"],
@@ -3741,8 +3755,8 @@ const IX_RULES = [
 {id:"avk2",a:"AVK",b:"INDUCER",s:1,f:"avk",t:"Disminución del RIN y pérdida del efecto anticoagulante",
  m:"La inducción de CYP2C9 y CYP3A4 acelera el metabolismo del anticoagulante; el efecto se instala en 1–2 semanas y persiste semanas después de suspender el inductor.",
  x:"Controlar el RIN con frecuencia y ajustar la dosis al iniciar y al suspender el inductor."},
-{id:"avk3",a:"AVK",b:"AVK_PD",s:2,f:"avk",t:"Aumento del RIN",
- m:"Paracetamol en dosis altas sostenidas (más de 2 g/día durante varios días): interfiere con el ciclo de la vitamina K. Levotiroxina: el aumento del metabolismo acelera el catabolismo de los factores de coagulación.",
+{id:"avk3",r:["Z"],a:"AVK",b:"AVK_PD",s:2,f:"avk",t:"Aumento del RIN",
+ m:"Paracetamol en dosis altas sostenidas (más de 2 g/día durante varios días): interfiere con el ciclo de la vitamina K. Levotiroxina: el aumento del metabolismo acelera el catabolismo de los factores de coagulación. Alopurinol: inhibe el metabolismo hepático del anticoagulante. Valproato: desplaza al anticoagulante de la albúmina (los AVK se unen a proteínas en ≈ 97%) y altera la función plaquetaria. Glucocorticoides en dosis altas: aumento del RIN de mecanismo no establecido.",
  x:"Controlar el RIN al iniciar o modificar la dosis."},
 /* --- CYP3A4 --- */
 {id:"cyp1",a:"INH3A4_S",b:"SUB3A4_CRIT",s:0,f:"cyp3a4",t:"Toxicidad grave por aumento de concentraciones",
@@ -3866,7 +3880,7 @@ const IX_RULES = [
  m:"Ambos reducen el umbral convulsivo por mecanismos distintos (antagonismo GABA-A, efecto monoaminérgico o bloqueo de canales).",
  x:"Evitar en pacientes con epilepsia o factores de riesgo; respetar las dosis máximas."},
 /* --- Bloqueo neuromuscular --- */
-{id:"bnm",a:"BNM_POT",b:"BNM",s:2,f:"bnm",t:"Potenciación del bloqueo neuromuscular",
+{id:"bnm",r:["ST","S2"],a:"BNM_POT",b:"BNM",s:2,f:"bnm",t:"Potenciación del bloqueo neuromuscular",
  m:"Aminoglucósidos, magnesio y clindamicina reducen la liberación presináptica de acetilcolina (dependiente de Ca²⁺); los halogenados y el litio potencian el efecto postsináptico. El bloqueo se prolonga y aumenta el riesgo de parálisis residual.",
  x:"Reducir la dosis del bloqueante, monitorear con TOF cuantitativo y confirmar TOF ≥ 0,9 antes de la extubación."},
 {id:"ache1",a:"ACHE",b:"SCH",s:1,f:"bnm2",t:"Prolongación del bloqueo por succinilcolina",
@@ -3886,13 +3900,13 @@ const IX_RULES = [
  m:"El pH gástrico ácido favorece la absorción del hierro no hemo (reducción a Fe²⁺) y la disolución de la levotiroxina; los antisecretores la reducen.",
  x:"Controlar ferritina o TSH durante el tratamiento prolongado y ajustar la dosis."},
 /* --- Antimicrobianos --- */
-{id:"avk4",a:"AVK",b:"AVK_ATB",s:2,f:"avk",t:"Aumento del RIN durante el tratamiento antibiótico",
- m:"Multifactorial: la reducción de la flora intestinal productora de menaquinonas (vitamina K2), la menor ingesta de vitamina K y el estado inflamatorio de la infección, que acelera el catabolismo de los factores de coagulación, potencian el efecto del antagonista de la vitamina K. En estudios de cohortes, la mayoría de las clases antibióticas, incluidas penicilinas y cefalosporinas, se asoció con mayor riesgo de hemorragia.",
+{id:"avk4",r:["S1","Z"],a:"AVK",b:"AVK_ATB",s:2,f:"avk",t:"Aumento del RIN durante el tratamiento antibiótico",
+ m:"Multifactorial: la reducción de la flora intestinal productora de menaquinonas (vitamina K2) —aunque la eliminación de la flora desconjugante también puede reducir la recirculación enterohepática del anticoagulante—, la menor ingesta de vitamina K y el estado inflamatorio de la infección, que acelera el catabolismo de los factores de coagulación, potencian el efecto del antagonista de la vitamina K. En estudios de cohortes, la mayoría de las clases antibióticas, incluidas penicilinas y cefalosporinas, se asoció con mayor riesgo de hemorragia. En la cefazolina, el núcleo metiltiadiazol de la cadena lateral (análogo al N-metiltiotetrazol de otras cefalosporinas) interfiere además con el ciclo de la vitamina K y la γ-carboxilación de los factores II, VII, IX y X.",
  x:"Controlar el RIN a los 3–5 días de iniciar el antibiótico y después de suspenderlo; ajustar la dosis del anticoagulante según el resultado."},
-{id:"antag",a:"PEN",b:"TETRA",s:2,f:"antag",t:"Antagonismo bactericida–bacteriostático",
+{id:"antag",r:["S1","S2"],a:"PEN",b:"TETRA",s:2,f:"antag",t:"Antagonismo bactericida–bacteriostático",
  m:"Los β-lactámicos solo destruyen bacterias en crecimiento activo, porque su efecto depende de la síntesis de pared y de la actividad de las autolisinas. Las tetraciclinas inhiben la síntesis proteica, detienen el crecimiento y reducen la actividad bactericida de la penicilina. El antagonismo se demostró in vitro y en la meningitis neumocócica.",
  x:"Evitar la asociación en infecciones que requieren efecto bactericida rápido (meningitis, endocarditis). En otros contextos su relevancia clínica es escasa."},
-{id:"c2c9",a:"INH2C9",b:"SUB2C9_NTI",s:1,f:"c2c9",t:"Toxicidad por fenitoína",
+{id:"c2c9",r:["S2"],a:"INH2C9",b:"SUB2C9_NTI",s:1,f:"c2c9",t:"Toxicidad por fenitoína",
  m:"La fenitoína se metaboliza principalmente por el CYP2C9 y presenta cinética de saturación (Michaelis-Menten): una inhibición moderada de su metabolismo produce aumentos desproporcionados de la concentración.",
  x:"Controlar niveles de fenitoína y signos de toxicidad (nistagmo, ataxia, disartria, somnolencia); reducir la dosis si es necesario."},
 {id:"vanes",a:"VANCO",b:"ANEST",s:2,f:"vanes",t:"Reacción a la infusión e hipotensión",
@@ -3901,9 +3915,39 @@ const IX_RULES = [
 {id:"lzgl",a:"LZD",b:"HYPOGLY",s:2,f:"lzgl",t:"Hipoglucemia",
  m:"Se comunicaron hipoglucemias sintomáticas en pacientes diabéticos tratados con insulina o hipoglucemiantes orales durante el tratamiento con linezolid; se atribuyen a su efecto inhibidor de la monoaminooxidasa, que aumenta la sensibilidad a la insulina.",
  x:"Advertir al paciente e intensificar el control glucémico; reducir la dosis del hipoglucemiante o suspender el linezolid si se presenta hipoglucemia."},
-{id:"fqn",a:"FQ",b:"NSAID",s:2,f:"fqn",t:"Aumento del riesgo de convulsiones",
+{id:"fqn",r:["S2"],a:"FQ",b:"NSAID",s:2,f:"fqn",t:"Aumento del riesgo de convulsiones",
  m:"Las fluoroquinolonas inhiben la unión del GABA al receptor GABA-A; los AINE potencian ese antagonismo, lo que reduce el umbral convulsivo (demostrado in vitro y en modelos animales).",
  x:"Precaución en pacientes con antecedentes de convulsiones, lesión del SNC o insuficiencia renal; considerar paracetamol como analgésico."},
+{id:"oat1",r:["S1"],a:"BLACT_OAT",b:"NSAID",s:3,f:"oat",t:"Competencia por la secreción tubular renal",
+ m:"Los β-lactámicos se eliminan por secreción en el túbulo contorneado proximal mediante los transportadores de aniones orgánicos (OAT1 y OAT3), por los que compiten con otros ácidos orgánicos como los AINE, el metotrexato y el probenecid. Según qué compuesto ocupe primero el transportador, puede prolongarse el efecto del β-lactámico o del AINE. El probenecid aprovecha este mecanismo para prolongar la acción de las penicilinas.",
+ x:"Sin relevancia clínica en la mayoría de los pacientes; considerarla en la insuficiencia renal."},
+{id:"oat2",r:["S1"],a:"BLACT_OAT",b:"LOOPTZ",s:3,f:"oat",t:"Competencia por la secreción tubular renal",
+ m:"Los diuréticos de asa y las tiazidas llegan a su sitio de acción en la luz tubular por secreción a través de los OAT del túbulo proximal; la competencia con los β-lactámicos puede reducir transitoriamente el efecto diurético.",
+ x:"Habitualmente sin relevancia clínica; vigilar la respuesta diurética en pacientes que dependen de ella (insuficiencia cardíaca descompensada)."},
+{id:"che",r:["S1","S2"],a:"ATB_CHE",b:"ACO_EE",s:3,f:"che",t:"Posible reducción de la eficacia anticonceptiva",
+ m:"Mecanismo clásico: el etinilestradiol se excreta en la bilis como glucurónido y la flora colónica desconjugante lo libera para su reabsorción (circuito enterohepático); al eliminar esa flora, el antibiótico reduciría su recirculación. Sin embargo, los estudios farmacocinéticos no demostraron descenso de las concentraciones de etinilestradiol con antibióticos no inductores enzimáticos, y las guías actuales no consideran clínicamente relevante esta interacción. La excepción es la rifampicina, que actúa por inducción enzimática.",
+ x:"Según las guías actuales (FSRH, CDC) no se requiere un método adicional. Indicarlo si hay vómitos o diarrea intensa que comprometan la absorción del comprimido."},
+{id:"cef1",r:["S1"],a:"CEF1",b:"NEPH_CEF",s:2,f:"nephro",t:"Nefrotoxicidad aditiva",
+ m:"Las cefalosporinas de primera generación por vía parenteral pueden producir daño tubular, que se potencia con aminoglucósidos, vancomicina y diuréticos de asa (estos últimos, por contracción de volumen).",
+ x:"Monitorizar creatinina y diuresis, asegurar la volemia y ajustar las dosis según el filtrado glomerular."},
+{id:"mac",r:["S2"],a:"MACRO",b:"BLACT",s:3,f:"antag2",t:"Antagonismo bactericida–bacteriostático (in vitro)",
+ m:"Los macrólidos inhiben la síntesis proteica y detienen el crecimiento bacteriano, condición que los β-lactámicos requieren para ejercer su efecto bactericida; el antagonismo se demostró in vitro.",
+ x:"Sin relevancia clínica demostrada: la asociación de un β-lactámico con un macrólido es el tratamiento estándar de la neumonía grave de la comunidad, en la que el macrólido aporta cobertura de gérmenes atípicos y efecto inmunomodulador."},
+{id:"la2",r:["ST"],a:"LA",b:"LA",s:2,f:"la",t:"Toxicidad sistémica aditiva (LAST)",
+ m:"La toxicidad de los anestésicos locales sobre el SNC y el corazón, por bloqueo de los canales de sodio voltaje-dependientes, es aditiva: al combinar dos anestésicos locales, sus dosis máximas no son independientes.",
+ x:"Calcular la dosis total como fracción de la dosis máxima de cada fármaco (la suma de las fracciones no debe superar 1); disponer de emulsión lipídica al 20%."},
+{id:"bnmw",r:["ST"],a:"BNM_POT_W",b:"NDBNM",s:3,f:"bnm",t:"Potenciación del bloqueo neuromuscular",
+ m:"Los anestésicos locales por vía intravenosa, los bloqueantes cálcicos y las tetraciclinas reducen la liberación de acetilcolina o la excitabilidad de la membrana muscular y potencian a los bloqueantes no despolarizantes.",
+ x:"Monitorizar el bloqueo con TOF; es más relevante en la miastenia o cuando se suman varios fármacos potenciadores."},
+{id:"anhy",r:["ST"],a:"ANEST_HYPO",b:"RAAS",s:2,f:"anhy",t:"Hipotensión posinducción",
+ m:"Los anestésicos generales reducen el tono simpático y la RVS; con el sistema renina-angiotensina bloqueado se pierde uno de los mecanismos que sostienen la presión arterial, y la hipotensión puede ser refractaria a los vasopresores adrenérgicos.",
+ x:"Valorar la suspensión 24 h antes de la cirugía según el contexto (evidencia heterogénea; en STOP-or-NOT no hubo diferencias en complicaciones mayores). Tratar con fenilefrina o noradrenalina y, si es refractaria, con vasopresina."},
+{id:"indc",r:["ST"],a:"INDUCER",b:"SUB_IND_CORT",s:2,f:"ind",t:"Disminución del efecto de los glucocorticoides",
+ m:"Rifampicina, fenitoína y carbamazepina inducen el CYP3A4 y aceleran el metabolismo de los glucocorticoides; la rifampicina duplica aproximadamente la depuración de la prednisolona. En tratamientos prolongados puede desencadenar insuficiencia suprarrenal.",
+ x:"Considerar duplicar la dosis del glucocorticoide y vigilar la respuesta clínica."},
+{id:"nsu",r:["ST"],a:"NSAID",b:"SU",s:3,f:"nsu",t:"Desplazamiento de la unión a proteínas",
+ m:"Los AINE, de alta unión a la albúmina, desplazan a las sulfonilureas y aumentan transitoriamente su fracción libre.",
+ x:"Controlar la glucemia al iniciar el AINE en pacientes tratados con sulfonilureas."},
 /* --- Toxicidad orgánica aditiva --- */
 {id:"mye",a:"MYELO",b:"MYELO",s:2,f:"myelo",t:"Mielotoxicidad aditiva",
  m:"Ambos pueden producir neutropenia o agranulocitosis por mecanismos idiosincráticos o tóxicos.",
@@ -3921,10 +3965,97 @@ const IX_RULES = [
 T.T_IVAB = ["ivabradina"];
 
 const IX_PAIRS = [
-{d:["amoxicilina","alopurinol"],s:2,t:"Aumento de la incidencia de exantema",
+{d:["valproato","carbamazepina"],r:["V"],s:1,t:"Toxicidad por el epóxido de carbamazepina",
+ m:"El valproato inhibe la epóxido hidrolasa y hace que se acumule el 10,11-epóxido de carbamazepina, metabolito activo responsable de buena parte de la toxicidad. El cuadro puede aparecer con una carbamazepinemia normal, porque el laboratorio habitual no mide el epóxido. La carbamazepina, a su vez, induce el metabolismo del valproato y reduce sus concentraciones.",
+ x:"Vigilar diplopía, ataxia, náuseas y somnolencia aunque la carbamazepinemia sea normal; considerar reducir la carbamazepina y controlar los niveles de valproato."},
+{d:["doxiciclina","digoxina"],r:["S2"],s:2,t:"Aumento de la digoxinemia",
+ m:"En alrededor del 10% de los pacientes, Eggerthella lenta (Eubacterium lentum) de la flora intestinal inactiva parte de la digoxina; al eliminarla, la tetraciclina aumenta su biodisponibilidad y el riesgo de toxicidad.",
+ x:"Controlar digoxinemia y signos de toxicidad digitálica durante el tratamiento."},
+{d:["azitromicina","metoclopramida"],r:["S2"],s:3,t:"Aumento de los efectos adversos digestivos",
+ m:"Los macrólidos son agonistas del receptor de motilina; los proquinéticos suman el aumento de la motilidad digestiva.",
+ x:"Sin ajuste; advertir sobre náuseas, cólicos y diarrea."},
+{d:["claritromicina","metoclopramida"],r:["S2"],s:3,t:"Aumento de los efectos adversos digestivos",
+ m:"Los macrólidos son agonistas del receptor de motilina; los proquinéticos suman el aumento de la motilidad digestiva.",
+ x:"Sin ajuste; advertir sobre náuseas, cólicos y diarrea."},
+{d:["gentamicina","clindamicina"],r:["S2"],s:2,t:"Nefrotoxicidad y bloqueo neuromuscular aditivos",
+ m:"La clindamicina potencia la nefrotoxicidad de los aminoglucósidos, y ambos fármacos potencian a los bloqueantes neuromusculares.",
+ x:"Monitorizar creatinina y niveles del aminoglucósido; en el perioperatorio, monitorizar el bloqueo con TOF."},
+{d:["gentamicina","heparina"],r:["S2"],s:3,t:"Incompatibilidad física",
+ m:"La gentamicina se inactiva al mezclarse con heparina en la misma solución.",
+ x:"No mezclar en la misma solución ni lavar la vía con heparina inmediatamente antes o después de la infusión."},
+{d:["vancomicina","heparina"],r:["S1"],s:3,t:"Incompatibilidad física",
+ m:"La vancomicina se inactiva al mezclarse con heparina e infundirse por la misma vía.",
+ x:"No mezclar en la misma solución; lavar la vía con solución fisiológica entre ambas."},
+{d:["linezolid","carbamazepina"],r:["S2"],s:3,t:"Disminución de la concentración de linezolid",
+ m:"Los inductores microsomales aumentan la oxidación del linezolid y reducen sus concentraciones plasmáticas.",
+ x:"Vigilar la respuesta clínica."},
+{d:["linezolid","levodopa"],r:["S2"],s:2,t:"Respuesta presora exagerada",
+ m:"El linezolid es un inhibidor reversible y no selectivo de la MAO; la levodopa aumenta la síntesis de dopamina y noradrenalina, cuyo catabolismo queda reducido.",
+ x:"Evitar la asociación; si es imprescindible, controlar la presión arterial."},
+{d:["isoniazida","warfarina"],r:["S2"],s:2,t:"Aumento del RIN",
+ m:"La isoniazida inhibe varias isoformas del citocromo P450 (CYP2C19, 2E1 y 3A4) y reduce el metabolismo de los anticoagulantes orales.",
+ x:"Controlar el RIN durante todo el tratamiento conjunto."},
+{d:["isoniazida","acenocumarol"],r:["S2"],s:2,t:"Aumento del RIN",
+ m:"La isoniazida inhibe varias isoformas del citocromo P450 (CYP2C19, 2E1 y 3A4) y reduce el metabolismo de los anticoagulantes orales.",
+ x:"Controlar el RIN durante todo el tratamiento conjunto."},
+{d:["isoniazida","diazepam"],r:["S2"],s:3,t:"Aumento de la concentración de diazepam",
+ m:"La isoniazida inhibe el metabolismo oxidativo del diazepam y prolonga su vida media.",
+ x:"Vigilar la sedación; considerar lorazepam, que se elimina por glucuronidación."},
+{d:["isoniazida","insulina"],r:["S2"],s:3,t:"Hiperglucemia",
+ m:"La isoniazida puede producir hiperglucemia y reducir la eficacia de la insulina.",
+ x:"Controlar la glucemia al iniciar el tratamiento antituberculoso."},
+{d:["pirazinamida","insulina"],r:["S2"],s:3,t:"Hipoglucemia",
+ m:"La pirazinamida aumenta la captación de glucosa por el tejido adiposo y puede potenciar el efecto de los antidiabéticos.",
+ x:"Controlar la glucemia y ajustar el antidiabético si es necesario."},
+{d:["pirazinamida","glibenclamida"],r:["S2"],s:3,t:"Hipoglucemia",
+ m:"La pirazinamida aumenta la captación de glucosa por el tejido adiposo y puede potenciar el efecto de los antidiabéticos.",
+ x:"Controlar la glucemia y ajustar el antidiabético si es necesario."},
+{d:["metronidazol","rifampicina"],r:["S2"],s:3,t:"Disminución de la concentración de metronidazol",
+ m:"La inducción enzimática acelera el catabolismo del metronidazol.",
+ x:"Vigilar la respuesta clínica."},
+{d:["ciprofloxacina","nitrofurantoina"],r:["S2"],s:3,t:"Antagonismo in vitro",
+ m:"Las quinolonas requieren crecimiento bacteriano activo para ejercer su efecto bactericida; los nitrofuranos, bacteriostáticos, lo antagonizan in vitro.",
+ x:"Evitar la asociación en el tratamiento de infecciones urinarias."},
+{d:["ciprofloxacina","metformina"],r:["S2"],s:3,t:"Competencia por la secreción tubular y disglucemia",
+ m:"Las quinolonas comparten con la metformina los transportadores de cationes orgánicos del túbulo proximal, lo que puede aumentar las concentraciones plasmáticas de ambas; las quinolonas pueden además producir hipo o hiperglucemia.",
+ x:"Controlar la glucemia durante el tratamiento."},
+{d:["ciprofloxacina","furosemida"],r:["S2"],s:3,t:"Hipomagnesemia",
+ m:"La furosemida produce hipomagnesemia, que favorece varios efectos adversos de las quinolonas, entre ellos las arritmias.",
+ x:"Controlar y reponer el magnesio sérico."},
+{d:["rifampicina","morfina"],r:["S2"],s:2,t:"Disminución del efecto analgésico de la morfina",
+ m:"La rifampicina induce la glucuronidación (UGT2B7) y las proteínas de transporte, aumenta la depuración de la morfina y reduce su efecto analgésico.",
+ x:"Titular la morfina según la respuesta; considerar otro analgésico."},
+{d:["rifampicina","glibenclamida"],r:["S2"],s:2,t:"Hiperglucemia",
+ m:"La rifampicina induce el CYP2C9 y el CYP3A4 y reduce las concentraciones de las sulfonilureas.",
+ x:"Controlar la glucemia y ajustar el hipoglucemiante; reajustarlo al suspender la rifampicina."},
+{d:["dexametasona","apixaban"],r:["Z"],s:3,t:"Posible disminución de la concentración del anticoagulante",
+ m:"En tratamientos prolongados, la dexametasona induce el CYP3A4 y la glicoproteína P (listado de interacciones de la guía de la Sociedad Europea de Cardiología 2018).",
+ x:"Usar con precaución en tratamientos prolongados con dexametasona."},
+{d:["levetiracetam","apixaban"],r:["Z"],s:3,t:"Posible disminución de la concentración del anticoagulante",
+ m:"La guía de la Sociedad Europea de Cardiología 2018 incluye al levetiracetam y al valproato entre los fármacos que podrían reducir las concentraciones de los ACOD por inducción de la glicoproteína P; la evidencia es limitada.",
+ x:"Usar con precaución; si se producen eventos trombóticos, considerar otro anticoagulante u otro antiepiléptico."},
+{d:["valproato","apixaban"],r:["Z"],s:3,t:"Posible disminución de la concentración del anticoagulante",
+ m:"La guía de la Sociedad Europea de Cardiología 2018 incluye al levetiracetam y al valproato entre los fármacos que podrían reducir las concentraciones de los ACOD por inducción de la glicoproteína P; la evidencia es limitada.",
+ x:"Usar con precaución; si se producen eventos trombóticos, considerar otro anticoagulante u otro antiepiléptico."},
+{d:["dexametasona","rivaroxaban"],r:["Z"],s:3,t:"Posible disminución de la concentración del anticoagulante",
+ m:"En tratamientos prolongados, la dexametasona induce el CYP3A4 y la glicoproteína P (listado de interacciones de la guía de la Sociedad Europea de Cardiología 2018).",
+ x:"Usar con precaución en tratamientos prolongados con dexametasona."},
+{d:["levetiracetam","rivaroxaban"],r:["Z"],s:3,t:"Posible disminución de la concentración del anticoagulante",
+ m:"La guía de la Sociedad Europea de Cardiología 2018 incluye al levetiracetam y al valproato entre los fármacos que podrían reducir las concentraciones de los ACOD por inducción de la glicoproteína P; la evidencia es limitada.",
+ x:"Usar con precaución; si se producen eventos trombóticos, considerar otro anticoagulante u otro antiepiléptico."},
+{d:["valproato","rivaroxaban"],r:["Z"],s:3,t:"Posible disminución de la concentración del anticoagulante",
+ m:"La guía de la Sociedad Europea de Cardiología 2018 incluye al levetiracetam y al valproato entre los fármacos que podrían reducir las concentraciones de los ACOD por inducción de la glicoproteína P; la evidencia es limitada.",
+ x:"Usar con precaución; si se producen eventos trombóticos, considerar otro anticoagulante u otro antiepiléptico."},
+{d:["sevoflurano","oxitocina"],r:["ST"],s:2,t:"Antagonismo del efecto uterotónico",
+ m:"Los anestésicos halogenados relajan el músculo liso uterino de forma dosis-dependiente y antagonizan la oxitocina, lo que aumenta el riesgo de atonía y hemorragia posparto.",
+ x:"En la cesárea bajo anestesia general, reducir la concentración del halogenado tras la extracción fetal y complementar con opioides."},
+{d:["sevoflurano","succinilcolina"],r:["ST"],s:2,t:"Desencadenantes de hipertermia maligna",
+ m:"Ambos fármacos desencadenan hipertermia maligna en pacientes con variantes del receptor de rianodina (RYR1), que liberan Ca²⁺ del retículo sarcoplásmico de forma sostenida.",
+ x:"Contraindicados en pacientes susceptibles o con antecedentes familiares; disponer de dantroleno donde se utilicen."},
+{d:["amoxicilina","alopurinol"],r:["S1"],s:2,t:"Aumento de la incidencia de exantema",
  m:"La frecuencia de exantema maculopapular con aminopenicilinas aumenta en pacientes tratados con alopurinol. El mecanismo no está establecido; se discute el papel de la hiperuricemia subyacente.",
  x:"No contraindica la asociación. Advertir al paciente y diferenciar el exantema no alérgico de una reacción de hipersensibilidad."},
-{d:["amoxiclav","alopurinol"],s:2,t:"Aumento de la incidencia de exantema",
+{d:["amoxiclav","alopurinol"],r:["S1"],s:2,t:"Aumento de la incidencia de exantema",
  m:"La frecuencia de exantema maculopapular con aminopenicilinas aumenta en pacientes tratados con alopurinol. El mecanismo no está establecido; se discute el papel de la hiperuricemia subyacente.",
  x:"No contraindica la asociación. Advertir al paciente y diferenciar el exantema no alérgico de una reacción de hipersensibilidad."},
 {d:["piptazo","rocuronio"],s:2,t:"Prolongación del bloqueo neuromuscular",
@@ -3933,7 +4064,7 @@ const IX_PAIRS = [
 {d:["piptazo","cisatracurio"],s:2,t:"Prolongación del bloqueo neuromuscular",
  m:"Se describió prolongación del bloqueo del vecuronio con piperacilina. Por la similitud del mecanismo, el prospecto extiende la advertencia a todos los bloqueantes neuromusculares no despolarizantes.",
  x:"Monitorizar el bloqueo con TOF y confirmar un cociente ≥ 0,9 antes de la extubación; revertir según la profundidad del bloqueo."},
-{d:["piptazo","gentamicina"],s:2,t:"Inactivación del aminoglucósido",
+{d:["piptazo","gentamicina"],r:["S1"],s:2,t:"Inactivación del aminoglucósido",
  m:"Las penicilinas de amplio espectro inactivan químicamente a los aminoglucósidos (el anillo β-lactámico reacciona con sus grupos amino). Ocurre cuando se mezclan en la misma solución y, in vivo, en la insuficiencia renal grave, en la que la concentración del aminoglucósido puede descender de forma significativa.",
  x:"No mezclar en la misma solución; administrar por separado. En insuficiencia renal y hemodiálisis, monitorizar los niveles del aminoglucósido."},
 {d:["cefalexina","metformina"],s:2,t:"Aumento de la concentración de metformina",
@@ -3942,22 +4073,22 @@ const IX_PAIRS = [
 {d:["azitromicina","digoxina"],s:2,t:"Aumento de la digoxinemia",
  m:"La azitromicina inhibe la glicoproteína P intestinal y renal y reduce la eliminación de la digoxina; además, la alteración de la flora intestinal puede disminuir la inactivación bacteriana de la digoxina en algunos pacientes.",
  x:"Controlar digoxinemia, FC y signos de toxicidad digitálica durante el tratamiento."},
-{d:["metronidazol","carbamazepina"],s:2,t:"Aumento de la concentración de carbamazepina",
+{d:["metronidazol","carbamazepina"],r:["S2"],s:2,t:"Aumento de la concentración de carbamazepina",
  m:"El metronidazol inhibe el metabolismo de la carbamazepina (descripto en reportes de casos); a su vez, la inducción enzimática por la carbamazepina puede reducir la concentración del metronidazol.",
  x:"Controlar niveles de carbamazepina y signos de toxicidad (diplopía, ataxia, somnolencia)."},
-{d:["doxiciclina","carbamazepina"],s:2,t:"Disminución de la concentración de doxiciclina",
+{d:["doxiciclina","carbamazepina"],r:["S2"],s:2,t:"Disminución de la concentración de doxiciclina",
  m:"Los inductores enzimáticos aceleran el metabolismo hepático de la doxiciclina y reducen su vida media aproximadamente a la mitad.",
  x:"Considerar la administración cada 12 horas con dosis plenas o elegir otro antibiótico."},
-{d:["doxiciclina","fenitoina"],s:2,t:"Disminución de la concentración de doxiciclina",
+{d:["doxiciclina","fenitoina"],r:["S2"],s:2,t:"Disminución de la concentración de doxiciclina",
  m:"Los inductores enzimáticos aceleran el metabolismo hepático de la doxiciclina y reducen su vida media aproximadamente a la mitad.",
  x:"Considerar la administración cada 12 horas con dosis plenas o elegir otro antibiótico."},
-{d:["doxiciclina","rifampicina"],s:2,t:"Disminución de la concentración de doxiciclina",
+{d:["doxiciclina","rifampicina"],r:["S2"],s:2,t:"Disminución de la concentración de doxiciclina",
  m:"Los inductores enzimáticos aceleran el metabolismo hepático de la doxiciclina y reducen su vida media aproximadamente a la mitad.",
  x:"Considerar la administración cada 12 horas con dosis plenas o elegir otro antibiótico."},
 {d:["clindamicina","rifampicina"],s:2,t:"Disminución de la concentración de clindamicina",
  m:"La rifampicina induce el CYP3A4, principal vía de metabolismo de la clindamicina, y reduce marcadamente su exposición.",
  x:"Considerar la posible pérdida de eficacia de la clindamicina y vigilar la respuesta clínica."},
-{d:["linezolid","rifampicina"],s:2,t:"Disminución de la concentración de linezolid",
+{d:["linezolid","rifampicina"],r:["S2"],s:2,t:"Disminución de la concentración de linezolid",
  m:"La rifampicina reduce la Cmáx y el AUC del linezolid (≈ 21% y 32%), probablemente por inducción de vías de eliminación no dependientes del CYP.",
  x:"Relevancia clínica incierta; vigilar la respuesta clínica."},
 {d:["fluconazol","rifampicina"],s:2,t:"Disminución de la concentración de fluconazol",
@@ -3969,10 +4100,10 @@ const IX_PAIRS = [
 {d:["albendazol","fenitoina"],s:2,t:"Disminución de la concentración de albendazol",
  m:"Los inductores enzimáticos reducen en un 50–60% la concentración plasmática del metabolito activo, el albendazol sulfóxido.",
  x:"En la neurocisticercosis, considerar el riesgo de fracaso terapéutico; preferir anticonvulsivantes no inductores (p. ej., levetiracetam)."},
-{d:["isoniazida","paracetamol"],s:2,t:"Aumento del riesgo de hepatotoxicidad",
+{d:["isoniazida","paracetamol"],r:["S2"],s:2,t:"Aumento del riesgo de hepatotoxicidad",
  m:"La isoniazida induce el CYP2E1, vía que forma el metabolito tóxico del paracetamol (NAPQI); el riesgo aumenta con dosis altas de paracetamol, ayuno o consumo de alcohol.",
  x:"Evitar dosis altas de paracetamol y vigilar el hepatograma."},
-{d:["vancomicina","furosemida"],s:2,t:"Ototoxicidad y nefrotoxicidad",
+{d:["vancomicina","furosemida"],r:["S1"],s:2,t:"Ototoxicidad y nefrotoxicidad",
  m:"Ambos fármacos son ototóxicos; el diurético de asa favorece además la contracción de volumen, que potencia la nefrotoxicidad de la vancomicina.",
  x:"Evitar dosis altas de furosemida en bolo; monitorizar niveles de vancomicina, función renal y audición en tratamientos prolongados."},
 {d:["tramadol","warfarina"],s:2,t:"Aumento del RIN",
@@ -4023,10 +4154,10 @@ const IX_PAIRS = [
 {d:["ciprofloxacina","hidrocortisona"],s:2,t:"Tendinopatía y rotura tendinosa",
  m:"Efecto aditivo sobre la matriz de colágeno del tendón.",
  x:"Evitar la asociación; suspender ante dolor tendinoso."},
-{d:["isoniazida","fenitoina"],s:1,t:"Intoxicación por fenitoína",
+{d:["isoniazida","fenitoina"],r:["S2"],s:1,t:"Intoxicación por fenitoína",
  m:"La isoniazida inhibe el CYP2C9 y CYP2C19 y aumenta la concentración de fenitoína, sobre todo en acetiladores lentos.",
  x:"Controlar niveles de fenitoína y ajustar la dosis."},
-{d:["isoniazida","carbamazepina"],s:1,t:"Intoxicación por carbamazepina y hepatotoxicidad",
+{d:["isoniazida","carbamazepina"],r:["S2"],s:1,t:"Intoxicación por carbamazepina y hepatotoxicidad",
  m:"La isoniazida inhibe el metabolismo de la carbamazepina y esta aumenta la formación de metabolitos hepatotóxicos de la isoniazida.",
  x:"Controlar niveles de carbamazepina y hepatograma."},
 {d:["metformina","dolutegravir"],s:2,t:"Aumento de la concentración de metformina",
@@ -4038,10 +4169,10 @@ const IX_PAIRS = [
 {d:["magnesio","nifedipina"],s:2,t:"Hipotensión y debilidad neuromuscular",
  m:"Ambos reducen la entrada de Ca²⁺ al músculo liso y a la terminal presináptica.",
  x:"Vigilar presión arterial, reflejos osteotendinosos y frecuencia respiratoria."},
-{d:["gentamicina","furosemida"],s:1,t:"Ototoxicidad y nefrotoxicidad",
+{d:["gentamicina","furosemida"],r:["S2"],s:1,t:"Ototoxicidad y nefrotoxicidad",
  m:"Los diuréticos de asa y los aminoglucósidos dañan las células ciliadas de la cóclea por mecanismos complementarios; la depleción de volumen aumenta además la nefrotoxicidad.",
  x:"Evitar la asociación; si es necesaria, controlar niveles de gentamicina, función renal y audición."},
-{d:["gentamicina","vancomicina"],s:1,f:"nephro",t:"Nefrotoxicidad y ototoxicidad",
+{d:["gentamicina","vancomicina"],r:["S2"],s:1,f:"nephro",t:"Nefrotoxicidad y ototoxicidad",
  m:"Suma de toxicidad tubular renal y coclear.",
  x:"Controlar niveles de ambos fármacos y la creatinina."},
 {d:["vancomicina","piptazo"],s:2,f:"nephro",t:"Insuficiencia renal aguda",
@@ -4061,7 +4192,30 @@ const IX_PAIRS = [
  x:"Puede requerirse un analgésico alternativo o de rescate."}
 ];
 
-const SEV = [["Contraindicada","sev0"],["Mayor","sev1"],["Moderada","sev2"]];
+const SEV = [["Contraindicada","sev0"],["Mayor","sev1"],["Moderada","sev2"],["Menor","sev3"]];
+const IXREF = { V:"Lorenzo P, et al. Velázquez. Farmacología básica y clínica. 20.ª ed. Madrid: Editorial Médica Panamericana; 2025.", G:"Brunton LL, Knollmann BC (eds.). Goodman & Gilman. Las bases farmacológicas de la terapéutica. 14.ª ed. McGraw-Hill; 2023.", S1:"Serra HA y col. Farmacología antibacteriana I: quimioantibioticoterapia antibacteriana. 1.ª ed. Buenos Aires: Editorial Sciens; 2023.", S2:"Serra HA y col. Farmacología antibacteriana II: quimioantibioticoterapia antibacteriana. 1.ª ed. Buenos Aires: Editorial Sciens; 2023.", ST:"Sánchez Toranzo A, Serra HA y col. Farmacología: de la molécula al paciente. Antiinflamatorios, analgésicos y anestesia. 1.ª ed. Buenos Aires: Editorial Sciens; 2017.", Z:"Zaidel EJ y col. Farmacología de los anticoagulantes orales. 1.ª ed. Buenos Aires: Editorial Sciens; 2021." };
+const IXSHORT = { V:"Velázquez (20.ª ed.)", G:"Goodman & Gilman (14.ª ed.)", S1:"Serra HA y col. Editorial Sciens", S2:"Serra HA y col. Editorial Sciens", ST:"Sánchez Toranzo A, Serra HA y col. Editorial Sciens", Z:"Zaidel EJ y col. Editorial Sciens" };
+const IXEXT = {
+  fda:"U.S. Food and Drug Administration. Drug Development and Drug Interactions: Table of Substrates, Inhibitors and Inducers.",
+  qt:"CredibleMeds. QTdrugs List: clasificación del riesgo de prolongación del QT y torsade de pointes.",
+  dsc:"U.S. Food and Drug Administration. Drug Safety Communications: opioides y benzodiacepinas (2016); gabapentinoides y depresión respiratoria (2019).",
+  bai:"Baillargeon J, et al. Concurrent use of warfarin and antibiotics and the risk of bleeding in older adults. Am J Med. 2012;125:183-9."
+};
+function ixRef(r){ return r && r.r ? `<p class="ix-ref">Fuente: ${[...new Set(r.r.map(k => IXSHORT[k]))].map(esc).join("; ")}.</p>` : ""; }
+/* referencias completas que aportan las interacciones de un fármaco a su bibliografía */
+function ixRefsFor(id){
+  const out = [];
+  for(const g of ixFor(id)){
+    const r = g.r;
+    (r.r || []).forEach(k => out.push(IXREF[k]));
+    const k = r.id || "";
+    if(/^(cyp|ind|d6|a2|c2c9|avk1|avk2)/.test(k)) out.push(IXEXT.fda);
+    if(/^qt/.test(k)) out.push(IXEXT.qt);
+    if(k === "cns1" || k === "cns2") out.push(IXEXT.dsc);
+    if(k === "avk4") out.push(IXEXT.bai);
+  }
+  return out;
+}
 const TAGSOF = {};
 for(const [tag, ids] of Object.entries(T)) for(const id of ids) (TAGSOF[id] = TAGSOF[id] || new Set()).add(tag);
 function hasT(id, tag){ return TAGSOF[id] ? TAGSOF[id].has(tag) : false; }
@@ -4107,14 +4261,14 @@ function ixHTML(d){
   const alc = `<p class="ix-alc">Para las interacciones con el alcohol, consultar <a href="https://alcoholito.com.ar" target="_blank" rel="noopener">alcoholito.com.ar</a>.</p>`;
   const foot = `<p class="ix-foot">Interacciones farmacocinéticas y farmacodinámicas de relevancia clínica con los fármacos incluidos en farmacodos; no es un listado exhaustivo.</p>`;
   if(!gs.length) return head + `<p class="ix-none">No se identificaron interacciones de relevancia clínica con los fármacos incluidos en farmacodos.</p>` + tool + alc + foot;
-  const cnt = [0,1,2].map(s => gs.filter(g => g.r.s === s).reduce((n,g) => n + g.with.length, 0));
+  const cnt = [0,1,2,3].map(s => gs.filter(g => g.r.s === s).reduce((n,g) => n + g.with.length, 0));
   const sum = `<div class="ix-sum">${cnt.map((n,s) => n ? `<span class="sev ${SEV[s][1]}">${SEV[s][0]}: ${n}</span>` : "").join("")}</div>`;
   const items = gs.map(({r, with:w}) => `
     <div class="ix-item">
       <div class="ix-top">${sevBadge(r.s)}<b>${esc(r.t)}</b></div>
       <div class="ix-with">${w.map(x => `<a href="/${x.id}" data-open="${x.id}">${esc(x.n)}</a>`).join("")}</div>
       <p><strong>Mecanismo:</strong> ${md(r.m)}</p>
-      <p><strong>Conducta:</strong> ${md(r.x)}</p>
+      <p><strong>Conducta:</strong> ${md(r.x)}</p>${ixRef(r)}
     </div>`).join("");
   return head + sum + tool + items + alc + foot;
 }
@@ -4292,7 +4446,7 @@ function ixRender(){
       <div class="ix-top">${sevBadge(r.s)}<b>${esc(r.t)}</b></div>
       <div class="ix-with"><a href="/${a.id}" data-open="${a.id}">${esc(a.n)}</a><span class="ix-plus">+</span><a href="/${b.id}" data-open="${b.id}">${esc(b.n)}</a></div>
       <p><strong>Mecanismo:</strong> ${md(r.m)}</p>
-      <p><strong>Conducta:</strong> ${md(r.x)}</p>
+      <p><strong>Conducta:</strong> ${md(r.x)}</p>${ixRef(r)}
     </div>`).join("") +
     `<p class="ix-foot">Analiza interacciones de relevancia clínica entre los fármacos incluidos en farmacodos; no es un listado exhaustivo ni reemplaza la revisión de la medicación completa del paciente.</p>`;
 }
